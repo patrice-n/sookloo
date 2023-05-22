@@ -1,0 +1,6 @@
+site_name: Sookloo
+site_url: https://sookloo.com/
+nav:
+  - Akwaba: index.md
+  - A propos: about.md
+theme: terminal
