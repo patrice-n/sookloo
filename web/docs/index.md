@@ -7,7 +7,6 @@ Cette page web se veut être un outil d'aide à la montée en compétences en CS
 * `algorithmique` - Notions d'algorithmique et de structures de données.
 * `programmation C++` - Code en C++.
 
-
 ## ML - Machine Learning
 
 * `mathematiques pour ml` - Les outils mathématiques (algèbre, analyse, ...)
