@@ -1,6 +1,56 @@
 site_name: Sookloo
 site_url: https://sookloo.info/
-nav:
-  - Akwaba: index.md
-  - A propos: about.md
-theme: terminal
+theme: 
+  name: terminal
+  custom_dir: overrides
+  features:
+    - footer.prev_next
+    - revision.date
+    - revision.history
+  palette: default
+repo_url: https://github.com/patrice-n/sookloo
+edit_uri: edit/main/web/docs
+copyright: Ce site est disponible sous la licence <a href="https://github.com/patrice-n/sookloo/blob/main/LICENSE">MIT</a> <br/>Copyright &copy; 2023 by <a href="https://github.com/patrice-n/sookloo">https://github.com/patrice-n/sookloo</a>
+extra_javascript:
+  - javascript/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - admonition
+  - markdown_include.include:
+        base_path: docs
+  - pymdownx.arithmatex
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+
+  # PyMdown Extensions
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      base_path: 
+        - docs
+
+plugins:
+  - search
+  - literate-nav:
+      nav_file: navigation.md
+  - git-revision-date
+  - macros
+  - build_plantuml:
+      render: 'server' # or "local" for local rendering
+      bin_path: '/usr/local/bin/plantuml' # ignored when render: server
+      server: 'http://www.plantuml.com/plantuml' # official plantuml server
+      disable_ssl_certificate_validation: true # for self-signed and invalid certs
+      output_format: 'svg' # or "png"
+      diagram_root: 'docs/diagrams' # should reside under docs_dir
+      output_folder: 'out'
+      input_folder: 'src'
+      input_extensions: '' # comma separated list of extensions to parse, by default every file is parsed

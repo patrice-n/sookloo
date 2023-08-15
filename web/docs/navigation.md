@@ -1,0 +1,16 @@
+- [Akwaba](index.md)
+- [A propos](about.md)
+- [Navigation](navigation.md)
+- Articles
+    - 100 Jours ML
+        - [1. ML Explique Simplement](articles/ml-explique-simple.md)
+    - Dernières trouvailles AI
+        - [Large Language Model](articles/high-level-llm.md)
+- Competitive programming
+    - Languages de programmation
+        - [Compilateur](cp/tools/compiler.md)
+        - [Bases du C++](cp/programming-lang/cpp.md)
+        - [Bases de Python](cp/programming-lang/python.md)
+- Mathematiques pour le Machine Learning
+    - Algèbre
+        - [Algèbre linéaire](mml/algebra/al.md)
