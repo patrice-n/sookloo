@@ -19,4 +19,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 ## Articles
 
 ## Les mis-à-jours
-- 15 Aout, 2023: Ajout du premier contenu au site [Le compilateur](https://sookloo.info/cp/tools/compiler.html)
+- 15 Aout, 2023: Ajout du premier contenu au site [Le compilateur](https://sookloo.info/cp/tools/compiler)
