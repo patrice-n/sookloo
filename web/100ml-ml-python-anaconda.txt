@@ -1,0 +1,319 @@
+bonjour et bienvenue sur le coin
+installe le coin où on redécouvre le
+monde de la date dans cette vidéo nous
+allons voir ensemble quels sont les
+avantages d'utiliser Python pour faire
+du machine learni en 2023 et surtout
+comment installer python sur son Mac ou
+son PC Windows pour ceux qui me
+connaissent pas moi c'est Natacha
+djangoa ingénieur data science 6 diplômé
+de l'enseigne et j'ai récemment lancé le
+challenge sans jour de machine en ligne
+# 100 jeux de ml ou pendant 100 jours je
+vais partager avec vous des vidéos qui
+va vous et qui vont vous aider de passer
+de 0 à 1 en matière de datation si vous
+souhaitez rejoindre l'aventure n'hésitez
+pas à vous abonner à la chaîne pour ne
+pas rater les 91 prochaines vidéos
+mettez-moi de gros pouce bleu sinon vous
+soutenez le challenge vous soutenez les
+filles vous soutenez la chaîne et
+surtout partager autour de vous à toutes
+les personnes qui souhaitent apprendre
+davantage sur la datation maintenant
+c'est dit pourquoi python déjà parce que
+la suite de nos vidéos la suite du
+challenge se fera principalement en
+python on va appliquer tout ce qu'on va
+faire en utilisant le chef python
+pourquoi est-ce que j'ai fait le choix
+de Python alors que je suis
+effectivement j'aime beaucoup air c'est
+mon langage de coeur je vais dire parce
+que c'est déjà spécialisé spécialisé en
+data science et spécialisée en
+statistiques il y a pas mal de fonctions
+intéressantes mais dans ce challenge
+j'ai choisi qu'on travaille en Python
+pour 6 raisons déjà la première raison
+c'est que Python est devenu un langage
+populaire toutes les entreprises sont en
+train de faire la transition vers python
+la plupart des entreprises vous avez
+rencontré dans les offres d'emploi il y
+a toujours python par exemple cette
+offre d'emploi de seniors data
+scientiste chez méta demande à ce qu'on
+connaît python également l'offre
+d'emploi qu'est-ce que vous voyez là
+chez Amazon demande à ce qu'on a des
+compétences en python donc clairement
+comme Kevin l'avait dit dans une autre
+vidéo qui s'affiche juste là python
+c'est le choix pragmatique en 2023 parce
+que la plupart des entreprises se vendu
+pour pouvoir être employables il faut
+faire ce que le marché demande ça c'est
+la première raison deuxième avantage de
+Python comment je trouve c'est que
+Python assez simple en fait c'est un
+langage simple et c'est facile à
+apprendre en général moi je trouve que
+Python en cours
+récompense donc si vous voulez coder
+avec Python il y aura pas de difficultés
+comme avec des langages comme si c'est
+plus plus ou encore Java donc python
+c'est un engage simple à apprendre et
+flexible la troisième la troisième
+raison pour laquelle je pense que Python
+c'est un bon outil c'est parce que
+Python c'est l'engage généraliste on ne
+fait pas seulement la dotation avec toi
+ce qui fait que la plupart des personnes
+qui veulent faire la transition de la
+datation ont déjà un background à Python
+je prends par exemple des programmeurs
+en général des informaticiens en général
+ils connaissent déjà fait du python du
+coup quand ils veulent faire la
+transition vers la datation aussi c'est
+assez naturel pour eux d'utiliser Python
+et contrairement à elle qui est déjà
+spécialisée data Science d'Or en général
+c'est plus les statisticiens et les
+universités qui choisissent r parce que
+c'est déjà spécialisé en mode patience
+les personnes qui font la transition qui
+n'ont pas forcément là-bas le bac dans
+le sacrétion vont naturellement des
+python parce qu'ils ont peut-être déjà
+eu à utiliser Python pour d'autres
+raisons dont quatrième raison python
+c'est un langage généraliste et la
+dernière raison qui fait vraiment de
+Python de langage et de idéal pour faire
+de la datation du machine c'est tout
+simplement parce que Python a une belle
+communauté il y a pas mal d'utilisateurs
+en plus il y a beaucoup de bibliothèques
+déjà prédéfinies qu'on peut réutiliser
+pour pouvoir faire de la datation comme
+ça qu'il est il y a les packages comme
+nulle panda matelot libre pour pouvoir
+faire de belles visualisation on aura le
+temps de parler tous ces paquets voilà
+globalement les 6 raisons pour
+lesquelles je pense que aujourd'hui
+python c'est un incontournable pour
+toute personne qui souhaite devenir
+scientiste en 2023 mais j'attire quand
+même sur votre attention sur le fait
+qu'il faut rester flexible parce que
+comme je dis souvent python c'est un
+outil personne
+c'est un outil SQL Java bref tous les
+langages de programmation qu'on utilise
+en natation ce sont des outils n'oubliez
+pas que le Data scientifique son rôle
+principal c'est d'aider le business à
+prendre des décisions en utilisant les
+mathématiques les statistiques la
+programmation la connaissance métier je
+veux dire communication esprit d'équipe
+donc c'est tous ces éléments qui font de
+nous de ta santé ce n'est pas seulement
+python donc dans ce challenge python
+sera utilisé pour pouvoir produire nos
+analyses mais le plus important c'est de
+savoir des analyser vous pouvez utiliser
+r le langage que vous voulez moi
+personnellement je peux faire parce que
+comme vous le déçu satisfait et en
+général faire des stats c'est mieux
+parce que les papiers qui sont plus
+précis mais ici on fait python parce que
+Python devient de plus en plus demandé
+et pour suivre la demande bien sûr il
+faut être prêt et flexible donc gardons
+l'esprit la flexibilité donc voilà
+maintenant on va passer directement sur
+mon ordinateur pour montrer comment
+est-ce qu'on installe python quelques
+tisses pour bien démarrer en python je
+tiens quand même à préciser que dans le
+cas de ce challenge je vous recommande
+d'utiliser anaconda pour ceux qui le
+savent pas anaconda c'est tout
+simplement une distribution qui
+interpython et l'avantage dans mes
+contacts c'est que
+il y a déjà installé tous les
+bibliothèques populaires du moins
+continuer souvent pour pouvoir faire des
+modèles machines en ligne et biotech
+comme escale
+bref toutes les librairies populaires en
+datation sont déjà intégrés dans
+anaconda par exemple laquelle je vous
+suggère d'utiliser anaconda la deuxième
+raison pour laquelle moi personnellement
+j'aime bien anaconda si à cause de
+Jupiter notebook en fait c'est quoi
+Jupiter notebook en fait j'ai plein
+d'autres book c'est d'interface qui vous
+permet de coder un python de commenter
+vos codes de voir vos résultats
+s'afficher automatiquement et surtout la
+partie qui m'intéresse le plus suivies
+c'est la possibilité de documenter son
+cours donc voilà maintenant c'est dit on
+va aller directement sur le PC et vont
+ensemble comment installer anaconda sur
+Mac ou Windows les deux logiciel c'est
+pareil donc pour installer
+navigateur moi j'ai ouvert ici là chrome
+on va taper juste installer anaconda
+comme bon je l'avais déjà fait parce que
+j'ai laissé avant d'enregistrer la vidéo
+tac et vous pouvez prendre par exemple
+le deuxième lien qui est ici qui est
+anaconda.com on va ouvrir ce lien ok
+parce que nouveau ce lien normalement
+vous avez plusieurs versions si c'est
+sur Windows si c'est Windows que vous
+avez vous pouvez cliquer sur le lien
+suivant ici et vous avez l'installeur
+qui vous permet d'installer à la conasse
+sur votre ordinateur si vous êtes sous
+Mac vous cliquez juste sur le lien
+suivant ok moi je suis sur Mac du coup
+je clique sur ce lien premier lien qui
+apparaît dans cette page c'est
+l'installeur donc on va le télécharger
+en général le téléchargement prend après
+donc là qu'est-ce qui s'est passé
+donne-moi on va commencer par
+on va le télécharger voilà en général le
+téléchargement prend à peu près une
+vingtaine de secondes donc on va
+attendre que le téléchargement fini mais
+globalement une fois que vous avez
+téléchargé que ce soit sur Mac que ce
+soit sur Windows il va juste falloir que
+vous double cliquer sur le fichier qui
+était téléchargé ensuite vous suivez les
+instructions c'est assez intuitif donc
+j'attends juste 4 secondes avant que mon
+téléchargement ne se termine alors c'est
+parfait c'est terminé une fois que
+c'était terminé comme je disais il
+suffit de cliquer sur le fichier qui a
+été téléchargé vous autorisez si vous
+êtes comme ça autorisez vous suivez
+juste des instructions continuez
+continuez continuez bon généralement je
+ne lis pas donc continuez installez moi
+comme j'ai déjà installé anaconda sur
+mon ordinateur bon ça va me générer
+une erreur à la fin comme le voyez ta ça
+il ne veut pas parce que j'ai déjà vu je
+pense que ça va aller jusque à la fin
+une fois que vous avez terminé de
+d'installer le logiciel
+placez dans la corbeille il suffit juste
+d'aller rechercher parmi vos logiciels
+installés anaconda Navigator ok on va
+cliquer sur anaconda Navigator on attend
+que ça ouvre ça prend aussi quelques
+secondes pour s'ouvrir et là normalement
+ça va s'ouvrir ok l'intéresse dans la
+Kunda ressemble à ceci ce qui va vous
+intéresser dans cet interview pour
+pouvoir causer un python c'est ceci le
+Jupiter notebook dont je vous parlais
+parce que Jupiter franchement moi j'aime
+bien Jupiter parce que je peux commenter
+mes coudes et j'ai également
+la possibilité de voir les résultats et
+aussi air studio sur Jupiter mais moi
+personnellement je n'utilise pas ça
+j'installe un studio directement sur mon
+ordinateur donc pour lancer Jupiter on
+clique juste ici c'est assez intuitif
+comme je le disais tac ça va prendre
+quelques secondes il y a une nouvelle
+page ici qui va s'ouvrir voici quand
+Jupiter un autre bourse souffre ça
+ressemble à ceci pour pouvoir créer un
+nouveau note donc c'est assez simple on
+va la suivre
+Python 3 on crée un nouveau notebook
+voici le notebook on peut renommer ici
+en fait vous cliquez là vous faites on
+va te donner le nom c'est parce que moi
+quoi challenge challenge ml joue ou deux
+parce que nous sommes au niveau du jour
+de notre challenge au bonhomme pour
+coder en fait c'est très simple
+imaginons je vais créer un code qui j'ai
+un code basique qui calcule 1 + 1 donc
+il va fêter à une variable a la valeur 1
++ 1
+les fonctions de Python je vais juste un
+prime prêt et vous voyez ça m'affiche a
+j'ai fait le code j'ai mon résultat et
+ce qui est sauvegardé en fait si je
+ferme le notebook je reviens le résultat
+sera toujours afficher
+l'un des avantages d'une autre book
+comme je le disais c'est de faire la
+documentation et pour faire la
+documentation ici vous voyez là c'est
+sur cette nouvelle entrée c'est code
+pour pouvoir faire la documentation il
+faut plutôt cliquer ICI sur Mac down
+lorsque c'est ma down je peux pas créer
+un nouveau tigre un truc ceci est un
+tigre OK et toujours j'exécute ici
+exécuté j'ai pas besoin de tigre de
+nouveau de jumelles ceci est un tigre de
+niveau 2
+exécuter vous pouvez ajouter
+un camp en fait parce que on appelle ça
+tient pour pouvoir acheter cette chaîne
+il suffit
+et là je retransforme en côte je peux
+voilà c'est ce qu'on fait les
+commentaires dans le côté ça on met
+juste le dire ok maintenant je vais
+exécuter ce que vous êtes surpris par ce
+qui se passe comme le constater en fait
+sur ma chaîne youtube sois 65 personnes
+des utilisateurs qui regardent mes
+vidéos le son pas abonné c'est un
+scandale les gars s'il vous plaît
+abonnez-vous abonnez-vous abonnez-vous
+allez-y de ce challenge j'aimerais que
+on équilibre les choses il faut que 40%
+des personnes qui regardent mes vidéos
+ne sont pas vidéos 65 c'est énorme et
+c'est un peu de monter vers 50% vous
+voyez seulement 35 peut être pour cent
+des personnes qui regardent mes vidéos
+sont abonnés à la chaîne les gars
+abonnez-vous likez partagez commentez
+donc voilà à peu près c'est quoi
+anaconda pardon Jupiter on aura
+l'occasion durant toute ce challenge de
+l'explorer pour pouvoir faire nos
+travaux en tant que dans le machine
+learning voilà ce que j'avais à partager
+avec vous aujourd'hui abonnez-vous à la
+chaîne mettez moi de gros pouce bleu
+partagez commentez faites tout ce que
+vous voulez nous on se dit à demain pour
+la suite de notre challenge bye
+[Musique]
