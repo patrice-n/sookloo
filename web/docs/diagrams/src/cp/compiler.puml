@@ -1,0 +1,21 @@
+@startuml Fonctionnement standard d'un compilateur
+
+(*) --> "Code source"
+partition Phases #LightSkyBlue {
+"Code source" --> "Scanneur"
+-->[Tokens] "Analyseur"
+-->[Arbre de syntaxe] "Analyseur Semantique"
+-->[Arbre attribué] "Optimiseur"
+-->[Code intermédiaire] "Générateur de code"
+}
+"Générateur de code" --> "Code cible"
+--> (*)
+
+partition "Ressources" #LightSkyBlue {
+  "Table des symboles" --> "Tableau litéral"
+  --> "Gestionnaire d'erreurs"
+}
+
+Phases -[#Blue,dotted,thickness=6]-> Ressources
+Ressources -[#Blue,dotted,thickness=6]-> Phases
+@enduml

@@ -1,0 +1,6 @@
+{% extends "partials/page-base.html" %}
+
+{%- block after_markdown_content %}
+{% include "partials/comments.html" %}
+{{ super() }}
+{%- endblock after_markdown_content %}
