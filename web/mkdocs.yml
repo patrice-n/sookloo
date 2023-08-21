@@ -1,7 +1,7 @@
 site_name: Sookloo
 site_url: https://sookloo.info/
 theme: 
-  name: terminal
+  name: material
   custom_dir: overrides
   features:
     - footer.prev_next
