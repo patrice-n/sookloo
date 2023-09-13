@@ -12,3 +12,6 @@ Il s'agit en effet d'un programme informatique qui transforme le code écrit par
 Un langage compilé est donc un langage dont l'exécution passe par la compilation. Le langage C++ est un langage compilé.
 
 ## Le langage C++
+
+Le langage C++ est basé sur le langage C qui est l'un des langages les plus performants en terme de vitesse à l'exécution car plus proche de la machine. Ce langage possède toute la puissance du langage C avec en plus la programmation orientée objet, le typage fort, la programmation générique, la programmation fonctionnelle et bien d'autres avantages. Il est utilisé partout pour de grands programmes informatiques. Des exemples notables sont: Le coeur Linux, Python, PHP, Perl, C#, Google search engine/Chrome/MapReduce/etc, Firefox, MySQL, Microsoft Windows/Office, Adobe Photoshop/Acrobat/InDesign/etc, beaucoup de logiciels de finance/trading, Starcraft, World of Warcraft, EA games, Doom engine et beaucoup d'autres encore.
+

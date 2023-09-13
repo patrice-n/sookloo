@@ -1,2 +1,6 @@
 /skenv/
 /web/site/
+/mlslfenv/
+.DS_Store
+/web/.DS_Store
+/web/docs/.DS_Store
