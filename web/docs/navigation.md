@@ -14,6 +14,7 @@
         - [Compilateur](cp/tools/compiler.md)
         - [Interprète ou Interprèteur](cp/tools/interpreter.md)
     - Langages de programmation
+        - [Bases du C](cp/programming-lang/c.md)
         - [Bases du C++](cp/programming-lang/cpp.md)
         - [Bases de Python](cp/programming-lang/python.md)
 - Mathématiques pour le Machine Learning
