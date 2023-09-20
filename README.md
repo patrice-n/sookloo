@@ -14,11 +14,13 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 
 * `Mathematiques pour machine learning` - Notions en mathématiques (algèbre, analyse, probabilité, statistiques)
 * `Machine learning` - Algorithmes de machine learning
-* `Code de Machine Learning` - Code des algorithmes de machine learning 
+* `Code de Machine Learning` - Code des algorithmes de machine learning
 
 ## Articles
 
 ## Les mis-à-jours
-- 15 Aout, 2023: Ajout du premier contenu au site [Le compilateur](https://sookloo.info/cp/tools/compiler)
-- 21 Aout, 2023: Ajout de la section contribuer au site [Contribuer](https://sookloo.info/support)
-- 13 Septembre, 2023: Ajout du contenu relatif au [langage C](https://sookloo.info/cp/programming-lang/c)
+
+* 15 Aout, 2023: Ajout du premier contenu au site [Le compilateur](https://sookloo.info/cp/tools/compiler)
+* 21 Aout, 2023: Ajout de la section contribuer au site [Contribuer](https://sookloo.info/support)
+* 13 Septembre, 2023: Ajout du contenu relatif au [langage C](https://sookloo.info/cp/programming-lang/c)
+* 20 Septembre, 2023: Ajout complément contenu relatif au [langage C](https://sookloo.info/cp/programming-lang/c)

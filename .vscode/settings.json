@@ -1,0 +1,11 @@
+{
+    "editor.someSetting": true,
+    "editor.anotherSetting": false,
+    "editor.onemoreSetting": true,
+
+    "markdownlint.config": {
+        "MD033": {
+            "allowed_elements": [ "span" ]
+        }
+    }
+}
