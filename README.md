@@ -24,3 +24,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 21 Aout, 2023: Ajout de la section contribuer au site [Contribuer](https://sookloo.info/support)
 * 13 Septembre, 2023: Ajout du contenu relatif au [langage C](https://sookloo.info/cp/programming-lang/c)
 * 20 Septembre, 2023: Ajout complément contenu relatif au [langage C](https://sookloo.info/cp/programming-lang/c)
+* 27 Septembre, 2023: Ajout exercice relatif au [langage C](https://sookloo.info/cp/programming-lang/action-c)
