@@ -4,7 +4,7 @@ comments: true
 
 # <span style="color:#074b83">Exercices d'application - langage C</span>
 
-## <span style="color:#0a69b7">Problème 1: Les nombres décimaux</span>
+## <span style="color:#0a69b7">Les nombres décimaux</span>
 
 Dans ce problème, nous allons investiguer comment les nombres décimaux sont représentés dans la mémoire. Il faudrait se rappeler qu'un float est une valeur de $32$ bits avec un bit encodant le signe, huits bits pour l'exposant et $23$ bits pour la mantisse. Plus précisement, un nombre décimal $x$ avec le bit du signe $'sign'$, d'exposant $e$ et de bits de mantisse $m_{0}, m_{1}, ..., m_{22}$ peut être écrit[^1]:
 [^1]: A l'exception du cas où $x$ est un nombre décimal dénormalisé (denormal floating point) auquel cas l'exposant (sans biais) est $-126$ et la mantisse est écrite $0.m_{22}m_{21}m_{20}...m_{0}$
@@ -58,7 +58,7 @@ Lignes $1, ..., N+1$: Ligne $i$ contient une représentation du nombre décimal 
 -1.11O1O1O1O1OO1111111OOOO * 2^2
 ```
 
-## <span style="color:#0a69b7">Exemple de solution au Problème 1</span>
+## <span style="color:#0a69b7">Exemple de solution au Problème</span>
 
 ```c
 /*
