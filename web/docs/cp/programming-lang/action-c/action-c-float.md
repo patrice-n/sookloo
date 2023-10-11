@@ -6,7 +6,7 @@ comments: true
 
 ## <span style="color:#0a69b7">Les nombres décimaux</span>
 
-Dans ce problème, nous allons investiguer comment les nombres décimaux sont représentés dans la mémoire. Il faudrait se rappeler qu'un float est une valeur de $32$ bits avec un bit encodant le signe, huits bits pour l'exposant et $23$ bits pour la mantisse. Plus précisement, un nombre décimal $x$ avec le bit du signe $'sign'$, d'exposant $e$ et de bits de mantisse $m_{0}, m_{1}, ..., m_{22}$ peut être écrit[^1]:
+Dans ce problème, nous allons investiguer comment les nombres décimaux sont représentés dans la mémoire. Il faudrait se rappeler qu'un float est une valeur de $32$ bits avec un bit encodant le signe, $8$ bits pour l'exposant et $23$ bits pour la mantisse. Plus précisement, un nombre décimal $x$ avec le bit du signe $'sign'$, d'exposant $e$ et de bits de mantisse $m_{0}, m_{1}, ..., m_{22}$ peut être écrit[^1]:
 [^1]: A l'exception du cas où $x$ est un nombre décimal dénormalisé (denormal floating point) auquel cas l'exposant (sans biais) est $-126$ et la mantisse est écrite $0.m_{22}m_{21}m_{20}...m_{0}$
 
 $$
@@ -15,7 +15,7 @@ $$
 
 où la mantisse est, bien sûr, dans la base deux. Il vous sera donné une liste de $N$ nombres décimaux (floating point) $x_{1}, x_{2}, ..., x_{N}$. Pour chaque $x_{i}$, votre programme devrait écrire sa représentation binaire à la sortie comme indiqué ci-dessous.
 
-Approche suggerée: Vous aurez besoin d'utiliser des opérations sur les bits, mais vous ne pourrez pas faire cela directement sur les nombres décimaux (floating-point). A la place, vous aurez besoin d'un moyen de considéré une variable comme étant soit un $float$ (nombre décimal) ou un $unsigned$ $int$ (entier positif). Nous utiliserons une union, qui est valide dans ce cas car nous supposons que la taille en mémoire de ces types de données est la même.
+**Approche suggerée:** Vous aurez besoin d'utiliser des opérations sur les bits, mais vous ne pourrez pas faire cela directement sur les nombres décimaux (floating-point). A la place, vous aurez besoin d'un moyen de considérer une variable comme étant soit un $float$ (nombre décimal) ou un $unsigned$ $int$ (entier positif). Nous utiliserons une union, qui est valide dans ce cas car nous supposons que la taille en mémoire de ces types de données est la même.
 
 ```c
 union float_bits {
@@ -85,8 +85,8 @@ union float_bits {
 
 void print_float( FILE *output, float f ) {
     union float_bits t; t.f = f;
-    uint32_t sign_bit = ( t.bits » ABSOLUTE_WIDTH );
-    uint32_t exponent = ( t.bits » MANTISSA_WIDTH ) & EXPONENT_MASK;
+    uint32_t sign_bit = ( t.bits >> ABSOLUTE_WIDTH );
+    uint32_t exponent = ( t.bits >> MANTISSA_WIDTH ) & EXPONENT_MASK;
     uint32_t mantissa = ( t.bits  &  MANTISSA_MASK );
 
     if( sign_bit != 0 ) {
