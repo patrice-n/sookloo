@@ -18,6 +18,7 @@
         - Pratique du C
             - [Pratique du C - Nombres décimaux](cp/programming-lang/action-c/action-c-float.md)
             - [Pratique du C - Matrices](cp/programming-lang/action-c/action-c-matrix.md)
+            - [Pratique du C - Grandes matrices](cp/programming-lang/action-c/action-c-big-matrix.md)
         - [Bases du C++](cp/programming-lang/cpp.md)
         - [Bases de Python](cp/programming-lang/python.md)
 - Mathématiques pour le Machine Learning

@@ -78,7 +78,7 @@ Il représente une abstraction du langage de programmation C (et par extension d
 
 ```c
 int a = 5; // L'adresse de la variable a est &a.
-int *a ptr = &a; // Lire les déclarations de droite à gauche, “*a ptr est déclaré comme étant de type entier(int).”
+int *a_ptr = &a; // Lire les déclarations de droite à gauche, “*a ptr est déclaré comme étant de type entier(int).”
 ```
 
 Il est possible d'appliquer l'opérateur & à toute variable nommée qui a une addresse (“lvalue”)
@@ -93,16 +93,18 @@ return &5;
 | &a      | 0x7fff6f641914 | 0x000000000005 |      a      |
 | &a_ptr  | 0x7fff6f641918 | 0x7fff6f641914 |    a_ptr    |
 
-NB: Il s'agit d'un ordinateur de 64-bit, puisque les adresses font plus de $2^32$.
+NB: Il s'agit d'un ordinateur de 64-bit, puisque les adresses font plus de $2^{32}$.
 
 ### <span style="color:#0c87eb">Les types de données en C</span>
 
-Les types de données en C sont, pour le comptage du nombre de bits occupés nous supposons avoir un ordinateur de 64-bits:
+Les types de données en C sont:
 
 * char (8): pour les caractères
 * short (16): pour des indices
 * int (32), long (64), long long (64+): pour les petits entiers jusqu'aux grands entiers
 * float (32), double (64), long double (80): pour les petits nombres décimaux jusqu'aux grands nombres décimaux
+
+Pour le comptage du nombre de bits occupés, nous supposons avoir un ordinateur de 64-bits.
 
 ### <span style="color:#0c87eb">Quelques points notables du C</span>
 
@@ -128,7 +130,7 @@ Suivant l'architecture de la machine, nous avons ces caractéristiques suivantes
 * ARM: sélectionnable
 * SPARC: pile (stack) circulaire
 
-En général, la pile (stack) s'étendra à partir à partir d'une addresse mémoire supérieure alors que le tas (heap) grandi.
+En général, la pile (stack) s'étendra à partir d'une addresse mémoire supérieure alors que le tas (heap) grandi.
 Exemple de valeur de mémoire de type pile (stack) et tas (heap):
 
 | Variable                       |    Addresse    |
