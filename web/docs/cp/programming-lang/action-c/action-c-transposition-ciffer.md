@@ -149,8 +149,8 @@ void encrypt( char *input_str, size_t length ) {
   char *first_part = (char*) malloc(sizeof(char)*half_length);
   char *sec_part = (char*) malloc(sizeof(char)*sechalf_length);
 
-  strncopy(first_part, input_str, half_length);
-  strncopy(sec_part, input_str + half_length, sechalf_length);
+  strncpy(first_part, input_str, half_length);
+  strncpy(sec_part, input_str + half_length, sechalf_length);
 
   // Application de manière recursive de la fonction encrypt à chaque partie
   encrypt(first_part, half_length);
@@ -159,7 +159,7 @@ void encrypt( char *input_str, size_t length ) {
   // Reallocation et concatenation des deux parties
   first_part = (char *) realloc(first_part, sizeof(char)*length);
   strncat(first_part, sec_part, sechalf_length);
-  strncopy(first_part, input_str, length);
+  strncpy(first_part, input_str, length);
 
   free(first_part);
   free(sec_part);
