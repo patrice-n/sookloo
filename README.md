@@ -28,3 +28,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 4 Octobre, 2023: Ajout d'un exercice relatif aux [matrices langage C](https://sookloo.info/cp/programming-lang/action-c/action-c-matrix)
 * 11 Octobre, 2023: Ajout d'un exercice relatif aux [grandes matrices langage C](https://sookloo.info/cp/programming-lang/action-c/action-c-big-matrix)
 * 18 Octobre, 2023: Ajout d'un exercice relatif au [cryptage par transposition en C](https://sookloo.info/cp/programming-lang/action-c/action-c-transposition-ciffer)
+* 25 Octobre, 2023: Ajout du contenu relatif à la programmation [Secure C](https://sookloo.info/cp/programming-lang/secure-c)

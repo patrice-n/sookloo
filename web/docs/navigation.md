@@ -22,6 +22,7 @@
             - [Pratique du C - Chiffrage par transposition](cp/programming-lang/action-c/action-c-transposition-ciffer.md)
         - [Bases du C++](cp/programming-lang/cpp.md)
         - [Bases de Python](cp/programming-lang/python.md)
+        - [Secure C](cp/programming-lang/secure-c.md)
 - Mathématiques pour le Machine Learning
     - Algèbre
         - [Algèbre linéaire](mml/algebra/al.md)
