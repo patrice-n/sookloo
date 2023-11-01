@@ -4,8 +4,8 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 
 ## CS - Informatique
 
-* `Commencer avec C++/Python` - Notions pour commencer en C++ et/ou Python.
-* `Programmation C++/Python` - Code en C++ et/ou Python.
+* `Commencer avec C/C++/Python` - Notions pour commencer en C, C++ et Python.
+* `Programmation C/C++/Python` - Code en C, C++ et Python.
 * `Algorithmique et complexité` - Notions d'algorithmique et de structures de données.
 * `Competitive programming` - Algorithmes pour la préparation aux compétitions et interviews de programmation.
 * `Software and system design` - Notions de design de systèmes informatiques.
@@ -24,8 +24,9 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 21 Aout, 2023: Ajout de la section contribuer au site [Contribuer](https://sookloo.info/support)
 * 13 Septembre, 2023: Ajout du contenu relatif au [langage C](https://sookloo.info/cp/programming-lang/c)
 * 20 Septembre, 2023: Ajout complément contenu relatif au [langage C](https://sookloo.info/cp/programming-lang/c)
-* 27 Septembre, 2023: Ajout exercice relatif aux [nombres décimaux langage C](https://sookloo.info/cp/programming-lang/action-c/action-c-float)
+* 27 Septembre, 2023: Ajout d'un exercice relatif aux [nombres décimaux langage C](https://sookloo.info/cp/programming-lang/action-c/action-c-float)
 * 4 Octobre, 2023: Ajout d'un exercice relatif aux [matrices langage C](https://sookloo.info/cp/programming-lang/action-c/action-c-matrix)
 * 11 Octobre, 2023: Ajout d'un exercice relatif aux [grandes matrices langage C](https://sookloo.info/cp/programming-lang/action-c/action-c-big-matrix)
 * 18 Octobre, 2023: Ajout d'un exercice relatif au [cryptage par transposition en C](https://sookloo.info/cp/programming-lang/action-c/action-c-transposition-ciffer)
 * 25 Octobre, 2023: Ajout du contenu relatif à la programmation [Secure C](https://sookloo.info/cp/programming-lang/secure-c)
+* 1er Novembre, 2023: Ajout du contenu relatif au [langage C++](https://sookloo.info/cp/programming-lang/cpp)
