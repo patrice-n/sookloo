@@ -4,7 +4,7 @@
 - [Contribuer](support.md)
 - Articles
     - 100 Jours ML
-        - [1. ML Explique simplement](articles/100joursml/ml-explique-simple.md)
+        - [1. ML Expliqué simplement](articles/100joursml/ml-explique-simple.md)
     - Dernières trouvailles AI
         - [Large Language Model](articles/news/high-level-llm.md)
     - Outils
@@ -21,6 +21,8 @@
             - [Pratique du C - Grandes matrices](cp/programming-lang/action-c/action-c-big-matrix.md)
             - [Pratique du C - Chiffrage par transposition](cp/programming-lang/action-c/action-c-transposition-ciffer.md)
         - [Bases du C++](cp/programming-lang/cpp.md)
+        - Pratique du C++
+            - [Pratique du C++ - Linked List](cp/programming-lang/action-cpp/action-cpp-linked-list.md)
         - [Bases de Python](cp/programming-lang/python.md)
         - [Secure C](cp/programming-lang/secure-c.md)
 - Mathématiques pour le Machine Learning
