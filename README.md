@@ -30,3 +30,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 18 Octobre, 2023: Ajout d'un exercice relatif au [cryptage par transposition en C](https://sookloo.info/cp/programming-lang/action-c/action-c-transposition-ciffer)
 * 25 Octobre, 2023: Ajout du contenu relatif à la programmation [Secure C](https://sookloo.info/cp/programming-lang/secure-c)
 * 1er Novembre, 2023: Ajout du contenu relatif au [langage C++](https://sookloo.info/cp/programming-lang/cpp)
+* 8 Novembre, 2023: Ajout d'un exercice relatif aux [linked list du C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-linked-list)
