@@ -23,6 +23,7 @@
         - [Bases du C++](cp/programming-lang/cpp.md)
         - Pratique du C++
             - [Pratique du C++ - Linked List](cp/programming-lang/action-cpp/action-cpp-linked-list.md)
+            - [Pratique du C++ - Minimum Spanning Tree](cp/programming-lang/action-cpp/action-cpp-mst.md)
         - [Bases de Python](cp/programming-lang/python.md)
         - [Secure C](cp/programming-lang/secure-c.md)
 - Mathématiques pour le Machine Learning
