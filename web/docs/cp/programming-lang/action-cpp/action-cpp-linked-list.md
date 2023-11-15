@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# <span style="color:#074b83">Exercices d'application - langage C</span>
+# <span style="color:#074b83">Exercices d'application - langage C++</span>
 
 ## <span style="color:#0a69b7">Librairie Linked List (list)</span>
 
