@@ -6,13 +6,13 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 
 * `Commencer avec C/C++/Python` - Notions pour commencer en C, C++ et Python.
 * `Programmation C/C++/Python` - Code en C, C++ et Python.
-* `Algorithmique et complexité` - Notions d'algorithmique et de structures de données.
+* `Algorithmique et complexité` - Notions d'algorithmique de complexité et de structures de données.
 * `Competitive programming` - Algorithmes pour la préparation aux compétitions et interviews de programmation.
 * `Software and system design` - Notions de design de systèmes informatiques.
 
 ## ML - Machine Learning
 
-* `Mathematiques pour machine learning` - Notions en mathématiques (algèbre, analyse, probabilité, statistiques)
+* `Mathématiques pour machine learning` - Notions en mathématiques pour le machine learning (algèbre, analyse, optimisation, probabilité et statistiques)
 * `Machine learning` - Algorithmes de machine learning
 * `Code de Machine Learning` - Code des algorithmes de machine learning
 
@@ -30,5 +30,6 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 18 Octobre, 2023: Ajout d'un exercice relatif au [cryptage par transposition en C](https://sookloo.info/cp/programming-lang/action-c/action-c-transposition-ciffer)
 * 25 Octobre, 2023: Ajout du contenu relatif à la programmation [Secure C](https://sookloo.info/cp/programming-lang/secure-c)
 * 1er Novembre, 2023: Ajout du contenu relatif au [langage C++](https://sookloo.info/cp/programming-lang/cpp)
-* 8 Novembre, 2023: Ajout d'un exercice relatif aux [linked list du C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-linked-list)
-* 15 Novembre, 2023: Ajout d'un exercice relatif aux [minimum spanning tree du C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-mst)
+* 8 Novembre, 2023: Ajout d'un exercice relatif aux [linked list C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-linked-list)
+* 15 Novembre, 2023: Ajout d'un exercice relatif à [l'arbre couvrant minimal du C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-mst)
+* 23 Novembre, 2023: Ajout d'un exercice relatif à une [librairie de nombres rationnels en C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-rational-nb-lib) et de contenu relatif à [l'algèbre linéaire](https://sookloo.info/mml/algebra/al)
