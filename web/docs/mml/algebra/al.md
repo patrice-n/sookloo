@@ -28,7 +28,7 @@ a_{n}\end{array}\right] \in \mathbb{R}^{n}$$
 
 En additionnant deux vecteurs $a, b \in \mathbb{R}^{n}$ composant par composant, cela donne: $a + b = c \in \mathbb{R}^{n}$. De plus, en multipliant un vecteur $a \in \mathbb{R}^{n}$ par $\lambda \in \mathbb{R}$, cela donne un vecteur $\lambda a \in \mathbb{R}^{n}$.
 
-L'on pourrait se poser la question de savoir ce qu'il advient si l'on commence avec un petit nombre de vecteurs puis les additionne un à un ou les multiplie par des nombres réels. En effet, l'on forme un espace dans lequel tout élément est la combinaison linéaire de ce petit nombre de vecteurs. Ce espace est appélé __espace vectoriel__. Lorsque l'ensemble des vecteurs de départ est fini on parle d'espace vectoriel de dimension finie. Il peut être montré que tout espace vectoriel de dimension finie $n$ est équivalent à $\mathbb{R}^{n}$.
+On pourrait se poser la question de savoir ce qu'il advient si l'on commence avec un petit nombre de vecteurs puis les additionne un à un ou les multiplie par des nombres réels. En effet, l'on forme un espace dans lequel tout élément est la combinaison linéaire de ce petit nombre de vecteurs. Cet espace est appélé __espace vectoriel__. Lorsque l'ensemble des vecteurs de départ est fini, on parle d'espace vectoriel de dimension finie. Il peut être montré que tout espace vectoriel de dimension finie $n$ est équivalent à $\mathbb{R}^{n}$.
 
 Pour une définition plus rigoureuse des notions d'espace vectoriel, de dimension d'un espace vectoriel ainsi que pour la preuve de l'assertion et de la notion d'équivalence entre espaces vectorielles, se reférer à la bibliographie ci-dessous. Des exemples d'espaces vectoriels sont:
 
@@ -58,10 +58,10 @@ Nous considérons par la suite un vecteur comme un élément de $\mathbb{R}^{n}$
 
 ### <span style="color:#0c87eb">Les matrices</span>
 
-Une matrice est un objet qui peut être representé comme un tableau à deux dimensions. Ainsi, l'on peut représenter une matrice de nombres réelles comme ci-dessous:
+Une matrice est un objet qui peut être representé comme un tableau à deux dimensions. Ainsi, l'on peut représenter une matrice de nombres réels comme ci-dessous:
 
 $$ A = \left[\begin{array}{ccccc}
-a_{11} & a_{11} & ... & a_{1n}\\
+a_{11} & a_{12} & ... & a_{1n}\\
 a_{21} & a_{22} & ... & a_{2n}\\
 . & . &  & .\\
 . & . &  & .\\
@@ -216,27 +216,27 @@ b_{n1} & b_{n2} & ... & b_{np}\end{array}\right] = \left[\begin{array}{ccccc}
 
 * __Norme de vecteur__: Il existe plusieurs définitions de normes de vecteurs. La définition la plus simple est la racine carrée du produit scalaire d'un vecteur par lui-même, il s'agit de la norme euclidienne.
 
-$$\|u\| = \sqrt{\langle u, u \rangle} = (\sum_{i=1}^{n}u_{i}^{2})^{1/2}$$
+$$\|u\|_{2} = \sqrt{\langle u, u \rangle} = (\sum_{i=1}^{n}u_{i}^{2})^{1/2}$$
 
 ### <span style="color:#0c87eb">Indépendance, orthogonalité et projection de vecteurs</span>
 
-* __Indépendance de vecteurs__: Des vecteurs $\vec{u}_{1}, ..., \vec{u}_{n}$ sont indépendants s'il n'est pas possible d'écrire l'un quelconque comme étant la combinaison linéaire des autres vecteurs, c'est-à-dire qu'un vecteur quelconque ne peut être écrit comme étant une somme des autres, chacun multiplié par un scalaire. Dans le cas où les vecteurs sont indépendants, on dit qu'ils forment une base de l'espace vectoriel formé par leur combinaison linéaire. Dans le cas contraire, on dit que les vecteurs $\vec{u}_{1}, ..., \vec{u}_{n}$ sont dépendants les uns des autres et on peut écrire tout vecteur $u_{j}, j \in {1, ..., n}$ de l'ensemble comme:
+* __Indépendance de vecteurs__: Des vecteurs $\vec{u}_{1}, ..., \vec{u}_{n}$ sont __indépendants__ s'il n'est pas possible d'écrire l'un quelconque comme étant la __combinaison linéaire__ des autres vecteurs, c'est-à-dire qu'un vecteur quelconque ne peut être écrit comme étant une somme des autres, chacun multiplié par un scalaire. Dans le cas où les vecteurs sont indépendants, on dit qu'ils forment une __base de l'espace vectoriel__ formé par leur combinaison linéaire. Dans le cas contraire, on dit que les vecteurs $\vec{u}_{1}, ..., \vec{u}_{n}$ sont __dépendants__ les uns des autres et on peut écrire tout vecteur $\vec{u_{j}}, j \in {1, ..., n}$ de l'ensemble comme:
 
-$$ \vec{u}_{j} = \sum_{i=1, i \neq j}^{n}\lambda_{i}\vec{u}_{i} $$
+$$ \vec{u}_{j} = \sum_{i=1, i \neq j}^{n}\lambda_{i}\vec{u}_{i}, \lambda_{i} \in \mathbb{R}, i \in \{1, ..., n\} - \{j\}$$
 
 * __Orthogonalité de vecteurs__: Après avoir défini la notion de produit scalaire de vecteurs, comme celle ci-dessus, notée par $\langle,\rangle$, deux vecteurs $\vec{u}$ et $\vec{v}$ sont dits orthogonaux si leur produit scalaire est nul c'est-à-dire:
 
 $$\langle\vec{u},\vec{v}\rangle = 0$$
 
-* __Projection de vecteurs sur un espace vectoriel__: Pour $V$ un espace vectoriel et $U$ un sous-espace vectoriel de dimension finie de base $(u_{1}, ..., u_{n})$, tout vecteur $v$ dans $V$ admet une projection sur l'espace vectoriel $U$ qui peut s'écrire comme:
+* __Projection de vecteurs sur un espace vectoriel__: Pour $V$ un espace vectoriel et $U$ un sous-espace vectoriel de dimension finie de base $(\vec{u_{1}}, ..., \vec{u_{n}})$, tout vecteur $\vec{v}$ dans $V$ admet une projection sur l'espace vectoriel $U$ qui peut s'écrire comme:
 
-$$ proj(v) = \sum_{i=1}^{n} \langle v, u_{i}\rangle u_{i} $$
+$$ proj(\vec{v}) = \sum_{i=1}^{n} \langle \vec{v}, \vec{u_{i}}\rangle \vec{u_{i}} $$
 
 ### <span style="color:#0c87eb">Déterminant, trace et rang d'une matrice</span>
 
-* __Rang d'une matrice__: En considérant l'ensemble formé par les colonnes d'une matrice $A \in \mathbb{R}^{n \times m}$, nous pouvons dire que son rang est le nombre maximum de colonnes indépendantes. Ce nombre est inférieur aux nombres de colonnes $m$ et est souvent noté $rg(A)$ ou $rk(A)$ dans la notation anglosaxonne.
+* __Rang d'une matrice__: En considérant l'ensemble formé par les colonnes d'une matrice $A \in \mathbb{R}^{n \times m}$, nous pouvons dire que son rang est le nombre maximum de colonnes indépendantes. Ce nombre est inférieur aux nombres de colonnes $m$ et est souvent noté $rg(A)$ ou $rk(A)$ en notation anglosaxonne.
 
-* __Déterminant d'une matrice__: Le déterminant d'une matrice carrée $A \in \mathbb{R}^{n}$, noté $det(A)$ est le volume à un signe près du parallelepipède formé par les colonnes de la matrice $A$. Pour une matrice dont les éléments au dessus ou en dessous de la diagonale sont nulles, le déterminant est égal au produit des éléments de sa diagonale.
+* __Déterminant d'une matrice__: Le déterminant d'une matrice carrée $A \in \mathbb{R}^{n \times n}$, noté $det(A)$ est le volume à un signe près du parallelepipède formé par les colonnes de la matrice $A$. Pour une matrice dont les éléments au dessus ou en dessous de la diagonale sont nuls, le déterminant est égal au produit des éléments de sa diagonale.
 
 * __Trace d'une matrice__: La trace d'une matrice carrée (le nombre de lignes est égal au nombre de colonnes) $A \in \mathbb{R}^{n \times n}$ est la somme de ses éléments diagonaux, soit:
 
@@ -268,16 +268,16 @@ Pour plus de détail sur les tenseurs mathématiques, consulté l'article [wikip
 
 Un système d'équations linéaires s'écrit de manière générale:
 
-$$\left[\begin{array}{c}
+$$\begin{array}{c}
 a_{11}x_{1} + ... + a_{1n}x_{n} = b_{1}\\
 .\\
 .\\
 .\\
-a_{m1}x_{1} + ... + a_{mn}x_{n} = b_{m}\end{array}\right]$$
+a_{m1}x_{1} + ... + a_{mn}x_{n} = b_{m}\end{array}$$
 
 où $a_{ij} \in \mathbb{R}$ et $b_{i} \in \mathbb{R}$ sont des constantes et $x_{j}$ sont inconnues pour $i \in {1, ..., m}$ et $j \in {1, ..., n}$.
 
-Ce système d'équations est équivalent à trouver le vecteur inconnue $\vec{x}$, tel que $A \vec{x} = \vec{b}$, avec:
+Ce système d'équations est équivalent à trouver le vecteur d'inconnus $\vec{x}$, tel que $A \vec{x} = \vec{b}$, avec:
 
 $$A = \left[\begin{array}{ccccc}
 a_{11} & a_{12} & ... & a_{1n}\\
@@ -323,7 +323,7 @@ $$L = \{ x_{0} + u: u \in U\}$$
 
 Un hyperplan sur un espace vectoriel (ou espace affine) de dimension $n$ est un sous-espace (ou sous-espace affine) de dimension $n - 1$.
 
-La notion d'hyperplan est utilisée en machine learning dans certains algorithmes qui demande de la projection d'un vecteur sur un espace donné.
+La notion d'hyperplan est utilisée en machine learning dans certains algorithmes qui nécessitent la projection de vecteurs sur un espace donné.
 Quelques uns de ces algorithmes sont le Support Vector Machine (SVM) et l'Analyse en Composantes Principales (ACP).
 
 ### <span style="color:#0c87eb">Fonctions linéaires entre espaces vectoriels</span>
