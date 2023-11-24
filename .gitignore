@@ -4,3 +4,8 @@
 .DS_Store
 /web/.DS_Store
 /web/docs/.DS_Store
+/web/tests/
+.vscode/
+/web/cp/.DS_Store
+/web/docs/diagrams/.DS_Store
+/web/docs/cp/programming-lang/.DS_Store
