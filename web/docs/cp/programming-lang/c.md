@@ -126,7 +126,7 @@ Deux types de modèles mémoire sont à distinguer:
 
 Suivant l'architecture de la machine, nous avons ces caractéristiques suivantes:
 
-* x86/x86_64: La pile (stack) s'étendre
+* x86/x86_64: La pile (stack) s'étend
 * ARM: sélectionnable
 * SPARC: pile (stack) circulaire
 

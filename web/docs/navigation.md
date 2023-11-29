@@ -20,13 +20,13 @@
             - [Pratique du C - Matrices](cp/programming-lang/action-c/action-c-matrix.md)
             - [Pratique du C - Grandes matrices](cp/programming-lang/action-c/action-c-big-matrix.md)
             - [Pratique du C - Chiffrage par transposition](cp/programming-lang/action-c/action-c-transposition-ciffer.md)
+            - [Pratique du C - Linked List](cp/programming-lang/action-c/action-c-linked-list.md)
         - [Bases du C++](cp/programming-lang/cpp.md)
         - Pratique du C++
-            - [Pratique du C++ - Linked List](cp/programming-lang/action-cpp/action-cpp-linked-list.md)
             - [Pratique du C++ - Minimum Spanning Tree](cp/programming-lang/action-cpp/action-cpp-mst.md)
             - [Pratique du C++ - Rational Number Library](cp/programming-lang/action-cpp/action-cpp-rational-nb-lib.md)
         - [Bases de Python](cp/programming-lang/python.md)
         - [Secure C](cp/programming-lang/secure-c.md)
 - Mathématiques pour le Machine Learning
     - Algèbre
-        - [Algèbre linéaire](mml/algebra/al.md)
+        - [Algèbre linéaire](mml/algebra-analysis/al.md)

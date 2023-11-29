@@ -230,7 +230,7 @@ $$\langle\vec{u},\vec{v}\rangle = 0$$
 
 * __Projection de vecteurs sur un espace vectoriel__: Pour $V$ un espace vectoriel et $U$ un sous-espace vectoriel de dimension finie de base $(\vec{u_{1}}, ..., \vec{u_{n}})$, tout vecteur $\vec{v}$ dans $V$ admet une projection sur l'espace vectoriel $U$ qui peut s'écrire comme:
 
-$$ proj(\vec{v}) = \sum_{i=1}^{n} \langle \vec{v}, \vec{u_{i}}\rangle \vec{u_{i}} $$
+$$ \pi_{U}(\vec{v}) = \sum_{i=1}^{n} \langle \vec{v}, \vec{u_{i}}\rangle \vec{u_{i}} $$
 
 ### <span style="color:#0c87eb">Déterminant, trace et rang d'une matrice</span>
 
@@ -345,3 +345,4 @@ $$\forall x, y \in V, \forall \lambda, \psi \in \mathbb{R}: \Phi(\lambda x + \ps
 * Wikipedia, Tensor (intrinsic definition), [https://en.wikipedia.org/wiki/Tensor_(intrinsic_definition)](https://wikipedia.org/wiki/Tensor_(intrinsic_definition)), consulté le 22/11/2023.
 * Wikipedia, Hyperplane, [https://en.wikipedia.org/wiki/Hyperplane](https://en.wikipedia.org/wiki/Hyperplane), consulté le 23/11/2023.
 * François Fleuret, [Deep Learning Course](https://fleuret.org/dlc/), consulté le 23/11/2023.
+* Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 28/11/2023.
