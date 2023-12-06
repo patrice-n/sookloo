@@ -34,3 +34,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 15 Novembre, 2023: Ajout d'un exercice relatif à [l'arbre couvrant minimal du C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-mst)
 * 23 Novembre, 2023: Ajout d'un exercice relatif à une [librairie de nombres rationnels en C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-rational-nb-lib) et de contenu relatif à [l'algèbre linéaire](https://sookloo.info/mml/algebra-analysis/al)
 * 29 Novembre, 2023: Ajout de contenu relatif à la librairie standard du [langage C++](https://sookloo.info/cp/programming-lang/cpp)
+* 6 Décembre, 2023: Ajout d'un exercice relatif aux [linked list C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-linked-list)
