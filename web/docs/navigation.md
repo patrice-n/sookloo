@@ -3,8 +3,8 @@
 - [Navigation](navigation.md)
 - [Contribuer](support.md)
 - Articles
-    - 100 Jours ML
-        - [1. ML Expliqué simplement](articles/100joursml/ml-explique-simple.md)
+    - Machine Learning
+        - [ML Expliqué simplement](articles/ml/ml-explique-simple.md)
     - Dernières trouvailles AI
         - [Large Language Model](articles/news/high-level-llm.md)
     - Outils
