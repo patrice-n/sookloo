@@ -29,5 +29,6 @@
         - [Bases de Python](cp/programming-lang/python.md)
         - [Secure C](cp/programming-lang/secure-c.md)
 - Mathématiques pour le Machine Learning
-    - Algèbre
+    - Algèbre et Analyse
         - [Algèbre linéaire](mml/algebra-analysis/al.md)
+        - [Calcul différentiel](mml/algebra-analysis/diff-calculus.md)
