@@ -36,3 +36,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 29 Novembre, 2023: Ajout de contenu relatif à la librairie standard du [langage C++](https://sookloo.info/cp/programming-lang/cpp)
 * 6 Décembre, 2023: Ajout d'un exercice relatif aux [linked list C++](https://sookloo.info/cp/programming-lang/action-cpp/action-cpp-linked-list)
 * 14 Décembre, 2023: Ajout du contenu relatif au [calcul différentiel](https://sookloo.info/mml/algebra-analysis/diff-calculus)
+* 18 Décembre, 2023: Ajout du contenu relatif au [l'apprentissage par renforcement](https://sookloo.info/rl/intro-rl)
