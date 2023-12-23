@@ -34,4 +34,4 @@
         - [Calcul différentiel](mml/algebra-analysis/diff-calculus.md)
 - Machine learning
     - Apprentissage par renforcement
-        - [Intro RL](rl/intro-rl.md)
+        - [Introduction RL](rl/intro-rl.md)
