@@ -280,7 +280,7 @@ $$ \frac{\partial L}{\partial \theta_{K-1}} = \frac{\partial L}{\partial f_{K}} 
 La back-propagation est un cas particulier de la différentiation automatique qui peut être basée sur l'utilisation d'un graphe de calcul.
 Ci-dessous vous trouverez un exemple de graphe de calcul de la fonction:
 
-$$f(x) = \sqrt(x^{2} + exp(x^{2})) + cos(x^{2} + exp(x^{2})$$
+$$f(x) = \sqrt{x^{2} + exp(x^{2})} + cos(x^{2} + exp(x^{2})$$
 
 ![file](../../diagrams/out/algebra-analysis/comp-graph.png "Graphe de calcul")
 
