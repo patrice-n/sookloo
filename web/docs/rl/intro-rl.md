@@ -10,7 +10,7 @@ comments: true
 
 __L'apprentissage par renforcement__ fait partie de la science des décisions (decision sciences) dont le but est d'optimiser la manière dont les gens prennent des décisions. De plus, l'apprentissage par renforcement est à la croisée de l'ingénierie, de l'informatique, de la neuroscience, de la psychologie, de l'économie et des mathématiques.
 
-L'un des exemples en neuroscience est l'étude du système de récompenses (reward system) du cerveau humain via la libération de la dopamine (comme récompense).
+L'un des exemples en neuroscience est l'étude du système de récompenses (reward system) du cerveau humain via la libération de la dopamine (comme récompense). Cette page ainsi que les images sont entièrement extraits du cours d'[introduction à l'apprentissage par renforcement](https://www.davidsilver.uk/teaching/) de David Silver.
 
 ### <span style="color:#0c87eb"> Caractéristiques </span>
 
@@ -261,6 +261,7 @@ __Model Based__:
 ### <span style="color:#0c87eb"> Apprentissage et plannification (Learning and Planning) </span>
 
 Deux problèmes fondamentaux dans la prise de décision séquentielle
+
 __L'apprentissage par renforcement (Reinforcement Learning):__
 
 + L'environnement est initiallement inconnu
