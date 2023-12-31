@@ -287,8 +287,8 @@ $$f(x) = \sqrt(x^{2} + exp(x^{2})) + cos(x^{2} + exp(x^{2})$$
 ## <span style="color:#074b83">Bibliographie</span>
 
 * Gilbert Strang, Introduction to Linear Algebra, Sixth Edition, Addison-Wesley Professional, 2023.
-* MIT OCW, Calculus Online Textbook, [https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/](https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/), consulté le 30/12/2023.
+* MIT OCW, Calculus Online Textbook, [https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/](https://ocw.mit.edu/courses/res-18-001-calculus-fall-2023/), consulté le 31/12/2023.
 * Ian Goodfellow, Yoshua Bengio and Aaron Courville, [Deep Learning](https://www.deeplearningbook.org), MIT Press, 2016.
-* François Fleuret, [Deep Learning Course](https://fleuret.org/dlc/), consulté le 30/12/2023.
-* Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, [Mathematics for Machine Learning](https://mml-book.com), Cambridge University Press, 2020, consulté le 30/12/2023..
-* Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 30/12/2023.
+* François Fleuret, [Deep Learning Course](https://fleuret.org/dlc/), consulté le 31/12/2023.
+* Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, [Mathematics for Machine Learning](https://mml-book.com), Cambridge University Press, 2020, consulté le 31/12/2023..
+* Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 31/12/2023.
