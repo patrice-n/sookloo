@@ -257,7 +257,7 @@ La back-propagation est une méthodologie utilisée pour le calcul de la dériv�
 
 ### <span style="color:#0c87eb">Back-propagation</span>
 
-Dans un réseau de neuronnes à plusieurs couches, la $i-ème$ couche est caractérisée par des fonctions $f_{i}(x_{i-1}) = \sigma(A_{i-1}x_{i-1} + b_{i-1})$ où $x_{i-1}$ est la sortie de la couche $i-1$ et $sigma$ appelée fonction d'activation.
+Dans un réseau de neuronnes à plusieurs couches, la $i-ème$ couche est caractérisée par des fonctions $f_{i}(x_{i-1}) = \sigma(A_{i-1}x_{i-1} + b_{i-1})$ où $x_{i-1}$ est la sortie de la couche $i-1$ et $\sigma$ appelée fonction d'activation.
 
 ![file](../../diagrams/out/algebra-analysis/back-prop-first.png "Back-propagation")
 
@@ -280,7 +280,7 @@ $$ \frac{\partial L}{\partial \theta_{K-1}} = \frac{\partial L}{\partial f_{K}} 
 La back-propagation est un cas particulier de la différentiation automatique qui peut être basée sur l'utilisation d'un graphe de calcul.
 Ci-dessous vous trouverez un exemple de graphe de calcul de la fonction:
 
-$$f(x) = \sqrt(x^{2} + exp(x^{2})) + cos(x^{2} + exp(x^{2})$$
+$$f(x) = \sqrt{x^{2} + exp(x^{2})} + cos(x^{2} + exp(x^{2})$$
 
 ![file](../../diagrams/out/algebra-analysis/comp-graph.png "Graphe de calcul")
 
