@@ -54,31 +54,31 @@ Un espace métrique est un ensemble $E$ avec une fonction $d: E \times E \righta
 * (Positivité) $d(x,y) \geq 0$ et $d(x, y) = 0$ si et seulement si $x = y$.
 * (Inégalité triangulaire) $d(x, z) \leq d(x, y) + d(y, z)$
 
-__Balle ouverte__:
+__boule ouverte__:
 
 Pour un espace métrique $E$ avec une métrique $d$, pour chaque élément $a \in E$, pour chaque $\rho \in \mathbb{R}$, avec $\rho > 0$, l'ensemble
 
 $$ B(a, \rho) = \{x \in E | d(a, x) < \rho \} $$
 
-est appelé la balle ouverte (open ball) de centre $a$ et de rayon $\rho$.
+est appelé la boule ouverte (open ball) de centre $a$ et de rayon $\rho$.
 
 __Ensemble ouvert, ensemble fermé__:
 
-Soit $(E, d)$ un espace métrique. Un sous-ensemble $U \subseteq E$ est un ensemble ouvert dans $E$ si soit $U = \emptyset$ ou pour chaque $a \in U$, il y a une balle ouverte $B(a, \rho)$ tel que, $B(a, \rho) \subseteq U$. Un sous-ensemble $F \subseteq E$ est fermé dans $E$ si son complémentaire c'est-à-dire $E - F$ est ouvert dans E.
+Soit $(E, d)$ un espace métrique. Un sous-ensemble $U \subseteq E$ est un ensemble ouvert dans $E$ si soit $U = \emptyset$ ou pour chaque $a \in U$, il y a une boule ouverte $B(a, \rho)$ tel que, $B(a, \rho) \subseteq U$. Un sous-ensemble $F \subseteq E$ est fermé dans $E$ si son complémentaire c'est-à-dire $E - F$ est ouvert dans E.
 
 __Espace topologique__:
 
 Soit un ensemble $E$, une topologie sur $E$ (ou structure topologique sur $E$), est définie comme une famille $\mathcal{O}$ de sous-ensembles de $E$ appelés _ensembles ouverts_ (_open sets_), et vérifiant les trois propriétés suivantes:
 
-* Pour chaque famille finie $(U_{i})_{1 \leq i \leq n}$ d'ensembles $U_{i} \in \mathcal{O}$, nous avons $U_{1} \cap ... \cap U_{1} \in \mathcal{O}$, c'est-à-dire, $\mathcal{O}$ est fermé sous les intersections finies.
-* Pour chaque famille finie $(U_{i})_{i \in I}$ d'ensembles $U_{i} \in \mathcal{O}$, nous avons $\cup_{i \in I} U_{i} \in \mathcal{O}$, c'est-à-dire $\mathcal{O}$ est fermé sous union arbitraire.
+* Pour chaque famille finie $(U_{i})_{1 \leq i \leq n}$ d'ensembles $U_{i} \in \mathcal{O}$, nous avons $U_{1} \cap ... \cap U_{n} \in \mathcal{O}$, c'est-à-dire, $\mathcal{O}$ est fermé sous les intersections finies.
+* Pour chaque famille finie $(U_{i})_{i \in I}$ d'ensembles $U_{i} \in \mathcal{O}, i \in I$, nous avons $\cup_{i \in I} U_{i} \in \mathcal{O}$, c'est-à-dire $\mathcal{O}$ est fermé sous union arbitraire.
 * $\emptyset \in \mathcal{O}$, et $E \in \mathcal{O}$, c'est-à-dire, $\emptyset$ et $E$ appartiennent à $\mathcal{O}$.
 
-$(E, \mathcal{O})$ est appelé est un espace topologique.
+$(E, \mathcal{O})$ est appelé espace topologique.
 
 __Voisinage__:
 
-Pour tout espace topologique $(E, \mathcal{O})$, le voisinage d'un point $a \in E$ est défini comme étant tout sous-ensemble $N$ de $E$ contenant un ensemble ouvert $O \in \mathcal{O}$ tel que $a \in O$.
+Pour tout espace topologique $(E, \mathcal{O})$, le voisinage d'un point $a \in E$ est défini comme étant tout sous-ensemble $N$ de $E$ contenant un certain ensemble ouvert $M \in \mathcal{O}$ tel que $a \in M$.
 
 ### <span style="color:#0c87eb">Dérivée de fonction</span>
 
@@ -86,7 +86,7 @@ Pour une fonction $f$ definie sur un sous-ensemble $A$ d'un espace affine normé
 
 __Séquence__:
 
-Pour tout ensemble $E$, une séquence est une fontion $x$ définie de l'espace des entiers naturels ($\mathbb{N}$) vers l'ensemble $E$. On note la séquence $(x_{n})_{n \in \mathbb{N}}$, ou $(x_{n})_{n \geq 0}$.
+Pour tout ensemble $E$, une séquence est une fontion $x$ définie de l'espace des entiers naturels $\mathbb{N}$ vers l'ensemble $E$. On note la séquence $(x_{n})_{n \in \mathbb{N}}$, où $(x_{n})_{n \geq 0}$.
 
 __Limite__:
 
@@ -122,10 +122,13 @@ $$ lim_{h \rightarrow 0, h \in U} \epsilon(h) = 0, $$
 
 Où $U = \{\vec{h} \in \vec{E} | a + \vec{h} \in A, h \neq 0\}$.
 
+Ici, nous avons pris $\mathbb{R}$ et $\mathbb{C}$, mais nous pourrions prendre n'importe quel ensemble sur lequel repose le scalaire utilisé pour effectuer les combinaisons linéaires de l'espace vectoriel $E$. Il est plus intuitif d'utiliser l'ensemble $\mathbb{R}$ par simplicité de compréhension.
+Le lecteur désirant en savoir plus peut se reférer au livre [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html).
+
 ### <span style="color:#0c87eb">Dérivée partielle de fonction</span>
 
 Soit $E$ et $F$ deux espaces affines normés tels que l'espace affine $E$ soit de dimension finie $n$.
-Notons par $(u_{1}, u_{2}, ..., u_{n})$ une base de l'espace vectoriel $\vec{E}$ (qui représente l'espace vectoriel associé à l'espace affine $E$) et $a_{0}$ le point de $E$ tel que tout élément de $E$ s'écrit comme la somme de $a_{0}$ et d'un élément de $\vec{E}$ (d'après la définition de $E$ et de $\vec{E}$). On peut appeler $(a_{0}, (u_{1}, u_{2}, ..., u_{n}))$, le support (frame en anglais) de $E$.
+Notons par $(u_{1}, u_{2}, ..., u_{n})$ une base de l'espace vectoriel $\vec{E}$ (qui représente l'espace vectoriel associé à l'espace affine $E$) et $a_{0}$ le point de $E$ tel que tout élément de $E$ s'écrive comme la somme de $a_{0}$ et d'un élément de $\vec{E}$ (d'après la définition de $E$ et de $\vec{E}$). On peut appeler $(a_{0}, (u_{1}, u_{2}, ..., u_{n}))$, le support (frame en anglais) de $E$.
 
 Ainsi, nous pouvons dire que tout élément $x$ de $E$ s'écrit sous la forme:
 
@@ -166,30 +169,30 @@ Lorsque $m = n$, alors le déterminant de la matrice Jacobienne $J(f)(a)$ de $Df
 
 ### <span style="color:#0c87eb">Quelques propriétés pour le calcul de gradient</span>
 
-Ici la notation est simplifiée; il convient donc de faire attention à la variable par rapport à laquelle la dérivée est calculée.
+Ici, la notation est simplifiée; il convient donc de faire attention à la variable par rapport à laquelle la dérivée est calculée.
 Soit $f$ et $g$ deux fonctions telles que l'ensemble des opérations suivantes de produit, de somme et de composition sont possibles. C'est-à-dire:
 
 * Pour la somme, cela veut dire que les espaces affines de départ et images sont les mêmes pour $f$ et $g$
 * Pour le produit de $f$ par $g$, il est possible de multiplier la fonction $f$ par la fonction $g$
 * Pour la composition, l'image de $f$ est dans l'espace de départ de $g$
 
-__Product rule (règle de produit)__:
+__Dérivée de produit (Product rule)__:
 
 $$\frac{\partial}{\partial \textbf{x}} \left(f(\textbf{x})g(\textbf{x})\right) = \frac{\partial f}{\partial \textbf{x}}g(\textbf{x}) + f(\textbf{x})\frac{\partial g}{\partial \textbf{x}}$$
 
-__Sum rule (règle de somme)__:
+__Dérivée de somme (Sum rule)__:
 
 $$\frac{\partial}{\partial x} \left(f(\textbf{x}) + g(\textbf{x})\right) = \frac{\partial f}{\partial \textbf{x}}(\textbf{x}) + \frac{\partial g}{\partial \textbf{x}}(\textbf{x})$$
 
-__Chain rule (règle de composition)__:
+__Dérivée de composition (Chain rule)__:
 
 $$\frac{\partial}{\partial x} \left(g \circ f\right)(\textbf{x}) = \frac{\partial}{\partial x} \left(g\left(f(\textbf{x})\right)\right) = \frac{\partial g}{\partial f}\frac{\partial f}{\partial \textbf{x}}$$
 
-Lorsqu'on calcule la dérivée par rapport à un vecteur $x \in \mathbb{R}^{n}$ (lorsque $n=1$, il s'agira de dérivée partielle ou de dérivée simple et lorsque $n>1$, il s'agira de gradient), il est important de noter que le gradient prend en compte des vecteurs et des matrices. Et de plus, la multiplication de matrices n'est pas commutative.
+Lorsqu'on calcule la dérivée par rapport à un vecteur $x \in \mathbb{R}^{n}$ (lorsque $n=1$, il s'agira de dérivée partielle ou de dérivée simple et lorsque $n>1$, il s'agira de gradient), il est important de noter que le gradient prend en compte des vecteurs et des matrices. Et de plus, la multiplication de matrices n'est pas commutative. Ces résultats ci-dessus s'appliquent aussi bien lorsque $x$ est un scalaire que lorsque $x$ est un vecteur.
 
 ### <span style="color:#0c87eb">Gradient par rapport à une matrice</span>
 
-Le gradient de matrices par rapport à des vecteurs (ou d'autres matrices) donne un tenseur. Par exemple, si nous calculons le gradient d'une matrice $A$, $m \times n$ par rapport à une matrice $p \times q$ $B$, le résultat serait un tenseur $J$ de dimension $4$, $(m \times n) \times (p \times q)$ dont les éléments sont donnés par $J_{ijkl} = \partial A_{ij}/\partial B_{kl}$.
+Le gradient de matrices par rapport à des vecteurs (ou d'autres matrices) donne un tenseur. Par exemple, si nous calculons le gradient d'une matrice $A$, $m \times n$ par rapport à une matrice $p \times q$, notée $B$, le résultat serait un tenseur $J$ de dimension $4$, $(m \times n) \times (p \times q)$ dont les éléments sont donnés par $J_{ijkl} = \partial A_{ij}/\partial B_{kl}$.
 
 __Exemple 1:__
 
@@ -201,7 +204,7 @@ On a:
 
 $$ \frac{df}{dA} \in \mathbb{R}^{M \times (M \times N)}$$
 
-La dérivée partielle de $f_{i}$ par rapport à une ligne de $A$, est donnée par:
+La dérivée partielle de $f_{i}$ ($i$-ème ligne ou colonne de $f$ selon l'ecriture de $f$) par rapport à une ligne de $A$, est donnée par:
 
 $$ \frac{\partial f_{i}}{\partial A_{i,:}} = \textbf{x}^{T} \in \mathbb{R}^{1 \times 1 \times N}$$
 
@@ -257,13 +260,17 @@ La back-propagation est une méthodologie utilisée pour le calcul de la dériv�
 
 ### <span style="color:#0c87eb">Back-propagation</span>
 
-Dans un réseau de neuronnes à plusieurs couches, la $i-ème$ couche est caractérisée par des fonctions $f_{i}(x_{i-1}) = \sigma(A_{i-1}x_{i-1} + b_{i-1})$ où $x_{i-1}$ est la sortie de la couche $i-1$ et $\sigma$ appelée fonction d'activation.
+Dans un réseau de neuronnes à plusieurs couches (utilisé dans le machine learning et connu sous le nom "deep neural network"), la $i$-ème couche est caractérisée par des fonctions $f_{i}(x_{i-1}) = \sigma(A_{i-1}x_{i-1} + b_{i-1})$ où $x_{i-1}$ est la sortie de la couche $i-1$ et $\sigma$ appelée fonction d'activation.
 
-![file](../../diagrams/out/algebra-analysis/back-prop-first.png "Back-propagation")
+![file](../../diagrams/out/algebra-analysis/back-prop-first.png "Propagation avant (forward-propagation)")
 
-La fonction de perte est définie à la fin du réseau comme étant une fonction $L$ qui dépend de $y$ et de $f_{K}(x)$ (par exemple la fonction $L(\theta) = \|y - f_{K}(\theta, x)\|^{2}$ avec $\theta = \{A_{0}, b_{0}, ..., A_{K-1}, b_{K-1}\}$). Afin de calculer le gradient de la fonction $L$ par rapport au paramètre $\theta$, nous avons besoin de la dérivée partielle de $L$ par rapport aux paramètres $\theta_{j} = \{A_{j}, b_{j}\}$ de chaque couche $j = 0, ..., K-1$.
+La fonction de perte est définie à la fin du réseau comme étant une fonction $L$ qui dépend de $y$ (la valeur réelle) et de $f_{K}(x)$ (la valeur à la sortie de la dernière couche du réseau). Par exemple la fonction:
 
-![file](../../diagrams/out/algebra-analysis/back-prop-sec.png "Back-propagation")
+$$ L(\theta) = \|y - f_{K}(\theta, x)\|^{2}$$
+
+Avec $\theta = \{A_{0}, b_{0}, ..., A_{K-1}, b_{K-1}\}$ est une fonction de perte appelée souvent l'erreur quadratique (quadratique loss). D'autres types de fonctions de pertes pourraient être utilisées. Afin de calculer le gradient de la fonction $L$ par rapport au paramètre $\theta$, nous avons besoin de la dérivée partielle de $L$ par rapport aux paramètres $\theta_{j} = \{A_{j}, b_{j}\}$ de chaque couche $j = 0, ..., K-1$.
+
+![file](../../diagrams/out/algebra-analysis/back-prop-sec.png "Propagation arrière du calcul de gradient (Back-propagation)")
 
 La "chain rule" permet de déterminer les dérivées partielles
 
@@ -273,16 +280,111 @@ $$ \frac{\partial L}{\partial \theta_{K-2}} = \frac{\partial L}{\partial f_{K}} 
 
 $$ \frac{\partial L}{\partial \theta_{K-3}} = \frac{\partial L}{\partial f_{K}} \frac{\partial f_{K}}{\partial f_{K-1}} \frac{\partial f_{K-1}}{\partial f_{K-2}} \frac{\partial f_{K-2}}{\partial \theta_{K-3}} $$
 
-$$ \frac{\partial L}{\partial \theta_{K-1}} = \frac{\partial L}{\partial f_{K}} \frac{\partial f_{K}}{\partial \theta_{K-1}} $$
+$$ \frac{\partial L}{\partial \theta_{i}} = \frac{\partial L}{\partial f_{K}} \frac{\partial f_{K}}{\partial f_{K-1}} ... \frac{\partial f_{i+2}}{\partial f_{i+1}} \frac{\partial f_{i+1}}{\partial \theta_{i}} $$
+
+Ces expressions sont vraies car la fonction $f_{i}$ dépend de $\theta_{i}$ pour tout $i \in \{0, ..., K-1\}$.
 
 ### <span style="color:#0c87eb">Différentiation automatique</span>
 
 La back-propagation est un cas particulier de la différentiation automatique qui peut être basée sur l'utilisation d'un graphe de calcul.
-Ci-dessous vous trouverez un exemple de graphe de calcul de la fonction:
+Il s'agit d'un ensemble de méthodes numériques qui permettent de calculer le gradient d'une fonction en se basant sur une décomposition de la fonction dont la dérivée est à calculer en des fonctions simples de base et appliquant la règle de calcul de la dérivée d'une composée de fonctions (chain rule). Ci-dessous vous trouverez un exemple de graphe de calcul de la fonction:
 
-$$f(x) = \sqrt{x^{2} + exp(x^{2})} + cos(x^{2} + exp(x^{2})$$
+$$f(x) = \sqrt{x^{2} + exp(x^{2})} + cos(x^{2} + exp(x^{2}))$$
 
 ![file](../../diagrams/out/algebra-analysis/comp-graph.png "Graphe de calcul")
+
+Pour plus de détail sur la différentiation automatique, consulté le cours suivant de Justin Domke sur la [différentiation automatique](https://people.cs.umass.edu/~domke/courses/sml2011/08autodiff_nnets.pdf).
+
+Plus formellement, si l'on considère $x_{1}, ..., x_{d}$ les variables d'entrée de la fonction cible à dériver $f$, $x_{d+1}, ..., x_{D-1}$ les variables intermédiaires, et $x_{D}$ la variable de sortie. Ainsi, le graphe de calcul peut être exprimé comme:
+
+Pour $i=d+1, ..., D$:
+
+$$x_{i} = g_{i}(x_{Pa(x_{i})})$$
+
+Où les fonctions $g_{i}(.)$ sont des fonctions élémentaires et $x_{Pa(x_{i})}$ sont les noeuds parents de la variable $x_{i}$ dans le graphe.
+Avec une fonction définie de cette façon, nous pouvons utiliser la règle de la dérivée de composée de fonctions ("chain rule") pour calculer la dérivée de la fonction étape par étape.
+
+Avec $f = x_{D}$ et ainsi
+
+$$ \frac{\partial f}{\partial x_{D}} = 1 $$
+
+Pour $x_{i}$, nous appliquons la règle de la dérivée de composée de fonctions:
+
+$$ \frac{\partial f}{\partial x_{i}} = \sum_{x_{j}: x_{i} \in Pa(x_{j})} \frac{\partial f}{\partial x_{j}}\frac{\partial x_{j}}{\partial x_{i}}$$
+
+## <span style="color:#0a69b7">Autres types de dérivées</span>
+
+Jusque là, nous avons parlé de la dérivée du premier dégré (ou premier ordre) et de certaines dérivées de fonctions qu'on peut rencontrer souvent. Nous allons à présent parler de la dérivée de l'inverse d'une fonction et des dérivées d'ordre supérieure comme la dérivée seconde, et un exemple de leur utilisation.
+
+### <span style="color:#0c87eb">Dérivée d'inverse de fonction</span>
+
+Avant de présenter un résultat sur la dérivée de la fonction inverse, nous allons définir certaines notions ci-dessous.
+
+__Fonction $C^{1}$__:
+Nous pouvons dire qu'une fonction $C^{1}$ est une fonction dérivable dont la dérivée est continue.
+
+Avec deux espaces topologiques $(E, \mathcal{O}_{E})$ et $(F, \mathcal{O}_{F})$, et un sous-ensemble ouvert $A$ de $E$,
+
+__Homéomorphisme__:
+Une fonction $f$ est un homéomorphisme entre $E$ et $F$ si elle est bijective et si $f: E \rightarrow F$ et $f^{-1}: F \rightarrow E$ sont continues.
+
+__Homéomorphisme local__:
+L'on peut dire qu'une fonction $f: A \rightarrow F$ est un homéomorphisme local de $A$ à $F$ si pour tout $a \in A$, il y a un ensemble ouvert $U \subseteq A$ contenant $a$ et un ensemble ouvert $V$ contenant $f(a)$ tel que $f$ est un homéomorphisme de $U$ vers $V = f(U)$. Si $B$ est un sous-ensemble ouvert de $F$, nous disons que $f: A \rightarrow F$ est un homéomorphisme (global) de $A$ à $B$ si $f$ est un homéomorphisme de $A$ à $B = f(A)$.
+
+__Difféomorphisme__:
+Si $E$ et $F$ sont des espaces affines normés, nous pouvons dire que $f: A \rightarrow F$ est un difféomorphisme local de $A$ à $F$ si pour chaque $a \in A$, il y a un ensemble ouvert $U \subseteq A$ contenant $a$ et un ensemble ouvert $V$ contenant $f(a)$ tel que $f$ est une bijection de $U$ à $V$, $f$ est une fonction $C^{1}$ sur $U$, et $f^{-1}$ est fonction $C^{1}$ sur $V = f(U)$. Nous disons que $f: A \rightarrow F$ est un difféomorphisme (global) de $A$ à $B$ si $f$ est un homéomorphisme de $A$ à $B = f(A)$, $f$ est une fonction $C^{1}$ sur $A$, et $f^{-1}$ est une fonction $C^{1}$ sur $B$.
+
+__Isomorphisme__:
+Nous avons déjà défini la notion d'isomorphisme dans la page sur [l'algèbre linéaire](al.md). Pour rappel, une fonction $\Phi: V \rightarrow W$ entre deux espaces vectoriels $V$ et $W$ est un isomorphisme si: $\Phi: V \rightarrow W$ est linéaire et bijective (c'est-à-dire, $\forall x, y \in V$ $\Phi(x) = \Phi(y) \Rightarrow x=y$ et $\Phi(V) = W$)
+
+__Résultat de calcul de la dérivée d'inverse de fonction__:
+Soit $E$ et $F$ deux espaces affines normés "complets" et soit $A$ un sous-ensemble ouvert de $E$, et soit $f: A \rightarrow F$, une fonction $C^{1}$ sur $A$. Nous avons les propriétés suivantes:
+
+1. Pour tout élément $a \in A$, si $Df(a)$ est un isomorphisme linéaire (qui signifie que $DF(a)$ et $(Df(a))^{-1}$ sont linéaires et continues), alors il existe un ensemble ouvert $U \subseteq A$ contenant $a$, et un ensemble ouvert $V$ de $F$ contenant $f(a)$, tel que $f$ est un difféomorphisme de $U$ à $V = f(U)$. De plus,
+
+$$Df^{-1}(f(a)) = (Df(a))^{-1}$$
+
+Pour chaque voisinage $N$ de $a$, son image $f(N)$ est un voisinage de $f(a)$, et pour chaque boule ouverte $U \subseteq A$ de centre $a$, son image $f(U)$ contient une certaine boule de centre $f(a)$.
+
+2. Si $Df(a)$ est inversible pour chaque $a \in A$, alors $B = f(A)$ est un sous-ensemble de $F$, et $f$ est un difféomorphisme local de $A$ vers $B$. De plus, si $f$ est injective, alors $f$ est un difféomorphisme de $A$ vers $B$.
+
+Des indications pour une démonstration de ce résultat se trouvent au chapitre __calcul différentiel__ du livre [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html).
+
+### <span style="color:#0c87eb">Dérivée seconde et Hessienne</span>
+
+Dans certains cas, il est nécessaire de calculer plus que la dérivée d'une fonction. C'est le cas lorsqu'on souhaite par exemple appliquer les méthodes numériques comme l'algorithme de Newton-Raphson afin de déterminer le point où une fonction donnée s'annule.
+
+Pour $(E, \mathbb{O}_{E})$ et $(F, \mathbb{O}_{F})$ deux espaces topologique et une fonction $f: A \rightarrow F$ définie sur un sous-ensemble ouvert $A$ de $E$, on a:
+
+__Dérivée seconde__:
+Si $D(Df)(a)$ existe pour chaque $a \in A$, elle est appelée la dérivée seconde de $f$ et notée $D^{2}f(a)$
+
+__Hessienne__:
+La matrice Hessienne d'une fonction $f$ définie sur $\mathbb{R}^{n}$ vers $\mathbb{R}$ en un point $a$ est donnée par:
+
+$$ \nabla^{2}f(a) = \left(\begin{array}{cccc}
+\frac{\partial^{2} f}{\partial x^{2}_{1}}(a) & \frac{\partial^{2} f}{\partial x_{1} \partial x_{2}}(a) & ... & \frac{\partial^{2} f}{\partial x_{1} \partial x_{n}}(a)\\
+\frac{\partial^{2} f}{\partial x_{1} \partial x_{2}}(a) & \frac{\partial^{2} f}{\partial x^{2}_{2}}(a) & ... & \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}}(a)\\
+. & . &  & .\\
+. & . &  & .\\
+. & . &  & .\\
+\frac{\partial^{2} f}{\partial x_{1} \partial x_{n}}(a) & \frac{\partial^{2} f}{\partial x_{2} \partial x_{n}}(a) & ... & \frac{\partial^{2} f}{\partial x^{2}_{n}}(a)\\\end{array}\right)$$
+
+### <span style="color:#0c87eb">Expansion de Taylor</span>
+
+Pour l'expansion de la série de Taylor, nous nous limiterons au cas où les ensembles de départ et d'arrivée sont respectivement $\mathbb{R^{n}}$ et $\mathbb{R}$.
+
+Soit une fonction $f$ définie de $R^{n}$ vers $R$ qui est infiniment différentiable et de dérivées continues en $x_{0}$. On définie l'expansion de Taylor de $f$ comme:
+
+$$ f = \sum_{k=0}^{\infty} \frac{D_{x}^{k}f(x_{0})}{k!}\delta^{k} $$
+
+où $\delta = x - x_{0}$. Ainsi $\delta^{k}$ est un tenseur de dimension $k$
+
+et,
+
+$D_{x}^{k}f(x_{0})$ est la dérivée totale d'ordre $k$ de $f$ en $x_{0}$, il s'agit d'un tenseur de dimension $k$.
+
+Pour plus de détail sur les expressions de $D_{x}^{k}f(x_{0})$ et $\delta^{k}$ se référer au livre [Mathematics for Machine Learning](https://mml-book.com).
 
 ## <span style="color:#074b83">Bibliographie</span>
 
@@ -292,3 +394,4 @@ $$f(x) = \sqrt{x^{2} + exp(x^{2})} + cos(x^{2} + exp(x^{2})$$
 * François Fleuret, [Deep Learning Course](https://fleuret.org/dlc/), consulté le 31/12/2023.
 * Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, [Mathematics for Machine Learning](https://mml-book.com), Cambridge University Press, 2020, consulté le 31/12/2023..
 * Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 31/12/2023.
+* Justin Domke, [Automatic Differentiation and Neural Networks](https://people.cs.umass.edu/~domke/courses/sml2011/08autodiff_nnets.pdf) from Lecture on Statistical Machine Learning 2011, consulté le 02/01/2024.
