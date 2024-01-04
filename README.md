@@ -40,3 +40,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 23 Décembre, 2023: Mis-à-jour du contenu relatif au [l'introduction à l'apprentissage par renforcement](https://sookloo.info/rl/intro-rl)
 * 27 Décembre, 2023: Mis-à-jour du contenu relatif au [l'introduction à l'apprentissage par renforcement](https://sookloo.info/rl/intro-rl)
 * 31 Décembre, 2023: Mis-à-jour du contenu relatif au [calcul différentiel](https://sookloo.info/mml/algebra-analysis/diff-calculus)
+* 4 Janvier, 2024: Mis-à-jour du contenu relatif au [calcul différentiel](https://sookloo.info/mml/algebra-analysis/diff-calculus)
