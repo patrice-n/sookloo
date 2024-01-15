@@ -32,6 +32,8 @@
     - Algèbre et Analyse
         - [Algèbre linéaire](mml/algebra-analysis/al.md)
         - [Calcul différentiel](mml/algebra-analysis/diff-calculus.md)
+    - Probabilité
+        - [Introduction probabilité](mml/probability/intro-proba.md)
 - Machine learning
     - Apprentissage par renforcement
         - [Introduction RL](rl/intro-rl.md)
