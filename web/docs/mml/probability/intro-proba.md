@@ -309,13 +309,174 @@ est une probabilité puisque $\sum_{k\in \mathbb{N}} \pi(k) = e^{-\lambda}\sum_{
 
 __Convergence vers une loi de Poisson__:
 
-Soit $X_{n}, n \geq 1$, une suite de variables aléatoires de lois $\mathcal{B}(n; p_{n})$ telle que $np_{n} \rightarrow \lambda > 0$. 
+Soit $X_{n}, n \geq 1$, une suite de variables aléatoires de lois $\mathcal{B}(n; p_{n})$ telle que $np_{n} \rightarrow \lambda > 0$.
 Alors:
 
 $$ \forall k \in \mathbb{N}, \mathbb{P}(X_{n}=k) \rightarrow e^{-k}\frac{\lambda^{k}}{k!}, \quad n \rightarrow +\infty$$
 
+### <span style="color:#0c87eb"> Pre-réquis sur les séries </span>
+
+__Série__:
+
+Soit $(u_{n})_{n \geq 0}$, une suite numérique, et $S_{n} = \sum_{k=0}^{n} u_{k}$ la somme des $n$ premiers termes de la suite $(u_{n})_{n \geq 0}$.
+On appelle série de terme général $(u_{n})_{n \geq 0}$, la suite $(S_{n})_{n \in \mathbb{N}}$. Ci-dessous, plusieurs résultats relatifs aux séries numériques notamment sur la définition de la convergence de séries numériques. Cette dernière notion est importante pour la suite de cette section.
+
+__Convergence de série__:
+
+Soit $S_{n} = \sum_{k=0}^{n} u_{k}, \quad n \in \mathbb{N}$ une série numérique de terme général $(u_{n})_{n \geq 0}$. On dit que la série $(S_{n})_{n \in \mathbb{N}}$ converge si elle admet une limite finie lorsque $n$ tend vers $+\infty$. Dans le cas où la limite est infinie ($-\infty$ ou $+\infty$), on dit que la série $(S_{n})_{n \in \mathbb{N}}$ diverge.
+
+__Conséquence de la convergence de série__:
+
+Si la série numérique $S_{n} = \sum_{k=0}^{n} u_{k}, \quad n \in \mathbb{N}$ converge cela implique que $u_{n}$ tend vers $0$ lorsque $n$ tend vers $+\infty$. Cependant, la réciproque est fausse car en prenant $u_{n} = \frac{1}{n}$, on a $lim_{n \rightarrow +\infty} u_{n} = 0$ mais $\sum_{k=0}^{n} u_{k}$ diverge. La divergence peut se démontrer avec le résultat:
+
+$$ \forall k \in \mathbb{N}^{+}, \quad \forall x \in ]k, k+1[, \frac{1}{x} \leq \frac{1}{k} $$
+
+Donc:
+
+$$ \sum_{k=1}^{n} \frac{1}{k} \geq \sum_{k=1}^{n-1} \int_{k}^{k+1} \frac{1}{x} dx \implies S_{n} \geq \int_{1}^{n} \frac{1}{x} dx $$
+
+$$ S_{n} \geq \log{n} $$
+
+D'où on peut déduire que: 
+
+$$ lim_{n \rightarrow +\infty} S_{n} = +\infty $$
+
+La suite $S_{n}$ diverge donc.
+
+__Absolue convergence__:
+
+Soit $S_{n} = \sum_{k=0}^{n} u_{k}, \quad n \in \mathbb{N}$ une série numérique de terme général $(u_{n})_{n \geq 0}$.  
+On dit que la série numérique $\sum_{n} u_{n}$ est absolument convergente si la série de terme générale $(|u_{n}|)_{n \geq 0}$ ($\sum_{n} |u_{n}|$) est convergente.
+
+### <span style="color:#0c87eb"> Espérance d'une variable aléatoire discrète </span>
+
+Pour rappel, la variabe aléatoire discrète est une variable aléatoire dont les valeurs sont dans un espace discret c'est-à-dire fini ou dénombrable.
+
+__Définition__:
+
+Soit $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E$ une variable aléatoire, $E$ fini ou dénombrable, $E \subset \mathbb{R}$ ou $\mathbb{C}$. Si
+
+$$ \sum_{x \in E} |x| \mathbb{P}(X = x) < +\infty $$
+
+Alors $X$ est intégrable et l'on définit alors l'espérance mathématique de $X$ par:
+
+$$ \mathbb{E}(X) = \sum_{x \in E} x\mathbb{P}(X=x) $$
+
+On dit aussi que la variable aléatoire $X$ admet un moment d'ordre $1$.
+
+En notant $\overline{\mathbb{R}}_{+}$, le plus petit ensemble fermé contenant $\mathbb{R}_{+}$ et dans le cas où $E \subset \overline{\mathbb{R}}_{+}$, on peut définir $\mathbb{E}(X) = \sum_{x \in E} x\mathbb{P}(X=x) \in \overline{\mathbb{R}}_{+}$. Et on dit que $X$ est intégrable si $\mathbb{E}(X) < +\infty$.
+
+__Moment d'ordre k__:
+
+Pour une variable aléatoire $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E$, $E$ fini ou dénombrable, $E \subset \mathbb{R}$ ou $\mathbb{C}$. Si
+
+$$ \sum_{x \in E} |x|^{k} \mathbb{P}(X = x) < +\infty $$
+
+Alors on dit que $X$ admet un moment d'ordre $k$.
+
+__Propriétés__:
+
+* Si $E \subset C$ est fini, $X$ est toujours intégrable.
+* $\mathbb{E}(X)$ est entièrement déterminée par la loi de $X$ (c'est-à-dire les probabilités $\mathbb{P}(X=x)$ avec $x \in E$); cependant, si $\Omega$ lui-même est _fini ou dénombrable_, la relation suivante est vérifiée:
+
+$$\mathbb{E}(X) = \sum_{\omega \in \Omega} X(\omega)\mathbb{P}({\omega})$$
+
+* Si $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E \subset \mathbb{R}$ est intégrable alors $|X|$ est intégrable et:
+
+$$|\mathbb{E}(X)| \leq \mathbb{E}(|X|)$$
+
+* Si $X, Y: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E \subset \mathbb{R}$ ou $\mathbb{C}$ sont intégrables (respectivement positives) alors:
+$\forall \lambda, \mu \in \mathbb{R}$ (respectivement $\mathbb{R}_{+}$), $\lambda X + \mu Y$ est intégrable (respectivement positives) et
+
+$$ \mathbb{E}(\lambda X + \mu Y) = \lambda \mathbb{E}(X) + \mu \mathbb{E}(Y) $$
+
+* Si $X, Y: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E \subset \mathbb{R}$ ou $\mathbb{C}$ sont intégrables et $X \leq Y$ alors
+
+$$ \mathbb{E}(X) \leq \mathbb{E}(Y) $$
+
+* Soit $\pi = (\pi(x))_{x \in E}$ une probabilité sur l'ensemble dénombrable $E$ et $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow (\mathcal{E}, \mathcal{P(E)})$ une variable aléatoire. Les assertions suivantes sont équivalentes:
+
+_(i)_ $X$ a pour loi $\pi$ [c'est-à-dire $\forall x \in E$, $\pi(x) = \mathbb{P}(X = x)$],
+
+_(ii)_ $\forall f: E \rightarrow \mathbb{R}_{+}$, $\mathbb{E}(f(X)) = \sum_{x \in E} f(x)\pi(x) \in \overline{\mathbb{R}_{+}}$, [en particulier $\pi(x) = \mathbb{P}(X=x) = \mathbb{E}(1_{{x}}(X))$],
+
+_(iii)_ $\forall f: E \rightarrow \mathbb{R}$, bornée, $f(X)$ est intégrable et $\mathbb{E}(f(X)) = \sum_{x \in E} f(x)\pi(x)$
+
+__Variance d'une variable aléatoire__:
+
+Soit $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E$ , $E$ fini ou dénombrable, $E \subset \mathbb{R}$ ou $\mathbb{C}$ une variable aléatoire qui admet un moment d'ordre $2$ (c'est-à-dire que $\sum_{x \in E} |x|^{k} \mathbb{P}(X = x) < +\infty$), alors on appelle variance de la variable aléatoire $X$, la quantité $Var(X) = \mathbb{E}((X-\mathbb{E}(X))^{2})$ et la quantité $\sigma(X) = \sqrt{Var(X)}$ est appelée l'écart-type de $X$.
+
+__Propriétés de la variance__:
+
+Pour $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E$ , $E$ fini ou dénombrable, $E \subset \mathbb{R}$ ou $\mathbb{C}$ une variable aléatoire qui admet un moment d'ordre $2$, on a:
+
+$$ Var(X) = \mathbb{E}(X^{2}) - (\mathbb{E}(X))^{2} $$
+
+$$ \forall \lambda, \mu \in \mathbb{R}, \quad Var(\lambda X + \mu) = \lambda^{2}Var(X) $$
+
+__Exemples d'espérances et variances__:
+
+* $$ X \sim^{\mathcal{L}} \mathcal{B}(p), \quad \mathbb{E}(X) = p \quad et \quad Var(X) = p(1-p). $$
+
+* $$ X \sim^{\mathcal{L}} \mathcal{B}(n; p), \quad \mathbb{E}(X) = np \quad et \quad Var(X) = np(1-p). $$
+
+* $$ X \sim^{\mathcal{L}} \mathcal{H}(n; N_{1}, N_{2}), \quad \mathbb{E}(X) = n\frac{N_{1}}{N_{1} + N_{2}} \quad et \quad Var(X) = \frac{N_{1}+N_{2}-n}{N_{1}+ N_{2}-1}\times n \times \frac{N_{1}}{N_{1} + N_{2}}\left(1 - \frac{N_{1}}{N_{1} + N_{2}}\right) \quad, \frac{N_{1}+N_{2}-n}{N_{1}+ N_{2}-1} \quad \textrm{est appelé le facteur d'exhaustivité.}$$
+
+* $$ X \sim^{\mathcal{L}} \mathcal{P}(\lambda), \quad \mathbb{E}(X) = \lambda \quad et \quad Var(X) = \lambda. $$
+
+* $$ X \sim^{\mathcal{L}} \mathcal{G}(p), \quad \mathbb{E}(X) = \frac{1}{p} \quad et \quad Var(X) = \frac{1-p}{p^{2}}. $$
+
+__Inégalité de Markov__:
+
+Soit $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E$ une variable aléatoire qui admet un moment d'ordre 1. Pour tout réel $a > 0$, on a:
+
+$$\mathbb{P}({|X| \geq a}) \leq a^{-1}\mathbb{E}(|X|)$$
+
+__Inégalité de Bienaymé-Chebitchev__:
+
+Soit $X$ une variable aléatoire qui admet un moment d'ordre $2$. Pour tout réel $a > 2$, on a:
+
+$$\mathbb{P}({|X - \mathbb{E}(X)|}) \leq a^{-2}Var(X).$$
+
+### <span style="color:#0c87eb"> Variable aléatoire discrètes indépendantes </span>
+
+__Définition__:
+
+Soient $X_{i}: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E_{i}, i=1,...,n,$ $n$ variables aléatoires discrètes définies sur un même espace probabilisé. On dit que ces variables aléatoires $X_{i}, \quad i=1,...,n$ sont indépendantes si et seulement si:
+
+$$\forall (x_{1},...,x_{n}) \in E_{1}\times...\times E_{n}, \quad \mathbb{P}({X_{1}=x_{1},...,X_{n}=x_{n}}) = \mathbb{P}(X_{1}=x_{1})...\mathbb{P}(X_{n}=x_{n}).$$
+
+Dans la suite, pour plus de lisibilité, nous allons omettre de mentionner les espactes de départ et d'arrivée des variables aléatoires $X_{i}, i=1, ..., n$, pour $n \in \mathbb{N}^{*}$.
+
+__Plusieurs résultats équivalents__:
+
+Les assertions suivantes sont équivalentes:
+
+* _(i)_ Les variables aléatoires $X_{i}, i=1,...,n$ sont indépendantes,
+* _(ii)_ $\forall f_{i}: E_{i} \rightarrow \mathbb{R}$, bornée ou positive, $i=1, ..., n,$: 
+
+$$\mathbb{E}\left(\prod_{i=1}^{n}f_{i}(X_{i})\right) = \prod_{i=1}^{n}\mathbb{E}(f_{i}(X_{i}))$$.
+
+* _(iii)_ $\forall B_{i}\in \mathcal{P}(E_{i}), \quad 1 \leq i \leq n,$
+
+$$\mathbb{P}(X_{1}\in B_{1},..., X_{n}\in B_{n}) = \mathbb{P}(X_{1} \in B_{1})...\mathbb{P}(X_{n}\in B_{n})$$
+
+* _(iv)_ $\forall (x_{1},...,x_{n}) \in E_{1}\times ... \times E_{n}$,
+
+$$\textrm{les évènements } {X_{i} = x_{i}}, i=1,...,n, \quad \textrm{sont indépendants.}$$
+
+__Conséquences__:
+
+Si les variables aléatoires $X_{i}, 1 \leq i \leq n,$ sont indépendantes, alors:
+
+* __(a)__ $\forall I \subset {1, ..., n}, (X_{i})_{i\in I}$ sont indépendantes.
+* __(b)__ Si $I_{1} \cup I_{2} = {1, ...,n}, \quad I_{1}\cap I_{2} = \emptyset$, alors $Y_{1} = (X_{i})_{i\in I_{1}}$ et $Y_{2} = (X_{i})_{i\in I_{2}}$ sont indépendantes.
+* __(c)__ Si $g_{i}: E_{i} \rightarrow F_{i}, 1 \leq i \leq n$, alors les $g_{i}(X_{i}), 1 \leq i \leq n$ sont indépendantes.
+
+Les événements $A_{1}, ..., A_{n}$ sont indépendants si et seulement si les variables aléatoires $\mathbb{1}_{A_{1}}, ..., \mathbb{1}_{A_{n}}$ sont indépendantes.
+
 ## <span style="color:#074b83">Bibliographie</span>
 
-* Yann Ollivier, [Bétisiers Probabiliste de Jean Bertoin](http://www.yann-ollivier.org/betisiers/bertoin), consulté le 15/01/2024.  
+* Yann Ollivier, [Bétisiers probabilistes de Jean Bertoin](http://www.yann-ollivier.org/betisiers/bertoin), consulté le 15/01/2024.  
 * Sylvie Méléard, Aléatoire, Introduction à la théorie et au calcul des probabilités, Les éditions de l'école polytechnique, 2010.
-* Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, [Mathematics for Machine Learning](https://mml-book.com), Cambridge University Press, 2020, consulté le 13/01/2023.
+* Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, [Mathematics for Machine Learning](https://mml-book.com), Cambridge University Press, 2020, consulté le 13/01/2024.
