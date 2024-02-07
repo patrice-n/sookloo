@@ -42,3 +42,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 31 Décembre, 2023: Mis-à-jour du contenu relatif au [calcul différentiel](https://sookloo.info/mml/algebra-analysis/diff-calculus)
 * 4 Janvier, 2024: Mis-à-jour du contenu relatif au [calcul différentiel](https://sookloo.info/mml/algebra-analysis/diff-calculus)
 * 15 Janvier, 2024: Ajout du contenu relatif à [l'introduction à la probabilité](https://sookloo.info/mml/probability/intro-proba)
+* 7 Février, 2024: Mis-à-jour du contenu relatif à [l'introduction à la probabilité](https://sookloo.info/mml/probability/intro-proba)
