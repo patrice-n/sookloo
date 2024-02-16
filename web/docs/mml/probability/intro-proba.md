@@ -149,7 +149,9 @@ Soit un espace probabilisé $(\Omega, \mathcal{A}, \mathbb{P})$ et des événeme
 * $$ Si \quad A \subset B, \mathbb{P}(B) = \mathbb{P}(A) + \mathbb{P}(B \setminus A) \geq \mathbb{P}(A) $$
 * $$ \mathbb{P}(A \cup B) = \mathbb{P}(A) + \mathbb{P}(B) - \mathbb{P}(A \cap B)$$
 * $$ Si \quad A_{n} \subset A_{n+1} \quad (c'est-à-dire \quad (A_{n})_{n \geq 1} \quad croissante) \quad alors \quad \mathbb{P}\left(\bigcup_{n}A_{n}\right) = lim_{n} \mathbb{P}(A_{n})$$
-* $\sigma$-sous-additivité: $$ \mathbb{P}\left(\bigcup_{n}A_{n}\right) \leq \sum_{n}\mathbb{P}(A_{n}) $$
+* $\sigma$-sous-additivité:
+
+$$ \mathbb{P}\left(\bigcup_{n}A_{n}\right) \leq \sum_{n}\mathbb{P}(A_{n}) $$
 
 __Identité de Poincaré__:
 
@@ -159,19 +161,19 @@ $$\mathbb{P}(\bigcup_{k=1}^{n} A_{k}) = p_{1} - p_{2} + ... + (-1)^{n-1}p_{n} = 
 
 où
 
-$$ p_{k} = \sum_{1 \leq i_{1} < ... < i_{k}} \mathbb{P}(A_{i_{1}}\cap ... \cap A_{i_{k}} $$
+$$ p_{k} = \sum_{1 \leq i_{1} < ... < i_{k}} \mathbb{P}(A_{i_{1}}\cap ... \cap A_{i_{k}}) $$
 
-### <span style="color:#0c87eb"> Probabilité conditionelle et indépendance d'évènements </span>
+### <span style="color:#0c87eb"> Probabilité conditionnelle et indépendance d'évènements </span>
 
-__Probabilité conditionelle__:
+__Probabilité conditionnelle__:
 
-Pour $(\Omega, \mathcal{A}, \mathbb{P})$ un espace probabilisé et $B \in \mathcal{A}$ tel que $\mathbb{P} \neq 0$. La probabilité conditionelle de $A$ sachant $B$ est donnée par:
+Pour $(\Omega, \mathcal{A}, \mathbb{P})$ un espace probabilisé et $B \in \mathcal{A}$ tel que $\mathbb{P} \neq 0$. La probabilité conditionnelle de $A$ sachant $B$ est donnée par:
 
 $$ \mathbb{P}(A|B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} $$
 
-Cela implique que la fonction $\mathbb{\Phi}: A \rightarrow \mathbb{P}(A|B)$ est une nouvelle probabilité sur l'espace probabilisé $(\Omega, \mathcal{A}, \mathbb{P})$ appélée probabilité conditionelle sachant $B$.
+Cela implique que la fonction $\mathbb{\Phi}: A \rightarrow \mathbb{P}(A|B)$ est une nouvelle probabilité sur l'espace probabilisé $(\Omega, \mathcal{A}, \mathbb{P})$ appélée probabilité conditionnelle sachant $B$.
 
-__Propriétés de la probabilité conditionelle__:
+__Propriétés de la probabilité conditionnelle__:
 
 * (Probabilités composées) $\forall A_{1}, ..., A_{n} \in \mathcal{A}$ tels que $\mathbb{P}(A_{1}\cap ... \cap A_{n}) > 0$,
 
@@ -337,7 +339,7 @@ $$ \sum_{k=1}^{n} \frac{1}{k} \geq \sum_{k=1}^{n-1} \int_{k}^{k+1} \frac{1}{x} d
 
 $$ S_{n} \geq \log{n} $$
 
-D'où on peut déduire que: 
+D'où on peut déduire que:
 
 $$ lim_{n \rightarrow +\infty} S_{n} = +\infty $$
 
@@ -434,11 +436,11 @@ $$\mathbb{P}({|X| \geq a}) \leq a^{-1}\mathbb{E}(|X|)$$
 
 __Inégalité de Bienaymé-Chebitchev__:
 
-Soit $X$ une variable aléatoire qui admet un moment d'ordre $2$. Pour tout réel $a > 2$, on a:
+Soit $X$ une variable aléatoire qui admet un moment d'ordre $2$. Pour tout réel $a > 0$, on a:
 
-$$\mathbb{P}({|X - \mathbb{E}(X)|}) \leq a^{-2}Var(X).$$
+$$\mathbb{P}({|X - \mathbb{E}(X)| \geq a}) \leq a^{-2}Var(X)$$
 
-### <span style="color:#0c87eb"> Variable aléatoire discrètes indépendantes </span>
+### <span style="color:#0c87eb"> Variables aléatoires discrètes indépendantes </span>
 
 __Définition__:
 
@@ -446,37 +448,169 @@ Soient $X_{i}: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow E_{i}, i=1,...,n,$ 
 
 $$\forall (x_{1},...,x_{n}) \in E_{1}\times...\times E_{n}, \quad \mathbb{P}({X_{1}=x_{1},...,X_{n}=x_{n}}) = \mathbb{P}(X_{1}=x_{1})...\mathbb{P}(X_{n}=x_{n}).$$
 
-Dans la suite, pour plus de lisibilité, nous allons omettre de mentionner les espactes de départ et d'arrivée des variables aléatoires $X_{i}, i=1, ..., n$, pour $n \in \mathbb{N}^{*}$.
+Dans la suite, pour plus de lisibilité, nous allons omettre de mentionner les espaces de départ et d'arrivée des variables aléatoires $X_{i}, i=1, ..., n$, pour $n \in \mathbb{N}^{*}$.
 
 __Plusieurs résultats équivalents__:
 
 Les assertions suivantes sont équivalentes:
 
 * _(i)_ Les variables aléatoires $X_{i}, i=1,...,n$ sont indépendantes,
-* _(ii)_ $\forall f_{i}: E_{i} \rightarrow \mathbb{R}$, bornée ou positive, $i=1, ..., n,$: 
+* _(ii)_ $\forall f_{i}: E_{i} \rightarrow \mathbb{R}$, bornée ou positive, $i=1, ..., n,$:
 
-$$\mathbb{E}\left(\prod_{i=1}^{n}f_{i}(X_{i})\right) = \prod_{i=1}^{n}\mathbb{E}(f_{i}(X_{i}))$$.
+$$ \mathbb{E}(\prod_{i=1}^{n}f_{i}(X_{i})) = \prod_{i=1}^{n}\mathbb{E}(f_{i}(X_{i})) $$
 
 * _(iii)_ $\forall B_{i}\in \mathcal{P}(E_{i}), \quad 1 \leq i \leq n,$
 
-$$\mathbb{P}(X_{1}\in B_{1},..., X_{n}\in B_{n}) = \mathbb{P}(X_{1} \in B_{1})...\mathbb{P}(X_{n}\in B_{n})$$
+$$ \mathbb{P}(X_{1}\in B_{1},..., X_{n}\in B_{n}) = \mathbb{P}(X_{1} \in B_{1})...\mathbb{P}(X_{n}\in B_{n}) $$
 
 * _(iv)_ $\forall (x_{1},...,x_{n}) \in E_{1}\times ... \times E_{n}$,
 
-$$\textrm{les évènements } {X_{i} = x_{i}}, i=1,...,n, \quad \textrm{sont indépendants.}$$
+$$ \textrm{Les évènements } {X_{i} = x_{i}}, i=1,...,n, \quad \textrm{sont indépendants.} $$
 
 __Conséquences__:
 
 Si les variables aléatoires $X_{i}, 1 \leq i \leq n,$ sont indépendantes, alors:
 
-* __(a)__ $\forall I \subset {1, ..., n}, (X_{i})_{i\in I}$ sont indépendantes.
-* __(b)__ Si $I_{1} \cup I_{2} = {1, ...,n}, \quad I_{1}\cap I_{2} = \emptyset$, alors $Y_{1} = (X_{i})_{i\in I_{1}}$ et $Y_{2} = (X_{i})_{i\in I_{2}}$ sont indépendantes.
+* __(a)__ $\forall I \subset \{1, ..., n\}, (X_{i})_{i\in I}$ sont indépendantes.
+* __(b)__ Si $I_{1} \cup I_{2} = \{1, ..., n\}, \quad I_{1}\cap I_{2} = \emptyset$, alors $Y_{1} = (X_{i})_{i\in I_{1}}$ et $Y_{2} = (X_{i})_{i\in I_{2}}$ sont indépendantes.
 * __(c)__ Si $g_{i}: E_{i} \rightarrow F_{i}, 1 \leq i \leq n$, alors les $g_{i}(X_{i}), 1 \leq i \leq n$ sont indépendantes.
 
 Les événements $A_{1}, ..., A_{n}$ sont indépendants si et seulement si les variables aléatoires $\mathbb{1}_{A_{1}}, ..., \mathbb{1}_{A_{n}}$ sont indépendantes.
 
+* Si les variables aléatoires $X_{i}, 1 \leq i \leq n,$ à valeur dans $E_{i} \subset \mathbb{R}$ sont indépendantes, intégrables (respectivement positives) alors $X_{1}...X_{n}$ est intégrable (respectivement positive) et
+
+$$ \mathbb{E}(X_{1}...X_{n}) = \mathbb{E}(X_{1})...\mathbb{E}(X_{n}) \quad \textrm{La "réciproque" est fausse} $$
+
+* Si les variables aléatoires $X_{i}, 1 \leq i \leq n,$ à valeur dans $E_{i} \subset \mathbb{R}$ sont indépendantes, de carré intégrable alors:
+
+$$ Var(X_{1} + ... + X_{n}) = Var(X_{1}) + ... + Var(X_{n}) $$
+
+__Variables aléatoires non correlées__:
+
+* On dit que deux variables aléatoires $X$ et $Y$ définies de $(\Omega, \mathcal{A}, \mathbb{P})$ vers $E_{i} \subset \mathbb{R}$ sont _non-correlées_ si
+
+$$ \mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y) $$
+
+* Si deux variables aléatoires $X$ et $Y$ sont indépendantes alors elles ne sont pas correlées. La réciproque est fausse (prendre $X$ : $(\Omega, \mathcal{A}, \mathbb{P}) \rightarrow {-1, 0, 1}$ uniforme et $Y = X^{2}$).
+
+### <span style="color:#0c87eb">Fonction génératrice et loi conditionnelle d'une variable aléatoire discrète</span>
+
+__Fonction génératrice__:
+
+Soit $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow \mathbb{N}$ une variable aléatoire.
+On appelle fonction génératrice de $X$, la fonction $G_{X}: [-1, 1] \rightarrow [0, 1]$ donnée par
+
+$$ G_{X}(s) = \mathbb{E}(s^{X}) = \sum_{n=0}^{\infty}s^{n}\mathbb{P}(X = n) $$
+
+Avec les conventions:
+
+$$ 0^{0} = 1, \quad 0 \times (+\infty) = 0 \quad et: \forall s \in [-1,1], \quad s^{\infty}=0 $$
+
+__Résultats et propriétés sur la fonction génératrice__:
+
+* Si $a_{n} \geq 0, n \geq 0$ et $\sum_{n}a_{n}s^{n}$ de rayon de convergence (supérieur ou égal) à $1$. Alors:
+
+$$ lim_{s \rightarrow 1^{-}} \sum_{n} a_{n}s^{n} = \sum_{n}a_{n} \leq +\infty. $$
+
+* Si $\sum_{n}|a_{n}| < +\infty$ alors $s \rightarrow \sum_{n}a_{n}s^{n}$ est continue sur $[-1,1]$.
+
+* $g_{X}(0) = \mathbb{P}(X=0)$ et $g_{X}(1) = \mathbb{P}(X < +\infty) \leq 1$ donc la série entière ci-dessus a un rayon de convergence $R_{g_{X}} \geq 1$. En particulier $g_{X} \in \mathcal{C}^{\infty}(]-1;1[)$, c'est-à-dire que la fonction $g_{X}$ est infiniment dérivable.
+
+* $g_{X} \in \mathcal{C}([-1,1])$, c'est-à-dire $g_{X}$ est continue sur $[-1,1]$ et de plus $g_{X}$ est croissante sur $[0,1]$ ainsi que toutes ses dérivées.
+
+* Si pour deux variables aléatoires $X$ et $Y$, on a: $g_{X} = g_{Y}$ alors $X \sim^{\mathcal{L}} Y$ et
+
+$$ \mathbb{P}(X=n) = \frac{g_{X}^{(n)}(0)}{n!}, n \in \mathbb{N}. $$
+
+* On suppose que $\mathbb{P}(X=+\infty) = 0$. Alors:
+
+$$ \mathbb{E}(X) = lim_{s \rightarrow 1^{-}} g^{'}_{X}(s) \leq +\infty $$
+
+En particulier $X$ est intégrable si et seulement si $lim_{s \rightarrow 1^{-}} g_{X}^{'} < +\infty$ ($g_{X}$ est dérivable à gauche en $1$).
+
+* On suppose que $\mathbb{P}(X=+\infty) = 0$. Alors, pour tout $p \in \mathbb{N}$,
+
+$$ \mathbb{E}(X(X-1)...(X-p+1)) = lim_{s \rightarrow 1^{-1}} g_{X}^{(p)}(s) \leq +\infty$$
+
+Ce terme de gauche est appelé moment factoriel d'ordre $p$. Ainsi $X$ admet un moment d'ordre $p \in \mathbb{N}^{*}$ fini si et seulement si $X$ a un moment factoriel d'ordre $p$ fini (c'est-à-dire $lim_{s \rightarrow 1^{-1}} g_{X}^{(p)}(s) < +\infty$ ou $g_{X}$ admet une dérivée d'ordre $p$ en $1-$).
+
+* Si $\mathbb{P}(X=+\infty) = 0$ et $R_{g_{X}} > 1$ alors $g_{X}$ est indéfiniment (continument) dérivable sur $]-R_{g_{X}}, R_{g_{X}}[$, par conséquent $X$ a des moments à tout ordre et
+
+$$ \mathbb{E}(X(X-1)...(X-p+1)) = g_{X}^{(p)}(1) \leq +\infty $$
+
+* Si $X_{1}, ..., X_{n}$ sont indépendantes, alors, au moins pour $s \in [-1, 1]$,
+
+$$ g_{X_{1}+...+X_{n}}(s) = g_{X_{1}}(s)...g_{X_{n}}(s) $$
+
+La réciproque est fausse.
+
+* On peut définir de façon analogue la fonction génératrice d'un vecteur aléatoire à valeurs dans $\mathbb{N}^{d}\cup {\infty}$ par
+
+$$ g_{(X_{1}, ...,X_{d})} = \mathbb{E}(s_{1}^{X_{1}} \times ... \times s_{d}^{X_{d}}) $$
+
+__Exemples de fonctions génératrices__:
+
+* $X \sim^{\mathcal{L}} \mathcal{B}(p)$: $g_{X}(s) = sp + 1 - p$
+* $X \sim^{\mathcal{L}} \mathcal{B}(n;p)$: $g_{X}(s) = \sum_{0 \leq k \leq n} C_{n}^{k}p^{k}(1-p)^{n-k}s^{k} = (sp + 1 - p)^{n}$
+* $X \sim_{\mathcal{L}} \mathcal{P}(\lambda)$: $g_{X}(s)=\sum_{n \in \mathbb{N}} e^{-\lambda}\frac{\lambda^{n}}{n!}s^{n} = e^{-\lambda (1 - s)} = e^{\lambda (s - 1)}$
+
+__Loi conditionnelle__:
+
+Soit deux variables aléatoires $X$ et $Y$ définies sur $(\Omega, \mathcal{A}, \mathbb{P})$ et à valeurs respectivement dans $F$ et $G$, telles que $\Omega$ est fini ou dénombrable et $F$, $G$ sont finis ou dénombrables. Soit la variable aléatoire $Z = (X,Y)$ à valeurs dans $F \times G$, et on note $P_{Z} = (p_{k}^{Z}, z_{k} \in F\times G)$ sa loi. En notant $p_{i}^{X} = \mathbb{P}(X=x_{i})$ pour $x_{i} \in F$, et $p_{j}^{Y} = \mathbb{P}(Y=y_{j})$ pour $y_{j} \in G$, les lois $P^{X}$ et $P^{Y}$ s'appellent __les lois marginales du couple de variables aléatoires X et Y__.
+
+* Soit $x_{i} \in F$ tel que $\mathbb{P}(X=x_{i}) > 0$. On appelle __loi conditionnelle__ de $Y$ sachant $X=x_{i}$ la probabilité définie sur $G$ par
+
+$$ p_{j}^{Y|X=x_{i}} = \mathbb{P}(Y=y_{j}|X=x_{i}) \quad \forall y_{j}\in G $$
+
+__Quelques résultats sur la loi conditionnelle__:
+
+Il est équivalent de connaître les $(p_{k}^{Z}: z_{k} \in F\times G)$ d'une part, $(z_{k}=(x_{i},y_{j}))$, les $(p_{i}^{X}: x_{i} \in F)$ et les $(p_{j}^{Y|X=x_{i}}: y_{j}\in G)$ pour les $x_{i} \in F$ tels que $p_{i}^{X} > 0$ d'autre part via les formules:
+
+$$ \mathbb{P}(X=x_{i}) = \sum_{y_{j} \in F} \mathbb{P}(Z = (x_{i}, y_{j}))$$
+
+$$ p_{j}^{Y|X=x_{i}} = \frac{\mathbb{P}(Z=(x_{i}, y_{j}))}{\mathbb{P}(X=x_{i})} \quad si \quad \mathbb{P}(X=x_{i}) > 0,$$
+
+$$ \mathbb{P}(Z=(x_{i},y_{j})) = \Biggl\{\begin{array}{rcl}\mathbb{P}(X=x_{i})\mathbb{P}(Y=y_{j}|X=x_{i}) & si & \mathbb{P}(X=x_{i}) > 0 \\
+0 & sinon & \end{array}$$
+
+__Espérance conditionnelle__:
+
+Soit $Y$ une variable aléatoire intégrable.
+
+* L'espérance conditionnelle de $Y$ sachant ${X = x_{i}}$ est l'espérance de la loi conditionnelle de $Y$ sachant ${X = x_{i}}$ c'est-à-dire
+
+$$ \mathbb{E}(Y|X=x_{i}) = \sum_{j}y_{j}p_{j}^{Y|X=x_{i}} = \sum_{j}y_{j}\mathbb{P}(Y=y_{j}|X=x_{i}) $$
+
+* On appelle __espérance conditionnelle de Y sachant X__ la variable aléatoire
+
+$$ \mathbb{E}(Y|X) = \psi(X), \quad avec \quad \psi(x) = \mathbb{E}(Y|X=x), $$
+
+pour $x$ tel que $\mathbb{P}(X=x) > 0,$ et $\psi(x) = 0$ sinon.
+
+__Propriété de l'espérance conditionnelle__:
+
+Soit $Y$ une variable aléatoire discrète définie sur $(\Omega, \mathcal{A}, \mathbb{P})$ à valeurs dans un ensemble fini ou dénombrable.
+
+* Si $Y$ est intégrable, alors $\psi(X) = \mathbb{E}(Y|X)$ est intégrable, et
+
+$$ \mathbb{E}(\psi(X)) = \mathbb{E}(Y) $$
+
+* Si $Y$ est intégrable, alors pour toute variable aléatoire auxiliaire $X$:
+
+$$ \mathbb{E}(Y) = \sum_{i} \mathbb{E}(Y|X=x_{i})\mathbb{P}(X=x_{i}) $$
+
+* Pour des variables aléatoires $X$, $Y$, $Z$ intégrables et une fonction $g$, on a:
+
+    _(a)_ $\mathbb{E}(aY+bZ|X) = a\mathbb{E}(Y|X) + b\mathbb{E}(Z|X)$
+
+    _(b)_ $\mathbb{E}(Y|X) \geq 0 \quad si \quad Y \geq 0$
+
+    _(c)_ $\mathbb{E}(1|X) = 1$
+
+    _(d)_ $\mathbb{E}(Yg(X)|X) = g(X)\mathbb{E}(Y|X)$
+
 ## <span style="color:#074b83">Bibliographie</span>
 
 * Yann Ollivier, [Bétisiers probabilistes de Jean Bertoin](http://www.yann-ollivier.org/betisiers/bertoin), consulté le 15/01/2024.  
-* Sylvie Méléard, Aléatoire, Introduction à la théorie et au calcul des probabilités, Les éditions de l'école polytechnique, 2010.
+* Sylvie Méléard, Aléatoire, Introduction à la théorie et au calcul des probabilités, Les éditions de l'École Polytechnique, 2010.
 * Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, [Mathematics for Machine Learning](https://mml-book.com), Cambridge University Press, 2020, consulté le 13/01/2024.
