@@ -105,7 +105,7 @@ Dans le cas où l'ensemble $\Omega$ est fini, la définition de la probabilité 
 
 __Probabilité (sur un "espace d'états finis")__:
 
-Une probabilité sur $\Omega$ fini est une application $\mathbb{P}: \mathcal{P}(\Omega) \rightarrow [0,1]$ qui vérifie, pour tous ensembles $A$ et $B$ de $\mathcal{P}(\Omega)$:
+Une probabilité sur $\Omega$ fini est une application $\mathbb{P}: \mathcal{P}(\Omega) \rightarrow [0,1]$ qui vérifie, pour tous ensembles $A$ et $B$ de $\mathcal{P}(\Omega)$ (l'ensemble des partitions de $\Omega$):
 
 * $$ 0 \leq \mathbb{P}(A) \leq 1, $$
 * $$ \mathbb{P}(\Omega) = 1, $$
@@ -133,7 +133,7 @@ On appelle événement tout élément de la tribu $\mathcal{A}$.
 
 __Probabilité (mésure de probabilité)__:
 
-On appelle probabilité sur $(\Omega, \mathcal{A})$ toute fonction $\mathbb{P}: \mathcal{P} \rightarrow [0, 1]$ vérifiant:
+On appelle probabilité sur $(\Omega, \mathcal{A})$ toute fonction $\mathbb{P}: \mathcal{A} \rightarrow [0, 1]$ vérifiant:
 
 * $$ \mathbb{P}(\Omega) = 1, $$
 * $$ Si \quad A_{n} \in \mathcal{A}, \quad n \geq A, \quad A_{i} \cap A_{j} = \emptyset \quad dès \quad que \quad i \neq j \quad alors, \quad \mathbb{P}\left(\bigcup_{n}A_{n}\right) = \sum_{n \geq 1} \mathbb{P}(A_{n})\left(=lim_{n}\sum_{k=1}^{n}\mathbb{P}(A_{k})\right).$$
@@ -161,13 +161,13 @@ $$\mathbb{P}(\bigcup_{k=1}^{n} A_{k}) = p_{1} - p_{2} + ... + (-1)^{n-1}p_{n} = 
 
 où
 
-$$ p_{k} = \sum_{1 \leq i_{1} < ... < i_{k}} \mathbb{P}(A_{i_{1}}\cap ... \cap A_{i_{k}}) $$
+$$ p_{k} = \sum_{1 \leq i_{1} < ... < i_{k} \leq n} \mathbb{P}(A_{i_{1}}\cap ... \cap A_{i_{k}}) $$
 
 ### <span style="color:#0c87eb"> Probabilité conditionnelle et indépendance d'évènements </span>
 
 __Probabilité conditionnelle__:
 
-Pour $(\Omega, \mathcal{A}, \mathbb{P})$ un espace probabilisé et $B \in \mathcal{A}$ tel que $\mathbb{P} \neq 0$. La probabilité conditionnelle de $A$ sachant $B$ est donnée par:
+Pour $(\Omega, \mathcal{A}, \mathbb{P})$ un espace probabilisé et $B \in \mathcal{A}$ tel que $\mathbb{P}(B) \neq 0$. La probabilité conditionnelle de $A$ sachant $B$ est donnée par:
 
 $$ \mathbb{P}(A|B) = \frac{\mathbb{P}(A \cap B)}{\mathbb{P}(B)} $$
 
@@ -205,7 +205,7 @@ $$ \mathbb{P}(A \cap B) = \mathbb{P}(A)\mathbb{P}(B)$$
 
 $$ \forall J \subset I, \mathbb{P}\left(\bigcap_{j\in J}A_{j}\right) = \prod_{j\in J} \mathbb{P}(A_{j})$$
 
-Cette dernière affirmation ne veut pas dire que les événements sont deux à deux indépendants. En effet, en jouant à deux fois à Pile ou Face et en considérant les événements $A$ = {Face au premier lancé}, $B$ = {Face au deuxième lancé} et $C$ = {les deux tirages donnent le même résultat}, on obtient que:
+Cette dernière affirmation ne veut pas dire que les événements sont deux à deux indépendants. En effet, en jouant à deux fois à Pile ou Face et en considérant les événements $A$ = {Pile au premier lancé}, $B$ = {Face au deuxième lancé} et $C$ = {les deux tirages donnent le même résultat}, on obtient que:
 
 $$\mathbb{P}(A \cap B) = \frac{1}{4} = \frac{1}{2} \times \frac{1}{2} = \mathbb{P}(A)\mathbb{P}(B)$$
 
@@ -234,7 +234,7 @@ A noter que la suite $(A_{n})_{n}$ est indépendante veut dire que pour toute fa
 
 $$ \mathbb{P}\left(\bigcap_{i \in I} \Lambda_{n(i)}\right) = \prod_{i \in I} \mathbb{P}(\Lambda_{n(i)}) $$
 
-Ce lemme a des applications très importantes notamment il sert à démontrer des résultats importants en théorie de la probabilité mais aussi à resoudre des problèmes de probabilité.
+Ce lemme a des applications très importantes; notamment il sert à démontrer des résultats importants en théorie de la probabilité mais aussi à resoudre des problèmes de probabilité. Pour la définition d'une série numérique, se reférer à la section ci-dessous sur pre-réquis sur les séries. De plus, le lecteur désirant avoir la démonstration de ce résultat est invité à se référer à la bibliographie.
 
 ## <span style="color:#0a69b7"> Variables aléatoires à valeurs dans un espace discret </span>
 
@@ -246,15 +246,15 @@ Pour un espace probabilisé $(\Omega, \mathcal{A}, \mathbb{P})$, on appelle vari
 
 $$ \forall e \in E, X^{-1}({e}) \in \mathcal{A}.$$
 
-L'on note parfois $X^{-1} = {X = e}$ et ${X \in B} = X^{-1}(B)$.
+L'on note parfois $X^{-1} = \{X = e\}$ et $\{X \in B\} = X^{-1}(B)$.
 
 __Espace vectoriel de variables aléatoires (discrètes)__:
 
 Si $(\Omega, \mathcal{A}, \mathbb{P})$ est un espace probabilisé, alors:
 
-$$ \chi_{\mathbb{K}} = {X: (\Omega, \mathcal{A}) \rightarrow E, \quad E \subset \mathbb{K}, \quad E \quad fini \quad ou \quad dénombrable}$$
+$$ \chi_{\mathbb{K}} = \{X: (\Omega, \mathcal{A}) \rightarrow E, \quad E \subset \mathbb{K}, \quad E \quad \textrm{fini ou dénombrable} \}$$
 
-est un $\mathbb{K}$ espace vectoriel (avec $\mathbb{K} = \mathbb{R} \quad ou \quad \mathbb{C}$). La définition d'espace vectoriel se trouve dans la page sur [l'algèbre linéaire](../algebra-analysis/al.md).
+est un $\mathbb{K}$ espace vectoriel (avec $\mathbb{K} = \mathbb{R} \quad ou \quad \mathbb{K} = \mathbb{C}$). La définition d'espace vectoriel se trouve dans la page sur [l'algèbre linéaire](../algebra-analysis/al.md).
 
 ### <span style="color:#0c87eb"> Loi de variable aléatoire </span>
 
@@ -262,7 +262,7 @@ __Loi de variable aléatoire__:
 
 On appelle loi de $X$ la probabilité $\pi$ (ou $\mathbb{P}_{X}$) sur $(E, \mathcal{P}(E))$ définie par:
 
-$$ \forall e \in E, \pi(e) = \mathbb{P}(X = e)$$
+$$ \forall e \in E, \pi(e) = \mathbb{P}(\{X = e\})$$
 
 __Exemples de lois discrètes__:
 
@@ -275,9 +275,9 @@ Avec $\pi = \mathbb{P}_{X}$, $\pi({1}) = \mathbb{P}(X = 1) = \mathbb{P}(C) = p$ 
 
 * (Loi Binomiale) $\mathcal{B}(n; p)$ avec $p \in [0, 1]$
 
-Pour $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow {0, ..., n}$ telle que:
+Pour $X: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow \{0, ..., n\}$ telle que:
 
-$$\forall k \in {0, ..., n}, \mathbb{P}(X=k) = C_{n}^{k}p^{k}(1-p)^{n-k} \in [0,1]$$
+$$\forall k \in \{0, ..., n\}, \mathbb{P}(X=k) = C_{n}^{k}p^{k}(1-p)^{n-k} \in [0,1]$$
 
 $\pi = \mathbb{P}_{X}$ est une probabilité ($\sum_{k=0}^{n}\pi(k) = \sum_{k=0}^{n}C_{n}^{k}p^{k}(1-p)^{n-k} = (p+1-p) = 1$). La loi de $X$ est appelée _loi binomiale_, notée $\mathcal{B}(n;p), \quad n \geq 1, \quad p \in [0,1]$
 
@@ -285,13 +285,13 @@ $\pi = \mathbb{P}_{X}$ est une probabilité ($\sum_{k=0}^{n}\pi(k) = \sum_{k=0}^
 
 On tire de manière successives $n$ fois une boule sans remise dans une urne contenant initialement $N$ boules dont $N_{1}$ sont blanches et $N_{2}$ sont noires, avec $n \leq min(N_{1}, N_{2})$. L'espace d'état peut être modélisé par $\Omega$ = {parties à $n$ éléments d'un ensemble à $N_{1} + N_{2}$ éléments dont $N_{1}$ sont blancs}.
 
-Avec l'hypothése on tire avec la même probabilité une boule (hypothèse d'équiprobabilité), on a pour:
+Avec l'hypothése "on tire avec la même probabilité une boule" (hypothèse d'équiprobabilité), on a pour:
 
 $$ X: \Biggl\{\begin{array}{c}
-\Omega \rightarrow {0, ..., n}\\
+\Omega \rightarrow \{0, ..., n\}\\
 \omega \rightarrow X(\omega) := card\{x \in \omega | x \quad est \quad de \quad type \quad "blanc"\}\end{array}$$
 
-$$\forall k \in {0, ..., n}, \mathbb{P}(X=k) = \frac{C^{k}_{N_{1}}C^{n-k}_{N_{2}}}{C^{n}_{N_{1}+N_{2}}}$$
+$$\forall k \in \{0, ..., n\}, \mathbb{P}(X=k) = \frac{C^{k}_{N_{1}}C^{n-k}_{N_{2}}}{C^{n}_{N_{1}+N_{2}}}$$
 
 La variable aléatoire $X$ suit une _loi hypergéométrique_ de paramètres $n$, $N_{1}$, $N_{2}$.
 
@@ -307,7 +307,7 @@ La fonction
 
 $$\forall k \in \mathbb{N}, \pi(k) = e^{-\lambda}\frac{\lambda^{k}}{k!}$$
 
-est une probabilité puisque $\sum_{k\in \mathbb{N}} \pi(k) = e^{-\lambda}\sum_{k\in \mathbb{N}} \frac{\lambda^{k}}{k!} = e^{-k+k} = 1$
+est une probabilité puisque $\sum_{k\in \mathbb{N}} \pi(k) = e^{-\lambda}\sum_{k\in \mathbb{N}} \frac{\lambda^{k}}{k!} = e^{-\lambda + \lambda} = 1$
 
 __Convergence vers une loi de Poisson__:
 
@@ -348,7 +348,7 @@ La suite $S_{n}$ diverge donc.
 __Absolue convergence__:
 
 Soit $S_{n} = \sum_{k=0}^{n} u_{k}, \quad n \in \mathbb{N}$ une série numérique de terme général $(u_{n})_{n \geq 0}$.  
-On dit que la série numérique $\sum_{n} u_{n}$ est absolument convergente si la série de terme générale $(|u_{n}|)_{n \geq 0}$ ($\sum_{n} |u_{n}|$) est convergente.
+On dit que la série numérique $\sum_{n} u_{n}$ est absolument convergente si la série de terme générale $(|u_{n}|)_{n \geq 0}$, ($\sum_{n} |u_{n}|$) est convergente.
 
 ### <span style="color:#0c87eb"> Espérance d'une variable aléatoire discrète </span>
 
@@ -455,7 +455,7 @@ __Plusieurs résultats équivalents__:
 Les assertions suivantes sont équivalentes:
 
 * _(i)_ Les variables aléatoires $X_{i}, i=1,...,n$ sont indépendantes,
-* _(ii)_ $\forall f_{i}: E_{i} \rightarrow \mathbb{R}$, bornée ou positive, $i=1, ..., n,$:
+* _(ii)_ $\forall f_{i}: E_{i} \rightarrow \mathbb{R}$, bornée ou positive, $i=1, ..., n$:
 
 $$ \mathbb{E}(\prod_{i=1}^{n}f_{i}(X_{i})) = \prod_{i=1}^{n}\mathbb{E}(f_{i}(X_{i})) $$
 
@@ -491,7 +491,7 @@ __Variables aléatoires non correlées__:
 
 $$ \mathbb{E}(XY) = \mathbb{E}(X)\mathbb{E}(Y) $$
 
-* Si deux variables aléatoires $X$ et $Y$ sont indépendantes alors elles ne sont pas correlées. La réciproque est fausse (prendre $X$ : $(\Omega, \mathcal{A}, \mathbb{P}) \rightarrow {-1, 0, 1}$ uniforme et $Y = X^{2}$).
+* Si deux variables aléatoires $X$ et $Y$ sont indépendantes alors elles ne sont pas correlées. La réciproque est fausse (prendre $X$ : $(\Omega, \mathcal{A}, \mathbb{P}) \rightarrow \{-1, 0, 1\}$ uniforme et $Y = X^{2}$).
 
 ### <span style="color:#0c87eb">Fonction génératrice et loi conditionnelle d'une variable aléatoire discrète</span>
 
@@ -552,7 +552,8 @@ __Exemples de fonctions génératrices__:
 
 * $X \sim^{\mathcal{L}} \mathcal{B}(p)$: $g_{X}(s) = sp + 1 - p$
 * $X \sim^{\mathcal{L}} \mathcal{B}(n;p)$: $g_{X}(s) = \sum_{0 \leq k \leq n} C_{n}^{k}p^{k}(1-p)^{n-k}s^{k} = (sp + 1 - p)^{n}$
-* $X \sim_{\mathcal{L}} \mathcal{P}(\lambda)$: $g_{X}(s)=\sum_{n \in \mathbb{N}} e^{-\lambda}\frac{\lambda^{n}}{n!}s^{n} = e^{-\lambda (1 - s)} = e^{\lambda (s - 1)}$
+* $X \sim^{\mathcal{L}} \mathcal{G}(p)$: $g_{X}(s) = \sum_{k \in \mathbb{N}^{*}} p(1-p)^{k-1}s^{k} = \frac{ps}{1-s(1-p)}$
+* $X \sim^{\mathcal{L}} \mathcal{P}(\lambda)$: $g_{X}(s)=\sum_{n \in \mathbb{N}} e^{-\lambda}\frac{\lambda^{n}}{n!}s^{n} = e^{-\lambda (1 - s)} = e^{\lambda (s - 1)}$
 
 __Loi conditionnelle__:
 
