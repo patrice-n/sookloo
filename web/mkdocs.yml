@@ -59,6 +59,7 @@ markdown_extensions:
         - docs
 
 plugins:
+  - offline
   - search
   - literate-nav:
       nav_file: navigation.md
