@@ -1,4 +1,4 @@
-name: Github Static Web Apps CI/CD
+name: Github Pages CI/CD
 
 on:
   push:
