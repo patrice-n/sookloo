@@ -26,9 +26,15 @@ concurrency:
 
 jobs:
   build_and_deploy_job:
-    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+          
     steps:
       - uses: actions/checkout@v3
         with:
@@ -49,21 +55,20 @@ jobs:
       - name: Build Application
         run: cd web && mkdocs build
 
-      - name: Upload artifact
-        id: upload-artifact
-        uses: actions/upload-artifact@v4
+      - name: Fix permissions
+        run: |
+          chmod -v -R +rX "web/site/" | while read line; do
+          echo "::warning title=Invalid file permissions automatically fixed::$line"
+          done
+      
+      - name: Upload Pages artifact
+        id: upload-pages-artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: sookloo_site
+          name: github-pages
           path: web/site
           if-no-files-found: error
 
       - name: Deploy to Github
         id: deploy
-        # Deploy to the github-pages environment
-        environment:
-          name: github-pages
-          url: ${{ steps.deployment.outputs.page_url }}
-
-        uses: actions/deploy-pages
-        with:
-          artifact_name: sookloo_site
+        uses: actions/deploy-pages@v4
