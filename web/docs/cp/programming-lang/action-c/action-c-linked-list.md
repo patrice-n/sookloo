@@ -8,7 +8,7 @@ comments: true
 
 Dans ce problème, nous allons apprendre comment écrire un code distribué sur plusieurs fichiers compilés ensemble et liés dans une application. Enregistrer le dossier zippé [list.zip](https://ocw.mit.edu/courses/6-s096-effective-programming-in-c-and-c-january-iap-2014/resources/list/) comme une base de votre programme et jettez-y un coup d'oeil au contenu.
 
-Premièrement, remarquez la structure du dossier. Le dossier zippé contient un dossier _include/_, un fichier _Makefile_, un fichier _GRADER_INFO.txt_, et un dossier _src/_. En général, tous les fichiers _header(.h)_ se trouvent dans le dossier _include/_ pendant que tous les fichiers sources (.c) se trouvent dans _src/_. Cela est visuellement représenté dans la Figure 1 sur la gauche. Maintenant, exécutons la commande __make__ (pour installer les outils de compilation, se reférer à la section sur le [compilateur](https://sookloo.info/cp/tools/compiler) seulement la commande __make__, avec rien d'autre suivant ce seul mot).
+Premièrement, remarquez la structure du dossier. Le dossier zippé contient un dossier _include/_, un fichier _Makefile_, un fichier _GRADER_INFO.txt_, et un dossier _src/_. En général, tous les fichiers _header(.h)_ se trouvent dans le dossier _include/_ pendant que tous les fichiers sources (.c) se trouvent dans _src/_. Cela est visuellement représenté dans la Figure 1 sur la gauche. Maintenant, exécutons la commande __make__ (pour installer les outils de compilation, se reférer à la section sur le [compilateur](../../tools/compiler.md) seulement la commande __make__, avec rien d'autre suivant ce seul mot).
 
 ```txt
                                                      |-- GRADER_INFO.txt
