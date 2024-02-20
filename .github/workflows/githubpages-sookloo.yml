@@ -29,6 +29,12 @@ jobs:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
+    
+    # Deploy to the github-pages environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+          
     steps:
       - uses: actions/checkout@v3
         with:
@@ -59,11 +65,6 @@ jobs:
 
       - name: Deploy to Github
         id: deploy
-        # Deploy to the github-pages environment
-        environment:
-          name: github-pages
-          url: ${{ steps.deployment.outputs.page_url }}
-
-        uses: actions/deploy-pages
+        uses: actions/deploy-pages@v4
         with:
           artifact_name: sookloo_site
