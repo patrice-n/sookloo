@@ -12,7 +12,7 @@ Ce qui a été vu à propos des probabilités dans la page [Introduction à la p
 
 * La pièce est truquée: dans ce cas, on obtient la probabilité,
 
-$$\forall \omega \in \Omega=\{P, F\}^{n}, \quad \mathbb{P}(\{\omega\}) = \frac{1}[2^{n}}$$
+$$\forall \omega \in \Omega=\{P, F\}^{n}, \quad \mathbb{P}(\{\omega\}) = \frac{1}{2^{n}}$$
 
 * La pièce est non truquée: la probabilité est donnée par,
 
@@ -32,9 +32,9 @@ On rappelle la définition d'une tribu déjà introduite dans la page [Introduct
 
 Soit $E$ un ensemble et $\mathcal{E} \subset \mathcal{P}(E)$. $\mathcal{E}$ est une _tribu_ (ou _$\sigma$-algèbre_) si:
 
-    * _(i)_ $$\emptyset \in \mathcal{E}$$,
-    * _(ii)_ $$A \in \mathcal{E} \implies ^{c}A \in \mathcal{E},$$
-    * _(iii)_ $$A_{n} \in \mathcal{E}, n \geq 1, alors \bigcup_{n} A_{n} \in \mathcal{E}.$$
+* _(i)_ $\emptyset \in \mathcal{E}$,
+* _(ii)_ $A \in \mathcal{E} \implies ^{c}A \in \mathcal{E},$
+* _(iii)_ $A_{n} \in \mathcal{E}, n \geq 1, alors \bigcup_{n} A_{n} \in \mathcal{E}.$
 
 Pour résumer, une tribu est un élément de l'ensemble des partitions d'un certain ensemble $E$ et qui est stable par passage au complementaire, par réunions et par intersection dénombrables.
 
@@ -44,18 +44,18 @@ __Exemples de tribus__:
 
 * $\mathcal{P}(E), \quad \{\phi, E\}, \quad \{\phi, A, ^{c}A, E\}, \quad A \subset E$ fixé sont des tribus.
 * $U_{A} = \{A \subset E, A \quad \textrm{est dénombrable ou} \quad ^{c}A \quad \textrm{est dénombrable}\}$ est une tribu et de plus $U_{A} \neq \mathcal{P}(E) \quad \textrm{si et seulement si} \quad E \quad \textrm{est non dénombrable}$.
-* Si les ensembles $\mathcal{E}_{i}, i \in I, I \neq \empty$ sont des tribus alors $\cap_{i \in I} \mathcal{E}_{i}$ est une tribu (c'est-à-dire une intersection de tribus est une tribu)
+* Si les ensembles $\mathcal{E}_{i}, i \in I, I \neq \emptyset$ sont des tribus alors $\cap_{i \in I} \mathcal{E}_{i}$ est une tribu (c'est-à-dire une intersection de tribus est une tribu)
 
 __Tribu engendrée par $\mathcal{C}$__:
 
 Le dernier exemple sur l'intersection de tribus est interessant dans la mesure où il permet de définir la notion de _tribu engendrée_ par $C$ pour tout $C \subset $\mathcal{P}(E)$.
-Il s'agit de la plus petite tribu, notée $\sigma(\mathcal{C}}$ contenant le sous-ensemble $C$ de $\mathcal{P}(E)$, l'ensemble des parties de $E$:
+Il s'agit de la plus petite tribu, notée $\sigma(\mathcal{C})$ contenant le sous-ensemble $C$ de $\mathcal{P}(E)$, l'ensemble des parties de $E$:
 
-$$\sigme(\mathcal{C}} = \bigcap_{\mathcal{E} \supset \mathcal{C}, \quad \mathcal{E} \textrm{ tribu}} \mathcal{E}$$.
+$$\sigma(\mathcal{C}) = \bigcap_{\mathcal{E} \supset \mathcal{C}, \quad \mathcal{E} \textrm{ tribu}} \mathcal{E}.$$
 
 __Tribu Borélienne__:
 
-Soit $(E, \mathcal{O}_{E})$ un espace topologique (se referer à la définition dans le section __Quelques notions de topologie_ de la page [Calcul différentiel](../algebra-analysis.md) pour plus de détails). Autrement $\mathcal{O}_{E}$ est une famille d'ouverts de $E$. On appelle _tribu borélienne_ de $E$ la tribu $\mathcal{B}(E) = \sigma(\mathcal{O}_{E})$.
+Soit $(E, \mathcal{O}_{E})$ un espace topologique (se referer à la définition dans le section __Quelques notions de topologie__ de la page [Calcul différentiel](../algebra-analysis.md) pour plus de détails). Autrement $\mathcal{O}_{E}$ est une famille d'ouverts de $E$. On appelle _tribu borélienne_ de $E$ la tribu $\mathcal{B}(E) = \sigma(\mathcal{O}_{E})$.
 De plus, $\mathcal{B}(E)$ est engendrée par les fermés de $E$.
 
 __Espace métrique séparable et tribu borélienne__:
@@ -66,7 +66,7 @@ Si $E$ est un espace métrique séparable (muni d'une topologie $\mathcal{O}_{E}
 
 $$\mathcal{B}(E) = \sigma(B(x_{n}, r), n \in \mathbb{N}, r \in \mathbb{Q}^{*}_{+})$$
 
-où $(x_{n}_{n \in \mathbb{N}})$ est une suite dense dans $E$.
+où $((x_{n})_{n \in \mathbb{N}})$ est une suite dense dans $E$.
 
 ## <span style="color:#074b83">Bibliographie</span>
 
