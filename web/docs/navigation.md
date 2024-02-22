@@ -28,12 +28,14 @@
             - [Pratique du C++ - Linked List](cp/programming-lang/action-cpp/action-cpp-linked-list.md)
         - [Bases de Python](cp/programming-lang/python.md)
         - [Secure C](cp/programming-lang/secure-c.md)
+        - [Assembleur](cp/programming-lang/assembly.md)
 - Mathématiques pour le Machine Learning
     - Algèbre et Analyse
         - [Algèbre linéaire](mml/algebra-analysis/al.md)
         - [Calcul différentiel](mml/algebra-analysis/diff-calculus.md)
     - Probabilité
         - [Introduction probabilité](mml/probability/intro-proba.md)
+        - [Théorie mesure et probabilité](mml/probability/proba-mes.md)
 - Machine learning
     - Apprentissage par renforcement
         - [Introduction RL](rl/intro-rl.md)
