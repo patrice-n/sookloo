@@ -8,6 +8,7 @@ theme:
     - revision.date
     - revision.history
   palette:
+    - primary: deep orange
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto
