@@ -67,7 +67,6 @@ jobs:
         with:
           name: github-pages
           path: web/site
-          if-no-files-found: error
 
       - name: Deploy to Github
         id: deploy
