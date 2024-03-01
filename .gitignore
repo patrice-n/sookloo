@@ -6,6 +6,7 @@
 /web/docs/.DS_Store
 /web/tests/
 .vscode/
-/web/cp/.DS_Store
+/web/docs/cp/.DS_Store
 /web/docs/diagrams/.DS_Store
+/web/docs/diagrams/out/.DS_Store
 /web/docs/cp/programming-lang/.DS_Store
