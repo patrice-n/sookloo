@@ -149,7 +149,7 @@ Avec ce résultat, il est possible de montrer que toute fonction mesurable à va
 
 !!! success "Démonstration"
 
-    Comme $\sigma(X) = \{(X \in A), A \in \mathcal{B}(\mathbb{R})\} et $[(X \in A) = X^{-1}(A)]$. 
+    Comme $\sigma(X) = \{(X \in A), A \in \mathcal{B}(\mathbb{R})\}$ et $[(X \in A) = X^{-1}(A)]$. 
     
     Si $f$ est une indicatrice $f = \mathbb{1}_{(X \in A)} = \mathbb{1}_{A} \circ X = g \circ X$.
 
