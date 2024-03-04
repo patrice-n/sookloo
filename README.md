@@ -48,3 +48,4 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * 22 Février, 2024: Ajout de contenu relatif à [quelques notions sur la théorie de la mesure et probabilité (pour le ML)](https://patrice-n.github.io/sookloo/mml/probability/proba-mes) et à [l'assembleur](https://patrice-n.github.io/sookloo/cp/programming-lang/assembly)
 * 27 Février, 2024: Mis-à-jour de la couleur du thème du site [sookloo](https://patrice-n.github.io/sookloo)
 * 1er Mars, 2024: Mis-à-jour du contenu relatif à [quelques notions sur la théorie de la mesure et probabilité (pour le ML)](https://patrice-n.github.io/sookloo/mml/probability/proba-mes) et à [l'assembleur](https://patrice-n.github.io/sookloo/cp/programming-lang/assembly)
+* 4 Mars, 2024: Mis-à-jour du contenu relatif à [quelques notions sur la théorie de la mesure et probabilité (pour le ML)](https://patrice-n.github.io/sookloo/mml/probability/proba-mes)
