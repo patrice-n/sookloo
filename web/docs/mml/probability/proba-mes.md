@@ -161,6 +161,70 @@ Avec ce résultat, il est possible de montrer que toute fonction mesurable à va
 
     Puis, si $f_{n} \rightarrow f$ avec $f_{n} = g_{n} \circ X$, on a $f = g \circ X$ avec $g = lim_{n} g_{n}$
 
+## <span style="color:#0a69b7"> Mesures positives, mesures finies, probabilités </span>
+
+### <span style="color:#0c87eb"> Concepts introductifs </span>
+
+!!! note "Définition"
+
+    * On appelle mesure positive sur un espace mesurable $(E, \mathcal{E})$ toute application:
+
+    $$
+    \mu: \left\{\begin{array}{cc}
+    \mathcal{E} \rightarrow & \overline{\mathbb{R}}_{+}\\
+    A \rightarrow & \mu(A)
+    \end{array}
+    \right.
+    $$
+
+    vérifiant:
+
+    _(i)_ $\mu(\emptyset) = 0$,
+
+    _(ii)_ $\textrm{Si} \quad A_{n} \in \mathcal{E}, \quad n \geq 1, \quad avec \quad A_{i}\cap A_{j} = \emptyset \quad \textrm{si} \quad i \neq j$, alors
+
+    $$\mu\left(\sum_{n \geq 1}A_{n}\right) = \sum_{n \geq 1} \mu \left(A_{n}\right)$$
+
+    * Si $\mu(E) < +\infty$, $\mu$ est dite _finie (ou bornée)_
+    * Si $\mu(E) = 1$, $\mu$ est appelée (mesure de) _probabilité_
+
+!!! info "Exemples"
+
+    * $\mu = 0$ (mesure nulle).
+    * $\mu(A) = +\infty$ si $A \neq \emptyset$, $\mu(\emptyset) = 0$ (mesure grossière).
+    * Pour $a \in E$, on définit la __mesure de Dirac__, notée $\delta_{a}$, par $\delta_{a}(A) = 1$ si $a \in A$, $\delta_{a}(A) = 0$ si $a \notin A$.
+    * Mesure de décompte sur $(E, \mathcal{P}(E))$: 
+    
+    $$ \forall A \in \mathcal{P}(E), \mu(A) = |A|$$
+
+    * Mesure de Lebesgue sur $(\mathbb{R}^{d}, \mathcal{B}(\mathbb{R}^{d}))$: Il existe une unique mesure sur $(\mathbb{R}^{d}, \mathcal{B}(\mathbb{R}^{d}))$, dite mesure de Lebesgue et notée $\lambda_{d}$, vérifiant:
+
+    _(i)_ $\lambda_{d}([0, 1]^{d}) = 1,$
+
+    _(ii)_ $\forall a \in \mathbb{R}^{d}, \forall A \in \mathcal{B}(\mathbb{R}^{d}), \lambda_{d}(a + A) = \lambda_{d}(A)$ où $a + A = \{a+x, x \in A\}$
+
+    Pour tout hypercube (ensemble du type $]a_{1},b_{1}[ \times ... \times ]a_{d},b_{d}[$), on montre alors que 
+
+    $$\lambda_{d}\left(\prod_{i=1}^{d}(a_{i},b_{i})\right) = \prod_{i=1}^{d} (b_{i} - a_{i})$$
+
+!!! note "Définition"
+
+    Une partie $N \subset E$ est $\mu$-négligeable si et seulement si il existe $A \in \mathcal{E}$ vérifiant $N \subset A$ et $\mu(A) = 0$. Une propriété vraie sauf sur un ensemble négligeable est vraie $\mu$-presque partout $(\mu-p.p.)$. Si $\mu$ est une probabilité, on parle alors de $\mu$-presque sûrement ($\mu$-p.s.).
+
+!!! tip "Propriétés"
+
+    * $Si A \subset B$, alors $\mu(A) \leq \mu(B)$ et $\mu(B \backslash A) = \mu(B) - \mu(A)$ si $\mu(A) < +\infty$
+    * $A, B \in \mathcal{E}, \mu(A \cup B) + \mu(A \cap B) = \mu(A) + \mu(B)$
+    * $A_{n} \in \mathcal{E}, \quad n \geq 1, \quad A_{n} \subset A_{n+1}$, alors
+
+    $$\mu\left(\cup_{n}A_{n}\right) = lim_{n}\uparrow \mu(A_{n})$$
+
+    * $A_{n} \in \mathcal{E}, n \geq 1, A_{n+1} \subset A_{n}$ et $\mu(A_{1}) < +\infty$ alors
+
+    $$\mu\left(\cap_{n}A_{n}\right) = lim_{n}\downarrow \mu(A_{n})$$
+
+    * $A_{n} \in \mathcal{E}, \quad n \geq 1, \quad \mu\left(\cup_{n}A_{n}\right) \leq \sum_{n}\mu(A_{n}) \leq +\infty$
+
 ## <span style="color:#074b83">Bibliographie</span>
 
 * Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 01/03/2024.
