@@ -225,6 +225,261 @@ Avec ce résultat, il est possible de montrer que toute fonction mesurable à va
 
     * $A_{n} \in \mathcal{E}, \quad n \geq 1, \quad \mu\left(\cup_{n}A_{n}\right) \leq \sum_{n}\mu(A_{n}) \leq +\infty$
 
+### <span style="color:#0c87eb"> Caractérisation d'une mesure, unicité </span>
+
+Il est difficile de comparer deux mesures sans l'outillage nécessaire. De ce fait, nous nous proposons ici de présenter des notions utiles.
+
+!!! note "Définition"
+
+    On appelle $\lambda$-système toute famille $\Lambda$ de parties de $E$ vérifiant:
+
+    * _(i)_ $\emptyset \in \Lambda$
+
+    * _(ii)_ $A_{n} \in \Lambda, n \geq 1, A_{n} \subset A_{n+1}$, alors
+
+    $$ \bigcup_{n}\uparrow A_{n} \in \Lambda $$
+
+    * _(iii)_ $A, B \in \Lambda, A \subset B$ alors $B \backslash A \in \Lambda$ (stabilité par _différence propre_)
+
+!!! warning "Remarque"
+
+    On vérifie aussitôt que si $\mathcal{C} \subset \mathcal{P}(E)$, il existe un plus petit $\lambda$-système $\Lambda(\mathcal{C})$ contenant $\mathcal{C}$.
+    En effet, $\mathcal{P}(E)$ est un $\lambda$-système contenant $\mathcal{C}$ donc $\bigcap_{\Lambda \supset \mathcal{C}, \quad \Lambda \lambda-système} \Lambda$ existe et c'est évidemment un $\lambda$-système contenant $\mathcal{C}$ donc. Il s'agit forcément du plus petit.
+
+!!! tip "Lemme"
+
+    Si $E \in \Lambda$ et $\Lambda$ est stable par intersection finie alors $\Lambda$ est une tribu.
+
+!!! success "Démonstration"
+
+    On vérifie que $\Lambda$ est stable par différence simple: si $A, B \in \Lambda$, $B \backslash A = B \backslash (A \cap B) \in \Lambda$. Comme $E \in \Lambda$, $\Lambda$ est stable par complémentaire.
+
+    Comme $\cup_{n} A_{n} = \cup_{n} \uparrow \left(\cup_{k=1}^{n}A_{k}\right)$, il suffit d'établir la stabilité par réunion finie qui découle elle-même de la stabilité par complémentaire et intersection finie.
+
+!!! tip "Proposition"
+
+    Soit $\mathcal{C} \subset \mathcal{P}(E)$ vérifiant:
+
+    $$
+    \left\{\begin{array}{cc} (i) & E\in \mathcal{C}\\
+    (ii) & A, B \in \mathcal{C} \Rightarrow A \cap B \in \mathcal{C}
+    \end{array}\right.
+    $$
+
+    Alors:
+
+    $$ \Lambda(\mathcal{C}) \supset \sigma(\mathcal{C}) $$
+
+!!! success "Démonstration"
+
+    Il suffit de vérifier, au vu du lemme, que $\Lambda(\mathcal{C})$ est stable par intersection finie (puisque $E \in \mathcal{C} \subset \Lambda(\mathcal{C})$). Soit $C \in \mathcal{C}$ et $\Lambda_{C} = \{A \in \Lambda(\mathcal{C}) | A \cap C \in \Lambda(\mathcal{C})\}$.
+
+    On vérifie que $\Lambda_{C}$ est un $\lambda$-système contenant $\mathcal{C}$ donc $\Lambda_{C} = \Lambda(C)$.
+
+    Soit maintenant $D \in \Lambda(\mathcal{C})$. $\Lambda_{D}$ est également un $\lambda$-système et $\Lambda_{D} \supset \mathcal{C}$ d'après ce qui précède donc $\Lambda_{D} = \Lambda(\mathcal{C})$. Finalement, $\Lambda(\mathcal{C})$ est stable par intersection finie et contient $E$, c'est donc une tribu qui contient $\mathcal{C}$ et par conséquent $\sigma(\mathcal{C})$.
+
+!!! tip "Conséquence"
+
+    Si $\mu_{1}$ et $\mu_{2}$, probabilités sur $(E, \mathcal{E})$, coïncident sur une famille de parties $\mathcal{C}$ stable par intersection telle que $\mathcal{E} = \sigma(\mathcal{C})$, alors
+    
+    $$\mu_{1} = \mu_{2}.$$
+
+!!! success "Démonstration"
+
+    On peut supposer que $E \in \mathcal{C}$ puisque $\mu_{1}(E) = \mu_{2}(E) = 1$ et on vérifie que $\Lambda = \{A \in \mathcal{E}|\mu_{1}(A) = \mu_{2}(A)\}$ est un $\lambda$-système.
+
+!!! info "Exemple"
+
+    Si $(E, \mathcal{B}(E))$ est un espace topologique muni de ses boréliens, $\mu_{1}$ et $\mu_{2}$ deux mesures finies. Alors:
+
+    \[ \mu_{1} = \mu_{2} \quad \textrm{sur} \quad \mathcal{O}_{E} \implies \mu_{1} = \mu_{2} \]
+
+!!! warning "Remarque"
+
+    La conséquence ci-dessus de la proposition s'étend au cas de mesures "$\sigma$-finies", c'est-à-dire telles qu'il existe $E_{n} \in \mathcal{C}$, $n \geq 1$, vérifiant
+
+    $$E = \cup_{n \geq 1} E_{n} \quad \textrm{et} \quad \mu_{1}(E_{n}) = \mu_{2}(E_{n}) < +\infty $$
+
+    (il suffit d'introduire les $\mu_{i}^{(n)}(.) = \mu_{i}(.\cap E_{n})$).
+
+!!! info "Exemple"
+
+    Il existe au plus une mesure $\lambda_{d}$ sur $(\mathbb{R^{d}}, \mathcal{B}(\mathbb{R}^{d}))$ vérifiant
+
+    $$ \lambda_{d}\left(\prod_{i=1}^{d}]a_{i}, b_{i}[ = \prod_{i=1}^{d}(b_{i} - a_{i}\right)$$
+
+    car $\mathcal{C} = \left\{\prod_{i=1}^{d}]a_{i}, b_{i}[, a_{i}, b_{i} \in \mathbb{Q}\right\}$ est stable par intersection finie, engendre $\mathcal{B}(\mathbb{R}^{d})$ et contient les $E_{n} = ]-n, n[^{d}, n \geq 1$
+
+### <span style="color:#0c87eb"> Un théorème de prolongement </span>
+
+!!! note "Définition (Algèbre de Boole)"
+
+    Une famille $\mathcal{C}$ de parties de $E$ est une algèbre de Boole sur $E$ si elle contient $E$ et si elle est stable par complémentaire et par _réunion_ finie.
+
+!!! tip "Théorème (de Carathéodory)"
+
+    Soit $\mu$ une fonction définie sur une algèbre de Boole $\mathcal{C} \subset \mathcal{P}(E)$, à valeurs dans $\mathbb{R}_{+}$, vérifiant:
+
+    \[ _(i)_ \quad \mu(\emptyset) = 0, \]
+
+    \[ _(ii)_ \quad A, B \in \mathcal{C}, A \cap B = \emptyset \implies \mu(A \cup B) = \mu(A) + \mu(B) \]
+
+    \[ _(iii)_ \quad A_{n} \in \mathcal{C}, \quad n \geq 1, \quad A_{n+1} \subset A_{n}, \cap_{n} \downarrow A_{n} = \emptyset \implies \mu(A_{n}) \rightarrow 0 \]
+
+    Alors, il existe une unique mesure finie $\tilde{\mu}$ sur $\sigma(\mathcal{C})$ prolongeant $\mu$.
+
+!!! info "Exemple : mesure de Lebesgue"
+
+    On considère
+    
+    $$\mathcal{C} = \{I_{1}\cup ... \cup I_{n}, n \geq 1, \quad I_{k} \quad \textrm{intervalle de} \quad [0,1], \quad 2 \quad \textrm{à} \quad 2 \quad \textrm{disjoints}\}$$
+    
+    et
+
+    $$\lambda(I_{1}\cup ... \cup I_{n}) = \sum_{1 \leq k \leq n} long(I_{k}).$$
+    
+    $\mathcal{C}$ est une algèbre, $\sigma(\mathcal{C}) = \mathcal{B}([0,1])$ et $\lambda$ se prolonge en une mesure
+    sur $([0, 1], \mathcal{B}([0, 1]))$: la mesure de Lebesgue sur $[0,1]$.
+
+## <span style="color:#0a69b7"> Rappels de théorie de l'intégration </span>
+
+### <span style="color:#0c87eb"> Construction (ébauche) </span>
+
+!!! note "Définition"
+
+    Soit $(E, \mathcal{E}, \mu)$ un espace mesurable.
+
+    * Soit $f = \sum_{i=1}^{n}\alpha_{i} \mathbb{1}_{A_{i}}$ une fonction étagée positive (c'est-à-dire $\alpha_{i} \geq 0 \quad \textrm{pour} \quad i = 1,...,n \quad (A_{i})_{1 \leq i \leq n}$ partition $\mathcal{E}$-mesurable de $E$). On pose:
+
+    $$ \int f d\mu = \sum_{\alpha \in f(E)} \alpha\mu(\{f=\alpha\}) = \sum_{i=1}^{n}\alpha_{i}\mu(A_{i})$$
+
+    avec la convention $0 \times (\pm \infty) = 0$ (utile si $\mu(\{f=0\}) = +\infty$).
+
+    * Pour une fonction mesurable positive $f: (E, \mathcal{E}) \rightarrow (\overline{\mathbb{R}_{+}}, \mathcal{B}(\overline{\mathbb{R}_{+}}))$, on pose:
+
+    $$ \int f d\mu = sup_{g \leq f, g \quad \textrm{étagée}} \int g d\mu \in \overline{\mathbb{R}_{+}}$$
+
+    On vérifie que, si $\alpha, \beta \in \mathbb{R}_{+}$ et $f$, $g$ sont mesurables positives,
+
+    $$ \int (\alpha f + \beta g) d\mu = \alpha \int f d\mu + \beta \int g d\mu$$
+
+    * Si $f$ est à valeurs dans $\overline{\mathbb{R}}$, on dira que $f$ est $\mu$-intégrable si et seulement si
+
+    $$ \int |f| d\mu < +\infty $$
+
+    Dans ce cas, $\int f^{\pm} d\mu < +\infty$ et l'on pose
+
+    $$ \int f d\mu = \int f^{+} d\mu - \int f^{-} d\mu $$
+
+    * Si $f$ est à valeurs complexes, on pose 
+
+    $$ \int f d\mu = \int Re(f)d\mu + i\int Im(f)d\mu $$
+    
+    dès que $Re(f)$ et $Im(f)$ sont intégrables (équivalent à $\int |f| d\mu < +\infty$).
+
+    On note
+
+    $$ \mathcal{L}^{1}_{\mathbb{K}}(\mu) = \{f: (E, \mathcal{E}) \rightarrow \mathbb{K}, \mu-\textrm{intégrable}\}, \quad (\mathbb{K}=\mathbb{R}, \overline{\mathbb{R}}, \mathbb{R}_{+}, \mathbb{C})$$
+
+!!! tip "Proposition"
+
+    (a) On vérifie que si $f$ est intégrable alors $\mu(\{|f| = +\infty\}) = 0$ (Attention! la réciproque est fausse)
+
+    (b) D'autre part, si $f = g$ $\mu-p.p.$ (c'est-à-dire $\mu(\{f \neq g\}) = 0$), $\int f d\mu = \int g d\mu$ dès que l'une des deux
+    intégrales a un sens.
+
+    (c) L'application $f \mapsto \int f d\mu$ est une forme linéaire de $\mathcal{L}^{1}_{\mathbb{K}}(\mu)$
+
+    (d) Inégalité triangulaire:
+
+    $$|\int f d\mu| \leq \int |f| d\mu \quad [\textrm{égalité si et seulement si} \quad |f(x)| = \lambda f(x) \quad \mu-p.p. \quad \textrm{pour un} \quad \lambda \in \mathbb{R} \quad \textrm{ou} \quad \mathbb{C}]$$
+
+!!! note "Notation"
+
+    On note aussi
+
+    $$ \int f d\mu = \int f(x) d\mu(x) = \int f(x) \mu(dx) $$
+
+!!! note "Définition"
+
+    Si $\mu(E) = 1$, on note $\mathbb{E}(f)$ au lieu de $\int f d\mu$, $\mathbb{E}$ pour espérance mathématique.
+
+!!! tip "Rappel de théorèmes et propriétés essentiels"
+
+    * __Théorème de Beppo-Levi (ou convergence croissante)__:
+
+    $$ f_{n}: (E, \mathcal{E}) \rightarrow \overline{\mathbb{R}_{+}}, \quad n \geq 1, \quad f_{n} \nearrow f, \quad \textrm{alors} \quad \int f_{n}d\mu \nearrow \int f d\mu \leq +\infty \quad \textrm{quand} \quad n \rightarrow +\infty. $$
+
+    * __Lemme de Fatou__:
+
+    \[ f_{n}: (E, \mathcal{E}) \rightarrow \overline{\mathbb{R}_{+}}, \quad n \geq 1, \quad Alors \quad \int lim_{n} f_{n} d\mu \leq lim_{n} \int f_{n} d\mu. \]
+
+    * __Théorème de Lebesgue (convergence dominée)__:
+
+    \[f_{n}: (E, \mathcal{E}) \rightarrow \mathbb{K}, \quad n \geq 1 \quad (avec \quad \mathbb{K} = \mathbb{R} \quad ou \quad \mathbb{C},\]
+
+    vérifiant:
+
+    \[\left\{\begin{array}{ccc} (i) & \mu(dx)-p.p. & f_{n}(x) \rightarrow . \\
+    (ii) & \mu(dx)-p.p. & |f(x)| \geq g(x), \quad g \in \mathcal{L}^{1}_{\mathbb{R}_{+}}(\mu), \end{array}\right.\]
+
+    \[\textrm{Alors:} \quad \left\{\begin{array}{cc} (\alpha) & \exists f \in \mathcal{L}^{1}_{\mathbb{K}_{+}}(\mu) \quad \textrm{tq} \quad f_{n} \rightarrow f \quad \mu-p.p.,\\
+    (\beta) & \int |f_{n} - f| d\mu \rightarrow_{n \rightarrow +\infty} \end{array}\right.\]
+
+### <span style="color:#0c87eb"> Espace de Banach et de Hilbert </span>
+
+!!! note "Définition (espace de Banach)"
+
+    Soit $(E, ||.||)$ un espace vectoriel normé, une suite $(u_{n})$ est une suite de Cauchy si pour tout $\epsilon > 0$, il existe un certain $N > 0$ tel que:
+
+    $$ \|u_{m} - u_{n}\| < \epsilon \quad \textrm{pour tout} \quad m,n \geq N. $$
+
+    Si toute suite de Cauchy converge, alors on dit que $E$ est complet. Un espace vectoriel normé complet est aussi appelé espace de Banach. 
+
+!!! note "Définition (espace de Hilbert)"
+
+    Soit $(E, ||.||_{2})$ un espace vectoriel normé avec $\|.\|_{2}$ la norme euclidienne (si cela est possible). $E$ est un espace de Hilbert si $E$ complet (sous la norme euclienne).
+
+### <span style="color:#0c87eb"> Inégalités de Hölder et Minkowski </span>
+
+!!! note "Définition"
+
+    * Si $1 \leq p < +\infty, \mathcal{L}_{\mathbb{K}}^{p}(\mu) = \{f: (E, \mathcal{E}) \rightarrow \mathbb{K} v.a. | \int |f|^{p} d\mu < +\infty\}$ est un
+    $\mathbb{K}$-e.v. semi-normé par $\|f\| = (\int |f|^{p} d\mu)^{1/p} \quad (\mathbb{K} = \mathbb{R} ou \mathbb{C})$.
+
+    * Si $p = +\infty$ (et $\mu \neq 0$), on définit $||f||_{\infty} = inf\{\alpha | \mu(\{|f| > \alpha \}) = 0\}$ et $\mathcal{L}_{\mathbb{K}}^{\infty} = \{f: (E, \mathcal{E}) \rightarrow \mathbb{K}| \|f\|_{\infty} < +\infty\}$. $\mathcal{L}_{\mathbb{K}}^{\infty}$ est aussi un $\mathbb{K}$ espace vectoriel semi-normé.
+
+On quotiente classiquement ces espaces par le "noyau" de la semi-norme qui correspond à chaque fois à la relation d'équivalence: $f \sim g$ si et seulement si $f - g = 0$ $\mu-p.p.$. On note ces quotients $L_{\mathbb{K}}^{p}(\mu)= \{\textrm{classes de v.a. modulo l'égalité}\quad \mu-p.p.\}$
+
+!!! tip "Théorème"
+
+    __(a)__ $1 \leq p \leq +\infty$, $L_{\mathbb{K}}^{p}(\mu)$ est un $\mathbb{K}$-espace de Banach.
+
+    __(b)__ Si $p=2$, $L_{\mathbb{K}}^{p}(\mu)$ est un $\mathbb{K}$-espace de Hilbert pour le produit scalaire.
+
+    $$(f,g) = \int f\tilde{g} d\mu$$
+
+    __(c)__ Si $\mu$ est une probabilité, on a: $\mathcal{L}_{\mathbb{K}}^{\infty} \subset \mathcal{L}_{\mathbb{K}}^{q} \subset \mathcal{L}_{\mathbb{K}}^{p} \subset \mathcal{L}_{\mathbb{K}}^{1} \quad \textrm{si} \quad 1 \leq p \leq q \leq +\infty$.
+    
+    Le fait que les $\|.\|_{p}$ soient des (semi-) normes repose essentiellement sur les inégalités importantes suivantes (valables tant dans $\mathcal{L}^{p}(\mu)$ que dans les $L^{p}(\mu)$):
+
+    * $\forall p, q \in [1, +\infty], \quad \frac{1}{p} + \frac{1}{q} = 1, \quad \forall f \in \mathcal{L}_{\mathbb{K}}^{p}(\mu), \forall g \in \mathcal{L}_{\mathbb{K}}^{q}(\mu)$
+
+    $$fg \in \mathcal{L}_{\mathbb{K}}^{1}(\mu) \quad \textrm{et} \quad \|fg\|_{1} \leq \|f\|_{p}\|g\|_{q}$$
+
+    [égalité si et seulement si $\alpha |f|^{p}(x)=\beta|g|^{q}(x)\mu(dx)-p.p., \quad (\alpha, \beta) \in \mathbb{R}_{+}^{2}\backslash \{(0,0)\}$].
+
+    * $\forall p\in [1, +\infty], \forall f,g \in \mathcal{L}_{\mathbb{K}}^{p}$
+
+    \[ \|f + g\|_{p} \leq \|f\|_{p}+\|g\|_{p}\]
+
+!!! tip "Théorème complémentaire: inégalité de Jensen"
+
+    Soit $(E, \mathcal{E}, \mu)$, $\mu$ _probabilité_, $\phi: \mathbb{R} \rightarrow \mathbb{R}$ convexe et $f \in \mathcal{L}_{\mathbb{R}}^{1}(\mu)$ telle que $\phi(f) \in \mathcal{L}_{\mathbb{R}}^{1}(\mu)$. Alors:
+
+    \[\phi(\mathbb{E_{\mu}(f)}) \leq \mathbb{E}_{\mu}(\phi(f))\]
+
 ## <span style="color:#074b83">Bibliographie</span>
 
-* Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 01/03/2024.
+* Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 14/03/2024.
+* Gilles Pagès, Probabilités (Rappels), Université Pierre & Marie Curie (Paris 6), 2004-05.
