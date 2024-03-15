@@ -615,3 +615,4 @@ $$ \mathbb{E}(Y) = \sum_{i} \mathbb{E}(Y|X=x_{i})\mathbb{P}(X=x_{i}) $$
 * Yann Ollivier, [Bétisiers probabilistes de Jean Bertoin](http://www.yann-ollivier.org/betisiers/bertoin), consulté le 15/01/2024.  
 * Sylvie Méléard, Aléatoire, Introduction à la théorie et au calcul des probabilités, Les éditions de l'École Polytechnique, 2010.
 * Marc Peter Deisenroth, A. Aldo Faisal, and Cheng Soon Ong, [Mathematics for Machine Learning](https://mml-book.com), Cambridge University Press, 2020, consulté le 13/01/2024.
+* Gilles Pagès, Probabilités (Rappels), Université Pierre & Marie Curie (Paris 6), 2004-05.
