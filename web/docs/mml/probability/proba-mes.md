@@ -479,7 +479,119 @@ On quotiente classiquement ces espaces par le "noyau" de la semi-norme qui corre
 
     \[\phi(\mathbb{E_{\mu}(f)}) \leq \mathbb{E}_{\mu}(\phi(f))\]
 
+!!! warning "Exemple de fonctions $\phi$"
+
+    \[\phi(x) = |x|, \quad x^{2}, \quad e^{x}, -ln(x), ...\]
+
+## <span style="color:#0a69b7"> Compléments de théorie de la mesure (caractérisation, mesure image...) </span>
+
+### <span style="color:#0c87eb"> Retour sur la caractérisation d'une mesure </span>
+
+!!! tip "Proposition"
+
+    Soit $(E,d)$ un espace _métrique_ et $\mu_{1}$, $\mu_{2}$ deux mesures sur $\mathcal{B}(E)$.
+
+    * __(a)__ Si $\mu_{1}$ et $\mu_{2}$ sont _finies_,
+
+    \[\left(\forall f \in \mathcal{C}_{b}(E)= \{f: E \rightarrow \mathbb{R} \quad \textrm{continues bornées} \quad \int fd\mu_{1}=\int fd\mu_{2}\}\right) \implies \mu_{1} = \mu_{2}.\]
+
+    * __(b)__ Soit $E$ localement compact (tout point admet un voisinage compact), dénombrable à l'infini ($E = \cup_{n \geq 1} K_{n}$, $K_{n}$ compact). Si $\mu_{1}$ et $\mu_{2}$ sont _finies sur les compacts_ et
+
+    \[\forall f \in \mathcal{C}_{K}(E)=\{g: E \rightarrow \mathbb{R},\quad \textrm{continues à support compact}\}, \quad \int fd\mu_{1} = \int fd\mu_{2},\] 
+
+    alors $\mu_{1} = \mu_{2}.$
+
+!!! warning "Remarque et définition"
+
+    * Un espace topologique $(E, \mathcal{O})$ est dit espace d'Hausdorff s'il satisfait:
+
+    \[ \forall a \in E, \quad b \in E, \quad a \neq b, \quad \textrm{il existe deux ensembles ouverts} \quad U_{a} \quad U_{b} \quad \textrm{tels que,} \quad a \in U_{a}, \quad b \in U_{b}, \quad \textrm{et} \quad U_{a} \cap U_{b} = \emptyset. \]
+
+    Pour tout espace topologique $E$, pour tout sous-ensemble $A$ de $E$, une couverture ouverte $(U_{i})_{i \in I}$ de $A$ est une famille de sous-ensembles ouverts de $E$ tels que $A \subseteq \bigcup_{i \in I} U_{i}$. 
+    
+    * Une sous-couverture ouverte d'une couverture ouverte $(U_{i})_{i \in I}$ de $A$ est une sous famille quelconque $(U_{j})_{j \in J}$ qui est une couverture ouverte de $A$, avec $J \subseteq I$. 
+    
+    * Une couverture ouverte $(U_{i})_{i \in I}$ de $A$ est finie si $I$ est finie. 
+
+    * L'espace topologique $E$ est compact si il est Hausdorff et pour toute couverture ouverte $(U_{i})_{i \in I}$ de $E$, il y a une sous-couverture ouverte finie $(U_{j})_{j \in J}$ de $E$.
+
+    * Pour tout sous-ensemble $A$ de $E$, on dit que $A$ est _compact_ si il est compact par rapport à la topologie du sous-espace. On dit que $A$ est relativement compact si sa fermeture $\overline{A}$ est compact.
+
+    * L'exemple typique d'espace localement compact dénombrable à l'infini est évidemment $\mathbb{R}^{d}$ (en revanche $\mathbb{R}^{\mathbb{N}}$ n'est pas localement compact)
+
+!!! success "Démonstration"
+
+    * _(a)_ Soit $O \in \mathcal{O}_{E}$. On pose
+
+    \[O_{\epsilon} = \{x \in E| d(x, ^{c}O) > \epsilon\} \quad \textrm{et} \quad f_{\epsilon}(x) = \frac{d(x, ^{c}O)}{d(x,^{c}O) + d(x,O_{\epsilon})};\]
+
+    $f_{\epsilon} \in \mathcal{C}(E,[0,1])$ et $f_{\epsilon}=0$ sur $^{c}O$ et $f_{\epsilon} = 1$ sur $O_{\epsilon} \subset O$. Quand $\epsilon \downarrow 0, f_{\epsilon}(x) \uparrow \mathbb{1}_{O}(x)$.
+
+    D'après le théorème de Beppo-Levi, on a donc $\mu_{1}(O) = \mu_{2}(O)$, d'où $\mu_{1} = \mu_{2}$.
+
+    * __(b)__ C'est un exercice classique de topologie de montrer l'existence d'une suite de compacts $K_{n}$, $n \geq 1$, vérifiant $E = \cup_{n \geq 1} K_{n}$ et $K_{n} \subset K^{o}_{n+1}$.
+    
+    Ici, $K^{o}_{n+1}$ représente l'intérieur de $K_{n+1}$, c'est-à-dire le plus grand ouvert contenant $K_{n+1}$.
+
+    On considère $\mu_{i}^{(n)} = \mu_{i}\left(.\cap K^{o}_{n+1}\right)$. Soit $O \in \mathcal{O}_{E}$ et $O^{(n)} = O \cap K^{o}_{n+1}$. Il est clair que les mesures $\mu_{i}^{(n)}$ sont finies et que $\mu_{i}^{(n)}(O) = \mu_{i}\left(O^{(n)}\right)$. Or les $f_{\epsilon}^{(n)}$ relatives à $O^{(n)}$ sont à support dans le compact $\overline{O^{(n)}} \subset K_{n+1}$, donc, procédant comme en _(a)_, on obtient que $\mu_{1}^{(n)} = \mu_{1}(O^{(n)}) = \mu_{2}(O^{(n)}) = \mu_{2}^{(n)}(O)$.
+
+    Donc $\mu_{1}^{(n)} = \mu_{2}^{(n)}$. On conclut en notant que $\mu_{i}(A) = lim_{n} \uparrow \mu_{i}^{(n)}(A).$
+
+!!! warning "Corollaire"
+
+    Si $\mu_{1}$ et $\mu_{2}$ sont deux mesures sur $(\mathbb{R}^{d}, \mathcal{B}(\mathbb{R}^{d}))$, finies sur les compacts, alors:
+
+    \[\forall f \in \mathcal{C}_{K}(\mathbb{R}^{d}, \mathbb{R}), \quad \int fd\mu_{1} = \int fd\mu_{2} \implies \mu_{1} = \mu_{2}.\]
+
+### <span style="color:#0c87eb"> Mesure image </span>
+
+Ici, il sera question du transport d'une mesure d'un espace vectoriel vers un autre à l'aide d'une application.
+
+!!! tip "Proposition"
+
+    Soit $(E, \mathcal{E})$ et $(F, \mathcal{F})$ deux espaces mesurables, $h: (E, \mathcal{E})\rightarrow (F, \mathcal{F})$ une application _mesurable_ et $\mu$ une mesure sur $(E, \mathcal{E})$. L'application
+
+    \[ \nu: \left\{\begin{array}{ccc}\mathcal{F} & \rightarrow & \overline{\mathbb{R}_{+}}\\
+    B & \rightarrow & \nu(B)=\mu(h^{-1}(B))\end{array}\right.\]
+
+    est une mesure sur $(F, \mathcal{F})$ de même masse totale que $\mu$. En particulier $\nu$ est une probabilité si $\mu$ l'est. On note $\nu = h(\mu)$ où $\mu_{h}$ selon les cas.
+
+!!! success "Démonstration"
+
+    \[\nu(\emptyset) = \mu(h^{-1}(\phi)) = \mu(\emptyset) = 0.\]
+
+    Soient $B_{n} \in \mathcal{F}$, $n \geq 1$, avec $B_{i} \cap B_{j} = \emptyset$ si $i \neq j$. Les $h^{-1}(B_{n})$ sont évidemment $2$ à $2$ disjoints et $\cup_{n} h^{-1}(B_{n}) = h^{-1}\left(\cup_{n}B_{n}\right)$ donc:
+
+    \[\nu(\cup_{n}B_{n}) = \mu\left(h^{-1}\left(\cup_{n}B_{n}\right)\right) = \mu\left(\cup_{n}h^{-1}(B_{n})\right) = \sum_{n} \mu\left(h^{-1}(B_{n})\right) = \sum_{n} \nu(B_{n}).\]
+
+    Enfin:
+
+    \[\nu(F) = \mu(h^{-1}(F)) = \mu(E).\]
+
+!!! warning "Remarques"
+
+    * En notation probabiliste, on écrit $\nu(B) = \mu(\{h \in B\})$.
+    * On peut noter que l'on peut définir $\nu$ sur une tribu à priori plus grande que $\mathcal{F}$: _la tribu image_ de $\mathcal{E}$ par $h$ définie par $\{B \in \mathcal{F}|h^{-1}(B) \in \mathcal{E}\}$. Cette tribu est en fait la plus grande tribu sur $F$ rendant $h$ mesurable comme fonction sur $(E, \mathcal{E})$.
+
+!!! note "Définition"
+
+    La mesure $\mu_{h}$ est appelée la _mesure image_ de $\mu$ par $h$. Si $\mu$ est une probabilité, $\mu_{h}$ est appelée loi de $h$ (sous $\mu$).
+
+!!! tip "Théorème"
+
+    Avec les notations de la proposition précédente, $f: (F, \mathcal{F}) \rightarrow \mathbb{K}$ est $\mu_{h}$- intégrable si et seulement si 
+    
+    \[f \circ g: (E, \mathcal{E}) \rightarrow \mathbb{K} \quad \textrm{est} \quad \mu \textrm{-intégrable} \quad \textrm{et} \quad \int f d\mu_{h} = \int f \circ h d\mu.\]
+
+    L'égalité a toujours lieu si $f$ est positive.
+
+!!! success "Démonstration"
+
+    Si $f=\mathbb{1}_{B}$, $B \in \mathcal{F}$, $\int f d\mu_{h} = \mu_{h}(B) = \mu(h^{-1}(B)) = \int \mathbb{1}_{h^{-1}(B)} d\mu$. Or $\mathbb{1}_{h^{-1}(B)}= \mathbb{1}_{B} \circ h$ donc $\int fd\mu_{h} = \int \mathbb{1_{B}}\circ h d\mu = \int f\circ h d\mu$
+
+    L'égalité s'étend aux fontions étagées positives par linéarité, aux fonctions mesurables positives par le théorème de Beppo-Levi (et le lemme fondamental d'approximatio) puis aux fontions réelles et complexes par décomposition ad hoc.
+
 ## <span style="color:#074b83">Bibliographie</span>
 
-* Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 14/03/2024.
+* Jean Gallier and Jocelyn Quaintance, [Algebra, Topology, Differential Calculus, and Optimization Theory for Computer Science and Machine Learning](https://www.cis.upenn.edu/~jean/gbooks/geomath.html), Book in Progress, consulté le 24/03/2024.
 * Gilles Pagès, Probabilités (Rappels), Université Pierre & Marie Curie (Paris 6), 2004-05.
