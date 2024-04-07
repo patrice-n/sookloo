@@ -6,13 +6,13 @@ comments: true
 
 ## <span style="color:#0a69b7">Le C</span>
 
-''' note "Définition du C"
+!!! note "Définition du C"
 
-  C'est un langage de programmation bas niveau, utilisé pour éditer des compilateurs d'autres langages haut niveaux comme par exemple Java.
+    C'est un langage de programmation bas niveau, utilisé pour éditer des compilateurs d'autres langages haut niveaux comme par exemple Java.
+  
+!!! warning "Remarque"
 
-''' warning "Remarque"
-
-  Ce langage est très performant, donnant un accès direct à la mémoire et permettant ainsi de mieux gérer la mémoire. Cela peut néamoins paraître déroutant puisque les allocations de mémoire et la libération de la mémoire sont à la charge du développeur.
+    Ce langage est très performant, donnant un accès direct à la mémoire et permettant ainsi de mieux gérer la mémoire. Cela peut néamoins paraître déroutant puisque les allocations de mémoire et la libération de la mémoire sont à la charge du développeur.
 
 ## <span style="color:#0a69b7">Où est utilisé le langage de programmation C ?</span>
 
@@ -26,46 +26,46 @@ Pour compiler un programme écrit en C, il faut installer un compilateur.
 
 La plupart des systèmes d'exploitation offrent des IDE (environnements de développement intégrés) qui contiennent des compilateurs et des assistants d'aide à la rédaction de code.
 
-''' example "Exemples d'IDE"
+!!! example "Exemples d'IDE"
 
-  Certains des plus utilisés sont:
+    Certains des plus utilisés sont:
   
-  * [Visual Studio](https://visualstudio.microsoft.com/fr/) disponible avec licence et possédant une version community gratuite.
-  * [XCode](https://developer.apple.com/xcode/) gratuit initialement développé pour MacOS.
-  * [Code::Blocks](https://www.codeblocks.org) gratuit, cet IDE a été developpé pour le développement en C/C++.
-  * [CLion](https://www.jetbrains.com/fr-fr/clion/) disponible avec licence.
+    * [Visual Studio](https://visualstudio.microsoft.com/fr/) disponible avec licence et possédant une version community gratuite.
+    * [XCode](https://developer.apple.com/xcode/) gratuit initialement développé pour MacOS.
+    * [Code::Blocks](https://www.codeblocks.org) gratuit, cet IDE a été developpé pour le développement en C/C++.
+    * [CLion](https://www.jetbrains.com/fr-fr/clion/) disponible avec licence.
 
 ### <span style="color:#0c87eb">Editeur de code</span>
 
-''' example "Exemples d'éditeur de code"
+!!! example "Exemples d'éditeur de code"
 
-  L'autre approche consiste à utiliser un éditeur de code, les plus recommandés sont:
-
-  * [Visual Studio Code](https://code.visualstudio.com) éditeur multi-plateforme avec beaucoup d'extensions pour la productivité.
-  * [Notepad++](https://notepad-plus-plus.org)
-  * [Sublime Text](https://www.sublimetext.com)
+    L'autre approche consiste à utiliser un éditeur de code, les plus recommandés sont:
+    
+    * [Visual Studio Code](https://code.visualstudio.com) éditeur multi-plateforme avec beaucoup d'extensions pour la productivité.
+    * [Notepad++](https://notepad-plus-plus.org)
+    * [Sublime Text](https://www.sublimetext.com)
 
 Ensuite, il faudra installer le compilateur du langage C/C++ de notre choix.
 
 ### <span style="color:#0c87eb">Compilateurs</span>
 
-''' example "Exemples de compilateurs"
+!!! example "Exemples de compilateurs"
 
-  Quelques exemples de compilateurs du langage C/C++ sont:
+    Quelques exemples de compilateurs du langage C/C++ sont:
 
-  * [GNU GCC](https://gcc.gnu.org) qui est l'un des compilateurs de reference supportant le langage C/C++.
-  * [Clang](https://clang.llvm.org) sous-projet de [LLVM](https://llvm.org)
-  * [MinGW](https://www.mingw-w64.org) version minimale adaptée à Windows de GNU GCC.
+    * [GNU GCC](https://gcc.gnu.org) qui est l'un des compilateurs de reference supportant le langage C/C++.
+    * [Clang](https://clang.llvm.org) sous-projet de [LLVM](https://llvm.org)
+    * [MinGW](https://www.mingw-w64.org) version minimale adaptée à Windows de GNU GCC.
 
 ### <span style="color:#0c87eb">Compléments</span>
 
-''' example "Exemples d'outils de développement"
+!!! example "Exemples d'outils de développement"
 
-  D'autres outils existent pour le développement de gros projets, pour le débogage de code et pour l'analyse de la performance du programme. Il s'agit de:
+    D'autres outils existent pour le développement de gros projets, pour le débogage de code et pour l'analyse de la performance du programme. Il s'agit de:
 
-  * [CMake](https://cmake.org) pour faire les liaisons entre fichiers et gérer les dépendances de fichiers/code sources.
-  * [GDB](https://www.gnu.org/software/gdb) pour le debogage du code. Le débogage est inclus dans la plupart des IDE.
-  * [Valgrind](https://valgrind.org) pour analyser les pertes mémoires.
+    * [CMake](https://cmake.org) pour faire les liaisons entre fichiers et gérer les dépendances de fichiers/code sources.
+    * [GDB](https://www.gnu.org/software/gdb) pour le debogage du code. Le débogage est inclus dans la plupart des IDE.
+    * [Valgrind](https://valgrind.org) pour analyser les pertes mémoires.
 
 Ces programmes ainsi que le compilateur font partie de ce qu'on appelle communement en jargon développeur la "toolchain" c'est-à-dire la chaîne de compilation. Et de manière générale, pour éditer des codes de très bonne qualité faisant partie d'un projet de développement, il y a besoin d'une toolchain en production.
 
@@ -84,25 +84,25 @@ int main(void) {
 
 Il s'agit d'un code écrit en C pour afficher le message "Hello, world!". 
 
-''' tip "Étapes de compilation et d'exécution de code C"
+!!! tip "Étapes de compilation et d'exécution de code C"
 
-  Pour compiler et exécuter ce code en ligne de commandes, les étapes sont:
+    Pour compiler et exécuter ce code en ligne de commandes, les étapes sont:
 
-  * Création du code objet en utilisant un compilateur ou l'outil cmake
-  * Exécution du code objet
+    * Création du code objet en utilisant un compilateur ou l'outil cmake
+    * Exécution du code objet
 
 ### <span style="color:#0c87eb">Le pointer</span>
 
-''' note "Définition"
+!!! note "Définition"
 
-  Il représente une abstraction du langage de programmation C (et par extension de l'algorithmique) pour avoir des informations à propos de la mémoire.
+    Il représente une abstraction du langage de programmation C (et par extension de l'algorithmique) pour avoir des informations à propos de la mémoire.
 
-''' example "Exemples de code"
+!!! example "Exemples de code"
 
-  ```c
-  int a = 5; // L'adresse de la variable a est &a.
-  int *a_ptr = &a; // Lire les déclarations de droite à gauche, “*a ptr est déclaré comme étant de type entier(int).”
-  ```
+    ```c
+    int a = 5; // L'adresse de la variable a est &a.
+    int *a_ptr = &a; // Lire les déclarations de droite à gauche, “*a ptr est déclaré comme étant de type entier(int).”
+    ```
 
 Il est possible d'appliquer l'opérateur & à toute variable nommée qui a une addresse (“lvalue”)
 
@@ -120,43 +120,43 @@ NB: Il s'agit d'un ordinateur de 64-bit, puisque les adresses font plus de $2^{3
 
 ### <span style="color:#0c87eb">Les types de données en C</span>
 
-''' info "Les types de données en C"
+!!! info "Les types de données en C"
 
-  Les types de données en C sont:
-  * char (8): pour les caractères
-  * short (16): pour des indices
-  * int (32), long (64), long long (64+): pour les petits entiers jusqu'aux grands entiers
-  * float (32), double (64), long double (80): pour les petits nombres décimaux jusqu'aux grands nombres décimaux
+    Les types de données en C sont:
+    * char (8): pour les caractères
+    * short (16): pour des indices
+    * int (32), long (64), long long (64+): pour les petits entiers jusqu'aux grands entiers
+    * float (32), double (64), long double (80): pour les petits nombres décimaux jusqu'aux grands nombres décimaux
 
 Pour le comptage du nombre de bits occupés, nous supposons avoir un ordinateur de 64-bits.
 
 ### <span style="color:#0c87eb">Quelques points notables du C</span>
 
-''' warning "À savoir sur le C"
+!!! warning "À savoir sur le C"
 
-  * Le langage C est focalisé sur la vitesse; vérifier toujours les bords des tableaux et les accès en mémoire nous ralentirait.
-  * Une simple coquille for(int i = 0; i <= N; ++i) peut provoquer une corruption mémoire
-  * La corruption mémoire peut provoquer un comportement inattendu ou difficile à debogger dans le pire des cas
-  * Dans le meilleur des cas, une segmentation fault (core dumped)
+    * Le langage C est focalisé sur la vitesse; vérifier toujours les bords des tableaux et les accès en mémoire nous ralentirait.
+    * Une simple coquille for(int i = 0; i <= N; ++i) peut provoquer une corruption mémoire
+    * La corruption mémoire peut provoquer un comportement inattendu ou difficile à debogger dans le pire des cas
+    * Dans le meilleur des cas, une segmentation fault (core dumped)
 
 ## <span style="color:#0a69b7">Subtilités du langage C</span>
 
 ### <span style="color:#0c87eb">Revue du modèle de la mémoire</span>
 
-''' note "types de mémoire"
+!!! note "types de mémoire"
 
-  Deux types de modèles mémoire sont à distinguer:
+    Deux types de modèles mémoire sont à distinguer:
 
-  * La mémoire de pile (stack): elle est utilisée pour représenter les variables locales, les arguments de fonctions, les appels de fonction, le retour des adresses, etc
-  * La mémoire de tas (heap): pour les allocations mémoire (malloc)
+    * La mémoire de pile (stack): elle est utilisée pour représenter les variables locales, les arguments de fonctions, les appels de fonction, le retour des adresses, etc
+    * La mémoire de tas (heap): pour les allocations mémoire (malloc)
 
-''' note "Quelques caractéristiques de ces types de modèles de mémoire"
+!!! note "Quelques caractéristiques de ces types de modèles de mémoire"
 
-  Suivant l'architecture de la machine, nous avons ces caractéristiques suivantes:
+    Suivant l'architecture de la machine, nous avons ces caractéristiques suivantes:
 
-  * x86/x86_64: La pile (stack) s'étend
-  * ARM: sélectionnable
-  * SPARC: pile (stack) circulaire
+    * x86/x86_64: La pile (stack) s'étend
+    * ARM: sélectionnable
+    * SPARC: pile (stack) circulaire
 
   En général, la pile (stack) s'étendra à partir d'une addresse mémoire supérieure alors que le tas (heap) grandi.
   Exemple de valeur de mémoire de type pile (stack) et tas (heap):
@@ -174,37 +174,37 @@ Pour le comptage du nombre de bits occupés, nous supposons avoir un ordinateur 
 
   ![file](../../diagrams/out/stack.png "Utilisation de la pile (stack)")
 
-''' info "L'allocation dynamique et l'allocation statique"
+!!! info "L'allocation dynamique et l'allocation statique"
 
-  Un exemple d'allocation statique de la mémoire:
+    Un exemple d'allocation statique de la mémoire:
 
-  ```c
-  int array[10];
-  int array2[] = { 1, 2, 3, 4, 5 };
-  char str[] = "Static string";
-  ```
+    ```c
+    int array[10];
+    int array2[] = { 1, 2, 3, 4, 5 };
+    char str[] = "Static string";
+    ```
 
-  Un exemple d'allocation dynamique de la mémoire:
+    Un exemple d'allocation dynamique de la mémoire:
 
-  ```c
-  #include <stdlib.h>
+    ```c
+    #include <stdlib.h>
 
-  int *array = malloc( 10 * sizeof( int ) );
+    int *array = malloc( 10 * sizeof( int ) );
 
-  // fait quelques opérations
+    // fait quelques opérations
 
-  array[5] = 5;
+    array[5] = 5;
 
-  // dès que les opérations sont finies
+    // dès que les opérations sont finies
 
-  free( array );
-  ```
+    free( array );
+    ```
 
-  A chaque fois qu'on fera appel à malloc, il faudrait se rappeler que cette mémoire doit être libérée (appeler free). Le langage C ne le fera pas pour nous, sinon cela conduirait à une fuite mémoire.
+    A chaque fois qu'on fera appel à malloc, il faudrait se rappeler que cette mémoire doit être libérée (appeler free). Le langage C ne le fera pas pour nous, sinon cela conduirait à une fuite mémoire.
 
-''' tip "Comparaison de la mémoire de pile (stack) et la mémoire de tas (heap)"
+!!! tip "Comparaison de la mémoire de pile (stack) et la mémoire de tas (heap)"
 
-  L'implémentation de la mémoire de pile (stack) et la mémoire de tas (heap) varie selon l'architecture matérielle (hardware) et logiciel (software) plus spécifiquement du système d'exploitation (Operating System - OS). Pour plus de détails sur cette comparaison avec des avis de développeurs, se référer au forum [stack overflow](http://goo.gl/t2PQo).
+    L'implémentation de la mémoire de pile (stack) et la mémoire de tas (heap) varie selon l'architecture matérielle (hardware) et logiciel (software) plus spécifiquement du système d'exploitation (Operating System - OS). Pour plus de détails sur cette comparaison avec des avis de développeurs, se référer au forum [stack overflow](http://goo.gl/t2PQo).
 
 ### <span style="color:#0c87eb"> Création de fichiers</span>
 
