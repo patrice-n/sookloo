@@ -98,3 +98,11 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
         <li>25 Mars, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/proba-mes">quelques notions sur la théorie de la mesure et probabilité (pour le ML)</a></li>
     </ul>
 </details>
+
+<details open>
+<summary>Avril 2024</summary>
+    <ul>
+        <li>9 Avril, 2024: Mise en forme du contenu relatif au langage <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/c">C</a> et au langage <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/cpp">C++</a>
+        </li>
+    </ul>
+</details>

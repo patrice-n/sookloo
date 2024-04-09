@@ -7,22 +7,31 @@ comments: true
 ## <span style="color:#0a69b7"> Qu'est ce qu'un langage compilé ?</span>
 
 Avant de définir un langage compilé, nous allons vous parler de ce que représente un compilateur.
-Il s'agit en effet d'un programme informatique qui transforme le code écrit par l'homme en une suite d'instructions compréhensibles par la machine (ordinateur, calculateur). En effet, une machine de base est composée de circuits électroniques qui ne comprennent que l'état $0$ et $1$ qui veut dire que le courant passe ou le courant ne passe pas. Pour plus de détail sur le compilateur, se référer à la page du [compilateur](../tools/compiler.md).
 
-Un langage compilé est donc un langage dont l'exécution passe par la compilation. Le langage C++ est un langage compilé.
+!!! note "Définition compilateur"
+
+    Il s'agit en effet d'un programme informatique qui transforme le code écrit par l'homme en une suite d'instructions compréhensibles par la machine (ordinateur, calculateur). En effet, une machine de base est composée de circuits électroniques qui ne comprennent que l'état $0$ et $1$ qui veut dire que le courant passe ou le courant ne passe pas. Pour plus de détail sur le compilateur, se référer à la page du [compilateur](../tools/compiler.md).
+    
+!!! note "Definition langage compilé"
+
+    Un langage compilé est donc un langage dont l'exécution passe par la compilation. Le langage C++ est un langage compilé.
 
 ## <span style="color:#0a69b7"> Le langage C++ </span>
 
-Le langage C++ est basé sur le langage C qui est l'un des langages les plus performants en terme de vitesse à l'exécution car plus proche de la machine. Ce langage possède toute la puissance de calcul du langage C avec en plus la programmation orientée objet, le typage fort, la programmation générique, la programmation fonctionnelle et bien d'autres avantages. Il est utilisé partout pour de grands programmes informatiques. Des exemples notables sont: Le coeur Linux, Python, PHP, Perl, C#, Google search engine/Chrome/MapReduce/etc, Firefox, MySQL, Microsoft Windows/Office, Adobe Photoshop/Acrobat/InDesign/etc, beaucoup de logiciels de finance/trading, Starcraft, World of Warcraft, EA games, Doom engine et beaucoup d'autres encore.
+!!! note "Généralités sur le langage C++"
+
+    Le langage C++ est basé sur le langage C qui est l'un des langages les plus performants en terme de vitesse à l'exécution car plus proche de la machine. Ce langage possède toute la puissance de calcul du langage C avec en plus la programmation orientée objet, le typage fort, la programmation générique, la programmation fonctionnelle et bien d'autres avantages. Il est utilisé partout pour de grands programmes informatiques. Des exemples notables sont: Le coeur Linux, Python, PHP, Perl, C#, Google search engine/Chrome/MapReduce/etc, Firefox, MySQL, Microsoft Windows/Office, Adobe Photoshop/Acrobat/InDesign/etc, beaucoup de logiciels de finance/trading, Starcraft, World of Warcraft, EA games, Doom engine et beaucoup d'autres encore.
 
 ### <span style="color:#0c87eb"> Recapitulatif de l'apprentissage du C </span>
 
-Jusque là, nous avons appris à:
+!!! warning "Recapitulatif notions du langage C"
 
-* Manipuler le type des nombres décimaux (floating)
-* Lire et écrire dans un fichier
-* Faire une multiplication de matrices (avec allocation statique, dynamique, utilisation de structure et optimisation de cache)
-* Faire un cryptage par transposition (allocation sécurisée et lecture d'une chaîne de caractères de taille arbitraire)
+    Jusque là, nous avons appris à:
+
+    * Manipuler le type des nombres décimaux (floating)
+    * Lire et écrire dans un fichier
+    * Faire une multiplication de matrices (avec allocation statique, dynamique, utilisation de structure et optimisation de cache)
+    * Faire un cryptage par transposition (allocation sécurisée et lecture d'une chaîne de caractères de taille arbitraire)
 
 ### <span style="color:#0c87eb"> Les fichiers headers </span>
 
@@ -70,31 +79,40 @@ int main(){
 
 ### <span style="color:#0c87eb"> Quelles sont les caractéristiques du langage C++ ? </span>
 
-Il s'agit d'un langage de programmation multiparadigme. Ce langage a des caractéristiques procédurales, fonctionnelles, génériques, et de métaprogrammation:
+Il s'agit d'un langage de programmation multiparadigme. 
 
-* Procedural: en dessous de la surface, le C++ est essentiellement du C.
-* Orienté-objet: les classes, l'encapsulation, l'héritage et le polymorphisme
-* Générique: template metaprogramming, les programmes qui s'exécutent durant la compilation
-* Standard Template Library (STL): des idiomes communs, les conteneurs et des algorithmes.
+!!! tip "Caractéristiques du langage C++"
+
+    Ce langage a des caractéristiques procédurales, fonctionnelles, génériques, et de métaprogrammation:
+
+    * Procédurale: en dessous de la surface, le C++ est essentiellement du C.
+    * Orienté-objet: les classes, l'encapsulation, l'héritage et le polymorphisme
+    * Générique: template metaprogramming, les programmes qui s'exécutent durant la compilation
+    * Standard Template Library (STL): des idiomes communs, les conteneurs et des algorithmes.
 
 ### <span style="color:#0c87eb"> Les différences majeures </span>
 
-Généralement, nous pouvons compiler un code C avec un compilateur C++. Mais il y a des différences entre ces langages:
+Généralement, nous pouvons compiler un code C avec un compilateur C++.
 
-* Différence entre les références (définies ci-dessous) et les pointeurs
-* C++ est plus fortement typé
-    1. Des notions fortes de casting, _static_cast<>_ et ainsi de suite
-    2. En même temps, des variables _auto_
-* C++ supporte les notions d'immutabilité
-    1. Exactitude de _const_ et _constexpr_.
-* C++ a des mécanismes étendus d'abstraction
-    1. Les classes et wrapping du management de la mémoire
-    2. Les templates _template< typename T >_
+
+!!! tip "Différences entre les langages C et C++"
+
+    Mais il y a des différences entre ces langages:
+
+    * Différence entre les références (définies ci-dessous) et les pointeurs
+    * C++ est plus fortement typé
+      1. Des notions fortes de casting, _static_cast<>_ et ainsi de suite
+      2. En même temps, des variables _auto_
+    * C++ supporte les notions d'immutabilité
+      1. Exactitude de _const_ et _constexpr_.
+    * C++ a des mécanismes étendus d'abstraction
+      1. Les classes et wrapping du management de la mémoire
+      2. Les templates _template< typename T >_
 
 ### <span style="color:#0c87eb"> Immutabilité et références </span>
 
 En plus du bon ancien pointeur, le C++ a aussi la notion de référence. Regardons à la fonction
-d'incrémentation écrite en C:
+d'incrémentation suivante écrite en C:
 
 ```c
 void increment( int *a ){
@@ -341,40 +359,53 @@ public:
 
 ### <span style="color:#0c87eb"> Des notions de programmation orientée objet </span>
 
-* __Héritage__: La notion d'héritage fait référence au fait de baser un objet (ou une classe) sur un autre objet (ou une classe) avec lequel (ou laquelle) il (ou elle) partage des implémentations similaires. Dans le code ci-dessus, pour le calcul des formes, nous avons comme classe de base la classe _Shape_ de laquelle les autres formes ont été créées (_Circle_, _Rectangle_, _Square_ et _Triangle_). Cela, car il y a un élément qui se retrouve à la fois dans la classe de base _Shape_ et les autres classes forme, il s'agit ici de la fonction de calcul de l'aire de la forme (_area()_).
+!!! tip "Héritage"
 
-* __Polymorphisme__: La notion de polymorphisme est l'utilisation d'une seule interface (ou abstraction) pour différentes d'entités. Il s'agit d'un concept emprunté à la biologie où une espèce ou organisme peut avoir plusieurs formes différentes ou étapes. Deux exemples de polymorphisme sont:
+    La notion d'héritage fait référence au fait de baser un objet (ou une classe) sur un autre objet (ou une classe) avec lequel (ou laquelle) il (ou elle) partage des implémentations similaires. Dans le code ci-dessus, pour le calcul des formes, nous avons comme classe de base la classe _Shape_ de laquelle les autres formes ont été créées (_Circle_, _Rectangle_, _Square_ et _Triangle_). Cela, car il y a un élément qui se retrouve à la fois dans la classe de base _Shape_ et les autres classes forme, il s'agit ici de la fonction de calcul de l'aire de la forme (_area()_).
+
+!!! tip "Polymorphisme"
+
+    La notion de polymorphisme est l'utilisation d'une seule interface 
+    (ou abstraction) pour différentes d'entités. Il s'agit d'un concept emprunté à la biologie où une espèce ou organisme peut avoir plusieurs formes différentes ou étapes. Deux exemples de polymorphisme sont:
+    
     1. L'utilisation de template qui est une certaine paramétrisation du type d'une fonction ou d'un objet (on parle de polymorphisme paramétrique)
+    
     2. L'utilisation de fonctions membres virtuelles d'une classe possédant une sous-classe (ou héritage). En effet, ce qui est couramment rencontré dans les implémentations est que chaque classe contient une table virtuelle (ou vtable), qui est une table de fonctions qui implémentent la partie polymorphique de l'interface de la classe, et chaque objet contient un pointeur vers la vtable de sa classe qui est ensuite consultée à chaque fois qu'une méthode polymorphique (virtuelle) est appelée. L'exemple ci-dessus sur les formes met en avant le polymorphisme de cette classe _Shape_ à travers deux mécanismes: les fonctions virtuelles, et la classe abstraite _Shape_.
 
-* __Classe abstraite (ou interface)__: Une classe est dite abstraite en programmation orientée objet si elle contient au moins une fonction membre purement virtuelle (c'est-à-dire que cette fonction n'a pas de définition mais en écrite égale à 0):
+!!! tip "Classe abstraite (ou interface)"
 
-```cpp
-virtual double area() = 0;
-```
+    Une classe est dite abstraite en programmation orientée objet si elle contient au moins une fonction membre purement virtuelle (c'est-à-dire que cette fonction n'a pas de définition mais en écrite égale à 0):
 
-C'est une classe qui ne peut pas être appelée (instanciée) directement pour créer un objet de ce type. L'appel se fait via une classe concrete qui hérite de celle-ci.
+    ```cpp
+    virtual double area() = 0;
+    ```
+
+    C'est une classe qui ne peut pas être appelée (instanciée) directement pour créer un objet de ce type. L'appel se fait via une classe concrete qui hérite de celle-ci.
 
 ## <span style="color:#0a69b7"> Quelques conseils de Scott Meyers </span>
 
 ### <span style="color:#0c87eb"> Du livre Effective C++ </span>
 
-* Item 7: Déclarer les destructeurs virtuels dans des classes polymorphiques.
-* Item 10: Avoir les operateurs d'affectation qui retournent une reférence à __*this__.
-* Item 12: Copier toutes les parties d'un objet.
-* Item 22: Déclarer les données membres comme privées.
-* Item 32: S'assurer que l'héritage publique suit la logique "est-un".
+!!! warning "Quelques recommandations Scott Meyers"
+
+    * Item 7: Déclarer les destructeurs virtuels dans des classes polymorphiques.
+    * Item 10: Avoir les operateurs d'affectation qui retournent une reférence à __*this__.
+    * Item 12: Copier toutes les parties d'un objet.
+    * Item 22: Déclarer les données membres comme privées.
+    * Item 32: S'assurer que l'héritage publique suit la logique "est-un".
 
 ### <span style="color:#0c87eb"> Du livre Programmer efficacement en C++ (version française du livre Effective Modern C++) </span>
 
-* Conseil 5: Préférer __auto__ aux déclarations de types explicites.
-* Conseil 8: Préférer __nullptr__ à __0__ et à __NULL__.
-* Conseil 11: Préférer les fonctions supprimées (__= delete__ ) aux fonctions indéfinies privées.
-* Conseil 21: Préférer __std::make_unique__ et __std::make_shared__ pour la création de pointeurs intelligents à une utilisation directe de __new__.
-* Conseil 23: Comprendre __std::move__ et __std::forward__.
-* Conseil 34: Préférer les expressions _lambda_ à __std::bind__.
-* Conseil 35: Préférer la programmation multitâche plutôt que multithread.
-* Conseil 41: Envisager un passage par valeur pour les paramètres copiables dont le déplacement est bon marché et qui sont toujours copiés.
+!!! warning "Quelques recommandations Scott Meyers"
+
+    * Conseil 5: Préférer __auto__ aux déclarations de types explicites.
+    * Conseil 8: Préférer __nullptr__ à __0__ et à __NULL__.
+    * Conseil 11: Préférer les fonctions supprimées (__= delete__ ) aux fonctions indéfinies privées.
+    * Conseil 21: Préférer __std::make_unique__ et __std::make_shared__ pour la création de pointeurs intelligents à une utilisation directe de __new__.
+    * Conseil 23: Comprendre __std::move__ et __std::forward__.
+    * Conseil 34: Préférer les expressions _lambda_ à __std::bind__.
+    * Conseil 35: Préférer la programmation multitâche plutôt que multithread.
+    * Conseil 41: Envisager un passage par valeur pour les paramètres copiables dont le déplacement est bon marché et qui sont toujours copiés.
 
 Pour mieux comprendre ces différentes notions, astuces et conseils, il est recommandé se reférer à ces ressources.
 
