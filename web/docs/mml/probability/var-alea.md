@@ -44,7 +44,7 @@ En comparant les définitions d'espace probabilisé donnée dans la page [Introd
 
     et plus généralement
 
-    \[f \in \mathcal{L}_{\mathbb{K}}^{1}(E, \mathcal{E}, \mathbb{P}_{X}) \quad \textrm{si et seulement si} $f \circ X \in \mathcal{L}_{\mathbb{K}}^{1}(\Omega, \mathcal{A}, \mathbb{P})$\]
+    \[f \in \mathcal{L}_{\mathbb{K}}^{1}(E, \mathcal{E}, \mathbb{P}_{X}) \quad \textrm{si et seulement si} f \circ X \in \mathcal{L}_{\mathbb{K}}^{1}(\Omega, \mathcal{A}, \mathbb{P})\]
 
     avec
 
