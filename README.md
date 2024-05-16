@@ -112,6 +112,8 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
     <ul>
         <li>11 Mai, 2024: : Ajout de contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea">variables aléatoires et leurs lois (pour le ML)</a>
         </li>
+        <li>16 Mai, 2024: : Mis-à-jour du contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea">variables aléatoires et leurs lois (pour le ML)</a>
+        </li>
     </ul>
 </details>
  
