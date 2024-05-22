@@ -62,7 +62,7 @@ __Exemples:__ Quelques exemples d'actions pour maximiser la récompense future t
 
 ### <span style="color:#0c87eb"> Environnements </span>
 
-![file](../../diagrams/out/rl/env.png "Interaction environnement et agent")
+![file](../diagrams/out/rl/env.png "Interaction environnement et agent")
 
 A chaque étape $t$,
 
@@ -96,7 +96,7 @@ $$S_{t} = f(H_{t})$$
 
 L'état de l'environnement (environment state) $S_{t}^{e}$ est la représentation privée de l'environnement c'est-à-dire n'importe quelle donnée d'environnement utilisée pour choisir l'observation/la récompense suivante. L'état de l'environnement n'est pas usuellement visible à l'agent, même si $S_{t}^{e}$ est visible, il pourrait contenir des informations non-pertinentes.
 
-![file](../../diagrams/out/rl/env_state.png "Etat de l'environnement")
+![file](../diagrams/out/rl/env_state.png "Etat de l'environnement")
 
 #### L'état de l'agent (agent state)
 
@@ -106,7 +106,7 @@ Cela pourrait être n'importe quelle fonction de l'historique:
 
 $$S_{t}^{a} = f(H_{t})$$
 
-![file](../../diagrams/out/rl/agent_state.png "Etat de l'agent")
+![file](../diagrams/out/rl/agent_state.png "Etat de l'agent")
 
 #### L'état de l'information
 
@@ -138,7 +138,7 @@ L'état de l'agent = environnement
 De manière formelle, il s'agit d'un processus Markov de decision (Markov Decision Process a.k.a. MDP).
 Il sera détaillé dans une des pages suivantes.
 
-![file](../../diagrams/out/rl/full_obs_env.png "Environnements totalement observables")
+![file](../diagrams/out/rl/full_obs_env.png "Environnements totalement observables")
 
 #### Environnements partiellement observables (Partially observable environments)
 
@@ -197,7 +197,7 @@ $$\mathcal{R}_{s}^{a} = \mathbb{E}[R_{t+1}| S_{t} = s, A_{t} = a]$$
 
 ### <span style="color:#0c87eb"> Un exemple, le labyrinthe </span>
 
-![file](../../diagrams/out/rl/maze_example.png "Example du labyrinthe")
+![file](../diagrams/out/rl/maze_example.png "Example du labyrinthe")
 
 Quelques caractéristiques de ce labyrinthe:
 
@@ -207,15 +207,15 @@ Quelques caractéristiques de ce labyrinthe:
 
 __Policy__: Pour chaque état $s$, la flêche en rouge représente la "policy" $\pi(s)$
 
-![file](../../diagrams/out/rl/maze_example_policy.png "Policy du labyrinthe")
+![file](../diagrams/out/rl/maze_example_policy.png "Policy du labyrinthe")
 
 __Value function__: Pour chaque état $s$, le nombre $v_{\pi}(s)$ représente la valeur
 
-![file](../../diagrams/out/rl/maze_example_value_function.png "Value function du labyrinthe")
+![file](../diagrams/out/rl/maze_example_value_function.png "Value function du labyrinthe")
 
 __Modèle (model)__:
 
-![file](../../diagrams/out/rl/maze_example_model.png "Modèle du labyrinthe")
+![file](../diagrams/out/rl/maze_example_model.png "Modèle du labyrinthe")
 
 + L'agent pourrait avoir un modèle interne de l'environnement
 + Dynamiques: comment les actions changent l'état
@@ -254,7 +254,7 @@ __Model Based__:
 
 ### <span style="color:#0c87eb"> Taxonomie d'un agent d'apprentissage par renforcement (RL Agent) </span>
 
-![file](../../diagrams/out/rl/taxonomy_rl_agent.png "Taxonomie d'un RL agent")
+![file](../diagrams/out/rl/taxonomy_rl_agent.png "Taxonomie d'un RL agent")
 
 ## <span style="color:#074b83">Quelques problèmes de l'apprentissage par renforcement</span>
 
@@ -276,7 +276,7 @@ __La plannification (Planning):__
 
 ### <span style="color:#0c87eb"> Exemple du jeu Atari: Apprentissage par renforcement </span>
 
-![file](../../diagrams/out/rl/atari_rl.png "Exemple du jeu Atari RL")
+![file](../diagrams/out/rl/atari_rl.png "Exemple du jeu Atari RL")
 
 + Les règles du jeu sont inconnues
 + L'agent apprend directement des parties interactives du jeu
@@ -284,7 +284,7 @@ __La plannification (Planning):__
 
 ### <span style="color:#0c87eb"> Exemple du jeu Atari: Plannification (Planning) </span>
 
-![file](../../diagrams/out/rl/atari_planning.png "Exemple du jeu Atari Planning")
+![file](../diagrams/out/rl/atari_planning.png "Exemple du jeu Atari Planning")
 
 __Les règles du jeu sont connues__
 __Peut interroger l'émulateur__
@@ -346,13 +346,13 @@ __Contrôle:__ optimise le futur
 
 #### Exemple Gridworld: Prediction
 
-![file](../../diagrams/out/rl/grid_world_prediction.png "Exemple du grid world prediction")
+![file](../diagrams/out/rl/grid_world_prediction.png "Exemple du grid world prediction")
 
 Quelle est la "value function" pour une "policy" qui est une variable aléatoire uniforme ?
 
 #### Exemple Gridworld: Contrôle
 
-![file](../../diagrams/out/rl/grid_world_control.png "Exemple du grid world contrôle")
+![file](../diagrams/out/rl/grid_world_control.png "Exemple du grid world contrôle")
 
 Quel est la "value function" optimale sur l'ensemble des "policies" possibles ?
 Quelle est la "policy" optimale ?
