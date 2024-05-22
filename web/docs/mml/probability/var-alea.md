@@ -224,7 +224,7 @@ Lorsque l'on doit déterminer la loi d'une variable aléatoire $X$ définie comm
 
     Soit $X \sim^{L} \mathcal{N}(0,1), \sigma > 0$ et $Y = \sigma X + m$. Quelle est la loi de $Y$ ?
 
-???- success "__Solution 1__"
+!!! success "__Solution 1__"
 
     Soit $f$ continue à support compact. $\mathbb{E}(f(Y)) = \mathbb{E}(f(\sigma X + m)) = \int f(\sigma x + m)\mathbb{P}_{X}(dx)$, d'où $\mathbb{E}(f(Y)) = \int_{-\infty}^{+\infty} f(\sigma x + m) e^{-\frac{x^{2}}{2}} \frac{dx}{\sqrt{2\pi}}$. On pose $x = \frac{y - m}{\sigma} = \varphi(y)$. Il vient $\mathbb{E}(f(Y)) = \int_{-\infty}^{+\infty} f(y)exp\left[-\frac{(y-m)^{2}}{2\sigma^{2}}\right]\frac{dy}{\sigma \sqrt{2\pi}}$ donc la loi de $Y$ est donnée par
 
@@ -293,7 +293,7 @@ Dans les exemples précédents, on s'est cantonné à des variables aléatoires 
     \[h(y) = \left{\begin{array}{ccc}g(\Psi^{-1}(y))|J_{\Psi^{-1}}(y)| & si & y \in \Delta\\
     0 & si & y \notin \Delta\end{array}\right.\]
 
-???- success "Démonstration"
+!!! success "Démonstration"
 
     _(i)_ $0 = \mathbb{P}(X \in ^{c}D) = \int 1_{^{c}D}(X)d\mathbb{P}= \mathbb{P}_{X}(^{c}D) = \int_{^{c}D}g(x)dx$ donc $g = 0$ _p.s._ sur $^{c}D$.
 
@@ -317,7 +317,7 @@ Dans les exemples précédents, on s'est cantonné à des variables aléatoires 
 
     Soit $X = (X_{1}, X_{2}): (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow \mathbb{R}^{2}$ de densité $g$. Quelles sont les lois des marginales ?
 
-???- success "__Solution 3__"
+!!! success "__Solution 3__"
 
     \[\mathbb{E}(f(X_{1})) = \iint f(x_{1})g(x_{1},x_{2})dx_{1}dx_{2} = \int f(x_{1})\left(\int g(x_{1},x_{2})dx_{2}\right)dx_{1},\]
 
@@ -408,7 +408,7 @@ Dans le cadre des variables aléatoires réelles, il est parfois commode d'intro
 
     On peut affaiblir la troisième propriété __P3__ en supposant que $F_{X}$ et $F_{Y}$ coïncident _a priori_ seulement sur une partie $D$ dense dans $\mathbb{R}$.
 
-???- success "__Démonstration__:"
+!!! success "__Démonstration__:"
 
     __P1__. Si $t_{n}\downarrow t$, $\cap_{n}^{\downarrow}\{X \leq t_{n}\} = \{X \leq t\}$ donc $F_{X}(t_{n}) \downarrow F_{X}(t)$. Si $t_{n} \uparrow t$, $t_{n} \neq t$, $\cup_{n}^{\uparrow}]-\infty, t_{n}]=]-\infty, t[$ donc $F_{X}(t_{n}) \uparrow \mathbb{P}(X < t)$.
 
@@ -454,7 +454,7 @@ Ces célèbres inégalités sont essentiellement triviales dans le cadre de la t
 
     \[\mathbb{P}(|X - \mathbb{E}(X)| \geq \lambda) \leq \frac{Var(X)}{\lambda^{2}}\]
 
-???- success "Démonstration"
+!!! success "Démonstration"
 
     \[\mathbb{E}(|X|^{\alpha}) = \int |X|^{\alpha} d\mathbb{P} \geq \int_{\{|X| \geq \lambda\}} |X|^{\alpha} d\mathbb{P} \geq \lambda^{\alpha} \int 1_{\{|X| \geq \lambda\}}d\mathbb{P} = \lambda^{\alpha}\mathbb{P}(|X| \geq \lambda).\]
 
