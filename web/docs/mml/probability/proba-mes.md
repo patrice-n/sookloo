@@ -55,7 +55,7 @@ Il est donc nécessaire d'apprendre les outils pour mieux modéliser une probabi
 
 !!! abstract "Tribu Borélienne"
 
-    Soit $(E, \mathcal{O}_{E})$ un espace topologique (se referer à la définition dans le section __Quelques notions de topologie__ de la page [Calcul différentiel](../algebra-analysis.md) pour plus de détails). Autrement dit, $\mathcal{O}_{E}$ est une famille d'ouverts de $E$. On appelle _tribu borélienne_ de $E$ la tribu $\mathcal{B}(E) = \sigma(\mathcal{O}_{E})$.
+    Soit $(E, \mathcal{O}_{E})$ un espace topologique (se referer à la définition dans le section __Quelques notions de topologie__ de la page [Calcul différentiel](../algebra-analysis/diff-calculus.md) pour plus de détails). Autrement dit, $\mathcal{O}_{E}$ est une famille d'ouverts de $E$. On appelle _tribu borélienne_ de $E$ la tribu $\mathcal{B}(E) = \sigma(\mathcal{O}_{E})$.
     De plus, $\mathcal{B}(E)$ est engendrée par les fermés de $E$.
 
 !!! note "Espace métrique séparable et tribu borélienne"

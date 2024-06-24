@@ -37,6 +37,7 @@
         - [Introduction probabilité](mml/probability/intro-proba.md)
         - [Théorie mesure et probabilité](mml/probability/proba-mes.md)
         - [Variables aléatoires et lois](mml/probability/var-alea.md)
+        - [Variables aléatoires indépendantes](mml/probability/var-alea-ind.md)
 - Machine learning
     - Apprentissage par renforcement
         - [Introduction RL](rl/intro-rl.md)

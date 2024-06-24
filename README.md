@@ -118,3 +118,11 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
         </li>
     </ul>
 </details>
+
+<details open>
+<summary>Juin 2024</summary>
+    <ul>
+        <li>21 Juin, 2024: Ajout de contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea-ind">variables aléatoires indépendantes (pour le ML)</a> et mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a>
+        </li>
+    </ul>
+</details>
