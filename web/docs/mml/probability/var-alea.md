@@ -422,7 +422,7 @@ Dans le cadre des variables aléatoires réelles, il est parfois commode d'intro
 
     L'intégrale $\int fd\mu$ est parfois notée $\int f dF$ par référence à _l'intégrale de Stièljès_ dont la construction dans la page [Quelques notions théorie de la mesure et probabilité](proba-mes.md) n'est qu'un cas particulier: l'intégrale de Stièljès peut être définie par rapport à une fonction $F$ à variation finie quelconque. Pour plus de détail sur la notion de fonction à variation bornée, se reférer à la page wikipédia [Fonction à variation bornée](https://fr.wikipedia.org/wiki/Fonction_à_variation_bornée).
 
-Le recours aux fonctions de répartition est notamment intéressant pour l'étude des lois de minimum et de maximum de variables aléatoires indépendantes: $min_{1 \leq i \leq n} X_{i}, max_{1 \leq i \leq n} X_{i}$.
+Le recours aux fonctions de répartition est notamment intéressant pour l'étude des lois de minimum et de maximum de variables aléatoires indépendantes: $min_{1 \leq i \leq n} X_{i}, max_{1 \leq i \leq n} X_{i}$. Pour de plus amples informations sur la notion de variables aléatoires indépendantes dans le cas général, se reférer à la page [Les variables aléatoires indépendantes](var-alea-ind.md).
 
 !!! example "__Applications__:"
 
@@ -465,6 +465,34 @@ Ces célèbres inégalités sont essentiellement triviales dans le cadre de la t
     \[\mathbb{P}(X \geq x) = \int_{x}^{+\infty}\mu e^{-\mu u}du = e^{-\mu x} \leq \frac{\mathbb{E}(X^{2})}{x^{2}} = \frac{Var(X) + (\mathbb{E}(X))^{2}}{x^{2}} = \frac{2}{\mu^{2}x^{2}}\]
 
     ce qui illustre le caractère généralement grossier de cette majoration de la "queue de distribution" d'une variable aléatoire.
+
+### <span style="color:#0c87eb">Inégalités de Cauchy-Schwarz</span>
+
+Il s'agit d'une inégalité très utilisée sur les espaces vectoriels. Ici, nous allons nous limiter au cas cette inégalité appliquée à l'espérance d'une variable aléatoire.
+
+!!! tip "__Proposition__:"
+
+Si $X$ et $Y$ sont des variables aléatoires dans $L^{2}$ (c'est-à-dire de carré intégrable), alors $XY \in L^{1}$, et on a __l'inégalité de Cauchy-Schwarz__:
+
+\[|E(XY)| \leq E(|XY|) \leq \sqrt{E(X^{2})E(Y^{2})}.\]
+
+On a égalité dans l'inégalité si et seulement si les deux variables aléatoires sont presque sûrement proportionnelles.
+
+!!! success "__Preuve__"
+
+    Comme $|XY| \leq \frac{1}{2}(X^{2}+Y^{2})$, on a $XY \in L^{1}$ dès que $X, Y \in L^{2}$. Enfin, pour tout $x \in \mathbb{R}$ on a d'après la linéarité et la positivité de l'espérance:
+
+    \[x^{2}E(X^{2}) + 2xE(XY) + E(Y^{2}) = E[(xX+Y)^{2}] \geq 0.\]
+
+    Mais ceci n'est possible que si ce trinôme en $x$ n'a au plus qu'une seule racine réelle; son discriminant doit être négatif ou nul, ce qui donne immédiatememt l'égalité de la proposition.
+
+!!! warning "__Remarque__"
+
+    Le discriminant dans la démonstration ci-dessus est nul si et seulement si il y a une racine double $x_{0}$ et dans ce cas, $Y(\omega)=-x_{0}X(\omega)$ pour presque tout $\omega$.
+
+    De la proposition ci-dessus, on en déduit en particulier que le coefficient de corrélation défini ci-dessus vérifie:
+
+    \[-1 \leq \rho(X,Y) \leq 1.\]
 
 ## <span style="color:#074b83">Bibliographie</span>
 
