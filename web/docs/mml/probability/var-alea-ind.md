@@ -42,7 +42,7 @@ Nous avons vu la notion d'indépendance de variables aléatoires sur un ensemble
 
     \[=\sigma(\pi_{i}, i \in I, \pi_{i} \quad \textrm{projection de } E \textrm{ sur } E_{i}).\]
 
-    * Ce sont ces résultats qui permettent de montrer par exemple que la somme de deux fonctions mesurables réelles est mesurable. En effet, si $f_{i}: (F, \mathcal{F}) \rightarrow (\mathbb{R}, \mathcal{B}(\mathbb{R}))$, $i=1, 2$ alors $f = (f_{1}, f_{2}): (F, \mathcal{F}) \rightarrow (\mathbb{R}^{2}, \mathcal{B}(\mathbb{R})\otimes\mathcal{B}(\mathbb{R}))$ est mesurable. D'autre part l'addition $\left\{\begin{array}{ccc}
+    * Ce sont ces résultats qui permettent de montrer par exemple que la somme de deux fonctions mesurables réelles est mesurable. En effet, si $f_{i}: (F, \mathcal{F}) \rightarrow (\mathbb{R}, \mathcal{B}(\mathbb{R}))$, $i=1, 2$ alors $f = (f_{1}, f_{2}): (F, \mathcal{F}) \rightarrow (\mathbb{R}^{2}, \mathcal{B}(\mathbb{R})\otimes\mathcal{B}(\mathbb{R}))$ est mesurable. D'autre part, l'addition $\left\{\begin{array}{ccc}
     \mathbb{R}^{2} & \rightarrow & \mathbb{R}\\
     (x,y) & \rightarrow & x+y\end{array}\right.$ est continue donc $(\mathcal{B}(\mathbb{R}^{2}), \mathcal{B}(\mathbb{R}))$-mesurable. Mais comme $\mathcal{B}(\mathbb{R})\otimes\mathcal{B}(\mathbb{R})=\mathcal{B}(\mathbb{R}^{2})$, par composition, $f_{1}+f_{2}$ l'est également. Idem pour le produit.
 
@@ -86,7 +86,7 @@ Nous avons vu la notion d'indépendance de variables aléatoires sur un ensemble
 
     \[\int f(x_{1}, x_{2}) \mu_{1}\otimes\mu_{2}(dx_{1},dx_{2}) = \int \left[\int f(x_{1},x_{2})\mu_{1}(dx_{1})\right]\mu_{2}(dx_{2}) \leq +\infty\]
 
-    \[= \int \left[\int f(x_{1},x_{2})\mu_{2}(dx_{2})\right]\mu_{1}(dx_{1}) +\infty.\]
+    \[= \int \left[\int f(x_{1},x_{2})\mu_{2}(dx_{2})\right]\mu_{1}(dx_{1}) \leq +\infty.\]
 
 !!! tip "Théorème de Fubini-Lebesgue:"
 
@@ -115,6 +115,102 @@ Nous avons vu la notion d'indépendance de variables aléatoires sur un ensemble
 ## <span style="color:#0a69b7"> Variables aléatoires indépendantes </span>
 
 Si l'on considère $n$ variables aléatoires $X_{i}: (\Omega, \mathcal{A}, \mathbb{P}) \rightarrow (E_{i}, \mathcal{E}_{i}), 1 \leq i \leq n$, le vecteur $X = (X_{1}, ..., X_{n}): \Omega \rightarrow \prod_{i=1}^{n}E_{i}$ est donc $(\mathcal{A}, \otimes_{i=1}^{n}\mathcal{E}_{i})$-mesurable (d'après la section sur les définitions). Par suite, la loi $\mathbb{P}_{(X_{1}, ..., X_{n})}$ est une probabilité sur $\left(\prod_{i=1}^{n}E_{i}, \otimes_{i=1}^{n}\mathcal{E}_{i}\right)$, tout comme $\mathbb{P}_{X_{1}}\otimes ... \otimes \mathbb{P}_{X_{n}}$.
+
+### <span style="color:#0c87eb"> Définitions </span>
+
+!!! note "Définitions"
+
+    __(a)__ Soient $X_{i}: (\Omega, \mathcal{A}, \mathbb{P}) \mapsto (E_{i}, \mathcal{E}_{i})$, $i=1, ..., n$. Les variables aléatoires $X_{i}$ sont indépendantes si $\mathbb{P}_{(X_{1},...,X_{n})} = \mathbb{P}_{X_{1}} \otimes ... \otimes \mathbb{P}_{X_{n}}$ _i.e._ la loi du n-uplet $(X_{1}, ..., X_{n})$ est le produit des lois marginales des $X_{i}$.
+
+    __(b)__ Une famille quelconque $(X_{i})_{i \in I}$ de variables aléatoires est composée de variables aléatoires indépendantes si, pour toute partie $J \subset I$, $J$ finie, les $X_{j}$, $j \in J$, sont indépendantes.
+
+!!! warning "Remarques"
+
+    Il est à noter que, dans ce cas, la loi du $n$-uplet $(X_{1}, ..., X_{n})$ est entièrement déterminée par les lois marginales $\mathbb{P}_{X_{i}}$. D'autre part, la caractérisation de la mesure produit sur les rectangles implique que les $X_{1}, ..., X_{n}$ sont indépendantes si et seulement si:
+
+    \[\forall A_{1} \in \mathcal{E}_{1}, ..., \forall A_{n} \in \mathcal{E}_{n}, \mathbb{P}_{(X_{1}, ..., X_{n})}(A_{1}\times ... \times A_{n}) = \mathbb{P}_{X_{1}}(A_{1})...\mathbb{P}_{X_{n}}(A_{n}).\]
+
+    Soit encore: $X_{1}, ..., X_{n}$ sont indépendantes si et seulement si:
+
+    \[(*) \quad \forall A_{1} \in \mathcal{E}_{1}, ..., \forall A_{n} \in \mathcal{E}_{n}, \mathbb{P}(X_{1} \in A_{1}, ..., X_{n} \in A_{n}) = \mathbb{P}(X_{1} \in A_{1})...\mathbb{P}(X_{n} \in A_{n}).\]
+
+    * Il est clair au vu de (*) que toute sous-famille d'une famille de variables aléatoires indépendantes est constituée de variables aléatoires indépendantes.
+    * Soit $X=(X_{1},...,X_{n})$ un vecteur aléatoire à valeurs dans $\mathbb{R}^{n}$ ayant pour densité $g_{(X_{1}, ..., X_{n})}(x_{1}, ..., x_{n})$ et dont les lois marginales $\mathbb{P}_{X_{i}}(dx_{i})$ ont des densités $g_{i}$ par rapport à la mesure de Lebesgue. Alors, il découle instantanément de la définition que:
+
+    \[X_{1}, ..., X_{n} \quad \textrm{sont indépendantes si et seulement si} \quad g_{(X_{1}, ..., X_{n})}(x_{1}, ..., x_{n}) = g_{1}(x_{1})...g_{n}(x_{n}).\]
+
+    sauf éventuellement sur un ensemble Lebesgue _négligeable_ de $\mathbb{R}^{n}$.
+    * Plus généralement, si la loi de $(X_{1}, ..., X_{n})$ a une densité de la forme $g_{(X_{1}, ..., X_{n})}(x_{1}, ..., x_{n})=\gamma_{1}(x_{1})...\gamma_{n}(x_{n})$, alors les variables aléatoires $X_{i}$ sont indépendantes et il existe des constantes $c_{1}, ..., c_{n}$ telles que $\mathbb{P}_{X_{i}}(dx_{i})=c_{i}\gamma_{i}(x_{i})dx_{i}$.
+
+!!! example "Exemple"
+
+    Si $X = (X_{1}, ..., X_{n}) \sim^{\mathcal{L}} \mathcal{N}(0, I_{n})$ c'est-à-dire $X$ a pour densité $f(x_{1}, ...,x_{n})=(2\pi)^{-\frac{n}{2}}exp\left[-\frac{1}{2}(x_{1}^{2}+...+x_{n}^{2})\right] = \prod_{i=1}^{n}\left(\frac{1}{\sqrt{2\pi}}e^{-\frac{x_{i}^{2}}{2}}\right)$, les $X_{i}$ sont indépendantes de même loi $\mathcal{N}(0;1)$.
+
+On peut légèrement affiner la caractérisation $(*)$ comme le montrent les caractérisations ci-après.
+
+!!! tip "Proposition"
+
+    Il y a équivalence entre:
+
+    _(i)_ $X_{1}, ..., X_{n}$ sont indépendantes,
+    _(ii)_ Si $\mathcal{E}_{i}=\sigma(\mathcal{C}_{i})$, $\mathcal{C}_{i}$ stable par intersection finie, $i=1, ..., n$
+
+    \[\forall A_{1} \in \mathcal{C}_{1}, ..., \forall A_{n} \in \mathcal{C}_{n}, \quad \mathbb{P}\left(\bigcap_{i=1}^{n}\{X_{i} \in A_{i}\}\right) = \prod_{i=1}^{n}\mathbb{P}(X_{i}\in A_{i}).\]
+
+    _(iii)_ $\forall f_{i}: (E_{i}, \mathcal{E}_{i}) \mapsto \mathbb{R}$, borélienne bornée ou positive, $i=1, ...,n,$
+
+    \[\mathbb{E}\left(\prod_{i=1}^{n}f_{i}(X_{i})\right) = \prod_{i=1}^{n}\mathbb{E}(f_{i}(X_{i})).\]
+
+!!! success "Démonstration:"
+
+    $(i) \implies (iii)$: d'après la proposition de caractérisation
+
+    \[\mathbb{E}\left(\prod_{i=1}^{n}f_{i}(X_{i})\right) = \int \prod_{i=1}^{n}f_{i}(x_{i})\mathbb{P}_{(X_{1}, ..., X_{n})}(dx_{1}, ...,dx_{n})\]
+
+    \[=\int \prod_{i=1}^{n}f_{i}(x_{i})\mathbb{P}_{X_{1}}(dx_{1})...\mathbb{P}_{X_{n}}(dx_{n}) \quad \textrm{par hypothèse,}\]
+
+    \[=\prod_{i=1}^{n}\int f_{i}(x_{i})\mathbb{P}_{X_{i}}(dx_{i}) \quad \textrm{d'après le théorème de Fubini.}\]
+
+    \[=\prod_{i=1}^{n}\mathbb{E}(f_{i}(X_{i})).\]
+
+    $(iii) \implies (ii)$: prendre $f_{i}=1_{A_{i}}$, $A_{i} \in \mathcal{C}_{i}$, $i=1,...,n$.
+    $(ii) \implies (i)$: On fixe $C_{i} \in \mathcal{C}_{i}, i=2, ...,n$ et l'on considère les mesures finies sur $E_{1}$ définies par $\mu_{1}(A_{1})=\mathbb{P}(X_{1}\in A_{1}, X_{i}\in C_{i},; 2 \leq i \leq n)$ et $\mu'_{1}(A_{1})=\mathbb{P}(X_{1}\in A_{1})\prod_{i=2}^{n}\mathbb{P}(X_{i}\in C_{i})$. $\mu_{1}$ et $\mu'_{1}$ coïncident sur $\mathcal{C}_{1}$ donc sur $\sigma(\mathcal{C}_{1})=\mathcal{E}_{1}$. Puis, on fixe $A_{1} \in \mathcal{E}_{1}$ et $C_{i} \in \mathcal{C}_{i}, 3 \leq i \leq n$ et on recommence la procédure précédente. De proche en proche, on finit par établir la relation $(*)$ ci-avant.
+
+!!! example "Application (n=2 pour simplifier):"
+
+    Deux variables aléatoires $X$, $Y$ sur $(\Omega, \mathcal{A}, \mathbb{P})$ sont indépendantes
+
+    \[\textrm{si et seulement si} \quad \forall u,v \in \mathbb{R}, \mathbb{P}(X\leq u, Y\leq v) = \mathbb{P}(X \leq u)\mathbb{P}(Y \leq v)\]
+
+    \[\textrm{si et seulement si} \quad \forall u,v \in \mathbb{R}, \mathbb{P}_{(X,Y)}(]-\infty,u]\times]-\infty,v])=F_{X}(u)F_{Y}(v).\]
+
+!!! tip "Corollaires:"
+
+    __(a)__ Si les $X_{i}: (\Omega, \mathcal{A}) \mapsto (E_{i}, \mathcal{E}_{i}), i=1, ...,n,$ sont indépendantes et les $h_{i}:(E_{i}, \mathcal{E}_{i}) \mapsto (F_{i}, \mathcal{F}_{i}), i=1,...,n,$ sont mesurables, alors les $h_{i}(X_{i}), i=1, ...,n,$ sont indépendantes
+
+    __(b)__ Si les $X_{1}, ..., X_{n}$ sont indépendantes et intégrables alors
+
+    \[\prod_{i=1}^{n}X_{i} \in \mathcal{L}^{1}(\mathbb{P}) \quad \textrm{et} \quad \mathbb{E}\left(\prod_{i=1}^{n}X_{i}\right) = \prod_{i=1}^{n}\mathbb{E}(X_{i}).\]
+
+    __(c)__ Si $U$ et $V$ sont indépendantes (de carré intégrable), alors $Cov(U, V) =0$ et $\rho(U,V)=0$ (la réciproque est fausse).
+
+!!! success "Démonstration"
+
+    __(a)__ On applique la caractérisation $(iii)$ de la proposition précédente à $f_{i} \circ h_{i}, 1 \leq i \leq n$.
+
+    __(b)__ D'après la caractérisation $(iii)$ ci-avant donc $\mathbb{E}[X_{1}...X_{n}]=\mathbb{E}[X_{1}]...\mathbb{E}[X_{n}] < +\infty$. On conclut via le théorème de Fubini-Lebesgue en reprenant la preuve de $(i) \implies (iii)$.
+
+    __(c)__ $Cov(U,V)=\mathbb{E}((U-\mathbb{E}(U))(V - \mathbb{E}(V)))=\mathbb{E}(UV)-\mathbb{E}(U)\mathbb{E}(V)=0.$
+
+!!! warning "Remarque"
+
+    Lorsque $n$ variable aléatoire réelles $X_{1}, ..., X_{n}$ vérifient que $Cov(X_{i},X_{j})=0$ pour tout $i \neq j$, on dit que les $X_{i}, i=1,...,n$ sont _non corrélées_. Il est clair qu'un vecteur $X=(X_{1},...,X_{n})$ est composé de variables aléatoires non corrélées si et seulement si sa matrice de dispersion $D(X)=[Cov(X_{i},X_{j})]_{1 \leq i,j \leq n}$ est diagonale.
+
+    On a par ailleurs les implications suivantes dont toutes les réciproques sont fausses
+
+    \[(X_{1}, ..., X_{n} \quad \textrm{sont indépendantes}) \quad \implies \quad (X_{1}, ..., X_{n} \quad \textrm{sont 2 à 2 indépendantes})\]
+
+    \[(X_{1}, ..., X_{n} \quad \textrm{sont 2 à 2 indépendantes}) \quad \implies \quad (X_{1}, ..., X_{n} \quad \textrm{sont 2 à 2 non corrélées})\]
 
 ## <span style="color:#0a69b7"> Bibliographie </span>
 
