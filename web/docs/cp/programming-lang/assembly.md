@@ -404,6 +404,6 @@ Von Neumann est un scientifique éminent qui a eu des contributions dans divers 
 
 ## <span style="color:#074b83">Bibliographie</span>
 
-* Princeton University, [Assembly Language: Part 1](https://www.cs.princeton.edu/courses/archive/spr19/cos217/lectures/13_Assembly1.pdf), Archive Computer Science 217: Introduction to Programming Systems, consulté le 01/03/2024.
+* Princeton University, [Assembly Language: Part 1](https://www.cs.princeton.edu/courses/archive/spr19/cos217/lectures/13_Assembly1.pdf), Archive Computer Science 217: Introduction to Programming Systems, consulté le 25/06/2024.
 * Stack Overflow, [How does the ARM architecture differ from x86?](https://stackoverflow.com/questions/14794460/how-does-the-arm-architecture-differ-from-x86#14795541), consulté le 29/02/2024.
 * Wikipedia, [Random-access memory](https://en.wikipedia.org/wiki/Random-access_memory), consulté le 01/03/2024.
