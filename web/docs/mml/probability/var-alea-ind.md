@@ -236,7 +236,7 @@ __Construction de variables aléatoires indépendantes:__ Soient $\mu_{1}, ..., 
 
     Dans la pratique, comme les $1_{A_{i}} \in {0,1}$, cela revient à vérifier les relations:
 
-    \[mathbb{P}(\cup_{i=1}^{n}) = \prod_{i=1}^{n}\mathbb{P}(A_{i}') \quad \text{où} \quad A_{i}' = A_{i}, ^{c}A_{i} ou \Omega.\]
+    \[\mathbb{P}(\cup_{i=1}^{n}) = \prod_{i=1}^{n}\mathbb{P}(A_{i}') \quad \text{où} \quad A_{i}' = A_{i}, ^{c}A_{i} \quad ou \quad \Omega.\]
 
     On montre par récurrence sur $n$ qu'il suffit de vérifier que:
 
