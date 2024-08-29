@@ -204,13 +204,57 @@ On peut légèrement affiner la caractérisation $(*)$ comme le montrent les car
 
 !!! warning "Remarque"
 
-    Lorsque $n$ variable aléatoire réelles $X_{1}, ..., X_{n}$ vérifient que $Cov(X_{i},X_{j})=0$ pour tout $i \neq j$, on dit que les $X_{i}, i=1,...,n$ sont _non corrélées_. Il est clair qu'un vecteur $X=(X_{1},...,X_{n})$ est composé de variables aléatoires non corrélées si et seulement si sa matrice de dispersion $D(X)=[Cov(X_{i},X_{j})]_{1 \leq i,j \leq n}$ est diagonale.
+    Lorsque $n$ variables aléatoires réelles $X_{1}, ..., X_{n}$ vérifient que $Cov(X_{i},X_{j})=0$ pour tout $i \neq j$, on dit que les $X_{i}, i=1,...,n$ sont _non corrélées_. Il est clair qu'un vecteur $X=(X_{1},...,X_{n})$ est composé de variables aléatoires non corrélées si et seulement si sa matrice de dispersion $D(X)=[Cov(X_{i},X_{j})]_{1 \leq i,j \leq n}$ est diagonale.
 
     On a par ailleurs les implications suivantes dont toutes les réciproques sont fausses
 
     \[(X_{1}, ..., X_{n} \quad \textrm{sont indépendantes}) \quad \implies \quad (X_{1}, ..., X_{n} \quad \textrm{sont 2 à 2 indépendantes})\]
 
     \[(X_{1}, ..., X_{n} \quad \textrm{sont 2 à 2 indépendantes}) \quad \implies \quad (X_{1}, ..., X_{n} \quad \textrm{sont 2 à 2 non corrélées})\]
+
+!!! tip "Proposition"
+
+    Soient $X_{1}, ..., X_{n}$, $n$ variables aléatoires réelles sur $(\Omega, \mathcal{A}, \mathbb{P})$ $2$ à $2$ non corrélées; alors
+
+    \[Var(X_{1}+...+ X_{n}) = Var(X_{1}) + ... + Var(X_{n}).\]
+
+!!! success "Démonstration"
+
+    Cela découle de la formule plus générale
+
+    \[Var(X_{1} + ... + X_{n}) = \sum_{i=1}^{n} Var(X_{i}) + 2\sum_{i < j} Cov(X_{i}, X_{j}).\]
+
+__Construction de variables aléatoires indépendantes:__ Soient $\mu_{1}, ..., \mu_{n}$, $n$ probabilités définies sur des espaces $(E_{1}, \mathcal{E}), ..., (E_{n}, \mathcal{E}_{n})$. La question qui se pose est: comment construire $n$ variables aléatoires indépendantes $X_{1}, ..., X_{n}$, de façon que $X_{i}$ ait pour loi $\mu_{i}$? La réponse est en fait presque immédiate: on pose $\Omega := E_{1} \times ... \times E_{n}$, $\mathcal{A} := \mathcal{E}_{1}\otimes ... \otimes \mathcal{E}_{n}$, $\mathbb{P} := \mu_{1} \otimes ... \otimes \mu_{n}$ et $X_{i} := \pi_{i}, i$-ème projection canonique de $\Omega$ sur $E_{i}$.
+
+## <span style="color:#0a69b7"> Evénements et tribus indépendants </span>
+
+!!! note "Définition"
+
+    Soit $(\Omega, \mathcal{A}, \mathbb{P})$ un espace probabilisé et $A_{1}, ..., A_{n} \in \mathcal{A}$. Les événements $A_{i}, i=1, ...,n,$ sont indépendants si les $1_{A_{i}}$ sont des variables aléatoires indépendantes.
+
+!!! warning "Remarque"
+
+    Dans la pratique, comme les $1_{A_{i}} \in {0,1}$, cela revient à vérifier les relations:
+
+    \[mathbb{P}(\cup_{i=1}^{n}) = \prod_{i=1}^{n}\mathbb{P}(A_{i}') \quad \text{où} \quad A_{i}' = A_{i}, ^{c}A_{i} ou \Omega.\]
+
+    On montre par récurrence sur $n$ qu'il suffit de vérifier que:
+
+    \[\forall I \subset \{1, ..., n\}, \mathbb{P}(\cap_{i \in I} A_{i}) = \prod_{i \in I} \mathbb{P}(A_{i}).\]
+
+!!! note "Définition"
+
+    $n$ sous-tribus $\mathcal{A}_{1}, ..., \mathcal{A}_{n}$ sur $(\Omega, \mathcal{A}, \mathbb{P})$ sont indépendantes si:
+
+    \[\forall A_{1} \in \mathcal{A_{1}}, ..., \forall A_{n} \in \mathcal{A}_{n}, \quad A_{1}, ..., A_{n} \quad \textrm{sont indépendants.}\]
+
+!!! warning "Remarque"
+
+    On vérifie sans difficulté, comme dans la caractérisation de l'indépendance des variables aléatoires, que si $\mathcal{A}_{i}=\sigma(C_{i})$, $i=1, ..., n$, $C_{i}$ stable par intersection finie, les $\mathcal{A}_{i}$ sont indépendantes si et seulement si $\forall A_{1} \in C_{1}, ..., \forall A_{n} \in C_{n}, \quad A_{1}, ..., A_{n}$ sont indépendants.
+
+!!! example "Exemple"
+
+    Si les variables aléatoires $X_{1}, ..., X_{n}$ sont indépendantes dans $(\Omega, \mathcal{A}, \mathbb{P})$, les sous-tribus $\sigma(X_{1}), ..., \sigma(X_{n})$ sont indépendantes.
 
 ## <span style="color:#0a69b7"> Bibliographie </span>
 
