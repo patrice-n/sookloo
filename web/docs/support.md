@@ -4,7 +4,7 @@ Pour contribuer à l'évolution de ce site web, nous avons identifier deux possi
 
 ## L'édition de code
 
-Avant de participer à l'édition d'une page web de ce projet, il est important de savoir que ce projet est sous Licence Creative Commons Non Commerciale CC-BY-NC-SA. C'est-à-dire grossièrement que le contenu est en partage libre à des buts non commerciaux. Pour plus de détail, se référer à la page de la [licence](https://github.com/patrice-n/sookloo/blob/main/LICENSE). Pour avoir les bases rapides de git, se référer à l'article sur [git](articles/tools/git.md).
+Avant de participer à l'édition d'une page web de ce projet, il est important de savoir que ce projet est sous Licence Creative Commons Non Commerciale CC-BY-NC-SA. C'est-à-dire grossièrement que le contenu est en partage libre à des buts non commerciaux. Pour plus de détail, se référer à la page de la [licence](https://github.com/patrice-n/sookloo/blob/main/LICENSE).
 
 Pour participer en éditant le code, il est recommandé de suivre les étapes suivantes:
 

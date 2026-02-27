@@ -7,12 +7,10 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 * `Commencer avec C/C++/Python` - Notions pour commencer en C, C++ et Python.
 * `Programmation C/C++/Python` - Code en C, C++ et Python.
 * `Algorithmique et complexité` - Notions d'algorithmique de complexité et de structures de données.
-* `Competitive programming` - Algorithmes pour la préparation aux compétitions et interviews de programmation.
-* `Software and system design` - Notions de design de systèmes informatiques.
 
 ## ML - Machine Learning
 
-* `Mathématiques pour le machine learning` - Notions de mathématiques pour le machine learning (algèbre, analyse, optimisation, probabilité et statistiques)
+* `Mathématiques pour le machine learning` - Notions de mathématiques pour le machine learning
 * `Machine learning` - Algorithmes de machine learning
 * `Code de Machine Learning` - Code des algorithmes de machine learning
 
@@ -74,17 +72,14 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 <summary>Janvier 2024</summary>
     <ul>
         <li>4 Janvier, 2024: Mis-à-jour du contenu relatif au <a href="https://patrice-n.github.io/sookloo/mml/algebra-analysis/diff-calculus">calcul différentiel</a></li>
-        <li>15 Janvier, 2024: Ajout du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/intro-proba">l'introduction à la probabilité</a></li>
     </ul>
 </details>
 
 <details open>
 <summary>Février 2024</summary>
     <ul>
-        <li>7 Février, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/intro-proba">l'introduction à la probabilité</a></li>
-        <li>16 Février, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/intro-proba">l'introduction à la probabilité</a></li>
-        <li>19 Février, 2024: Mis-à-jour du workflow github actions pour migration du site et mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/intro-proba">l'introduction à la probabilité</a></li>
-        <li>22 Février, 2024: Ajout de contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/proba-mes">quelques notions sur la théorie de la mesure et probabilité (pour le ML)</a> et à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a></li>
+        <li>19 Février, 2024: Mis-à-jour du workflow github actions pour migration du site</li>
+        <li>22 Février, 2024: Ajout de contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a></li>
         <li>27 Février, 2024: Mis-à-jour de la couleur du thème du site <a href="https://patrice-n.github.io/sookloo">sookloo</a></li>
     </ul>
 </details>
@@ -92,10 +87,7 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 <details open>
 <summary>Mars 2024</summary>
     <ul>
-        <li>1er Mars, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/proba-mes">quelques notions sur la théorie de la mesure et probabilité (pour le ML)</a> et à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a></li>
-        <li>8 Mars, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/proba-mes">quelques notions sur la théorie de la mesure et probabilité (pour le ML)</a></li>
-        <li>14 Mars, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/proba-mes">quelques notions sur la théorie de la mesure et probabilité (pour le ML)</a></li>
-        <li>25 Mars, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/mml/probability/proba-mes">quelques notions sur la théorie de la mesure et probabilité (pour le ML)</a></li>
+        <li>1er Mars, 2024: Mis-à-jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a></li>
     </ul>
 </details>
 
@@ -108,21 +100,9 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 </details>
 
 <details open>
-<summary>Mai 2024</summary>
-    <ul>
-        <li>11 Mai, 2024: Ajout de contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea">variables aléatoires et leurs lois (pour le ML)</a>
-        </li>
-        <li>16 Mai, 2024: Mis-à-jour du contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea">variables aléatoires et leurs lois (pour le ML)</a>
-        </li>
-        <li>22 Mai, 2024: Mis-à-jour du contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea">variables aléatoires et leurs lois (pour le ML)</a>
-        </li>
-    </ul>
-</details>
-
-<details open>
 <summary>Juin 2024</summary>
     <ul>
-        <li>24 Juin, 2024: Ajout de contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea-ind">variables aléatoires indépendantes (pour le ML)</a> et mise à jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a>
+        <li>24 Juin, 2024: Ajout de contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a>
         </li>
     </ul>
 </details>
@@ -130,15 +110,7 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
 <details open>
 <summary>Juillet 2024</summary>
     <ul>
-        <li>12 Juillet, 2024: Mise à jour de contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea-ind">variables aléatoires indépendantes (pour le ML)</a> et mise à jour du contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a>
-        </li>
-    </ul>
-</details>
-
-<details open>
-<summary>Août 2024</summary>
-    <ul>
-        <li>29 Août, 2024: Mise à jour de contenu relatif aux <a href="https://patrice-n.github.io/sookloo/mml/probability/var-alea-ind">variables aléatoires indépendantes (pour le ML)</a>
+        <li>12 Juillet, 2024: Mise à jour de contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/assembly">l'assembleur</a>
         </li>
     </ul>
 </details>
