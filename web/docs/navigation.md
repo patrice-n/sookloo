@@ -15,7 +15,6 @@
             - [Pratique du C - Chiffrage par transposition](cp/programming-lang/action-c/action-c-transposition-ciffer.md)
             - [Pratique du C - Linked List](cp/programming-lang/action-c/action-c-linked-list.md)
         - [Bases du C++](cp/programming-lang/cpp.md)
-        - [Concurrence en C++](cp/programming-lang/concur-cpp.md)
         - Pratique du C++
             - [Pratique du C++ - Minimum Spanning Tree](cp/programming-lang/action-cpp/action-cpp-mst.md)
             - [Pratique du C++ - Rational Number Library](cp/programming-lang/action-cpp/action-cpp-rational-nb-lib.md)
