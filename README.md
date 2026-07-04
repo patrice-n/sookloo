@@ -114,3 +114,10 @@ Ce site web se veut être un outil d'aide à la montée en compétences en CS (C
         </li>
     </ul>
 </details>
+<details open>
+<summary>Juillet 2026</summary>
+    <ul>
+        <li>1er Juillet, 2026: Ajout de contenu relatif à <a href="https://patrice-n.github.io/sookloo/cp/programming-lang/concur-cpp">la concurrence en C++</a>
+        </li>
+    </ul>
+</details>
